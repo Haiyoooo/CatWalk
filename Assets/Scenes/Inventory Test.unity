@@ -439,13 +439,13 @@ MonoBehaviour:
   storeSpace: {fileID: 1751182030}
   closetSpace: {fileID: 125169805}
   AllItemList:
-  - prefab: {fileID: 1833679522901875022, guid: 7499a8e86c045ea458729b0b51533cdc,
+  - prefab: {fileID: 3338574476334180608, guid: 5c6b8966515694043a6503605dfa2a28,
       type: 3}
     cost: 3
   - prefab: {fileID: 2779081703225607381, guid: a376e1d9aa425ea44a81c75eb9d34e8b,
       type: 3}
     cost: 4
-  - prefab: {fileID: 3338574476334180608, guid: 5c6b8966515694043a6503605dfa2a28,
+  - prefab: {fileID: 1833679522901875022, guid: 7499a8e86c045ea458729b0b51533cdc,
       type: 3}
     cost: 6
   storeItems: []
