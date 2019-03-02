@@ -5,6 +5,7 @@ using UnityEngine.EventSystems;
 public class Job : MonoBehaviour
 {
 
+
     public enum jobState { AVALIABLE, SUCCESS, SUPERSUCCESS, FAIL };
     public jobState thisJobState = jobState.AVALIABLE;
     private jobPopUp jobPopUp; //refer to pop-up script

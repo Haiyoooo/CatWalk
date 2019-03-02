@@ -4,23 +4,30 @@ using UnityEngine;
 
 public class City : MonoBehaviour
 {
-    public bool isEmpty = true;
-    private SpriteRenderer spriteRenderer;
+
+    public enum type { NOTHING, JOB, PARTY }
+    public type myType;
 
     private void Start()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
+
     }
 
     private void Update()
     {
-        if(isEmpty)
+        switch(myType)
         {
-            spriteRenderer.color = Color.white;
-        }
-        else
-        {
-            spriteRenderer.color = Color.black;
+            case type.NOTHING:
+                break;
+            case type.JOB:
+                Job();
+                break;
+            case type.PARTY:
+                Party();
+                break;
+            default:
+                myType = type.JOB;
+                break;
         }
     }
 }
