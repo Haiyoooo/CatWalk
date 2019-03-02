@@ -5,14 +5,16 @@ using UnityEngine;
 public class TrendManager : MonoBehaviour
 {
     float degree;
-    public float inSeason;
-    public float passSeason;
-    public float nextSeason;
+    int[] style;
+    public int inSeason;
+    public int passSeason;
+    public int nextSeason;
     
     // Start is called before the first frame update
     void Start()
     {
         GameManager.instance.day = 1;
+        style = new int[12];
         inSeason = 1;
         passSeason = 12;
         nextSeason = 2;
