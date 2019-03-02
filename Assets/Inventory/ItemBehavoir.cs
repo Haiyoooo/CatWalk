@@ -5,8 +5,8 @@ using UnityEngine;
 public class ItemBehavoir : MonoBehaviour
 {
 
-    bool mouseOver = false;
-    bool mouseHeld = false;
+    private bool mouseOver = false;
+    //bool mouseHeld = false;
     bool equipped = false;
     public enum foundIn { store, closet };
     public foundIn location = foundIn.store;
@@ -29,11 +29,12 @@ public class ItemBehavoir : MonoBehaviour
         // grabs the item
         if ( mouseOver && (location == foundIn.store) && Input.GetMouseButtonDown(0) )
         {
-            mouseHeld = true;
+            //mouseHeld = true;
             print(style);
         }
 
         // move with the mouse
+        /*
         if (mouseHeld)
         {
             transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -45,15 +46,16 @@ public class ItemBehavoir : MonoBehaviour
                 mouseHeld = false;
 
                 // moving from the store to closet
-                if ( (transform.position.x > 0.5) /*&& (transform.position.y > -3)*/ ) // yes, I did it manually
+                if ( (transform.position.x > 0.5) /*&& (transform.position.y > -3) ) // yes, I did it manually
                 {
                     location = foundIn.closet;
                     //AUDIO
                     //money -= cost;
                 }
-
+                //tell the ItemManager to reorganize the lists
             }
         }
+        */
 
 
         // equip code
@@ -67,13 +69,15 @@ public class ItemBehavoir : MonoBehaviour
 
     }
 
-    private void OnMouseOver()
+    private void OnMouseEnter()
     {
         mouseOver = true;
+        print("on " + name);
     }
     private void OnMouseExit()
     {
         mouseOver = false;
+        print("off " + name);
     }
     
 }
