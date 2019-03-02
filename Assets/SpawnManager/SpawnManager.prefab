@@ -43,3 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7488d1992cd3504c965ed6c4f26f397, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  partyPrefab: {fileID: 2650468526807148236, guid: 11c158a1ae4cac14aba8f82e2797122e,
+    type: 3}
+  jobPrefab: {fileID: 945904642881673508, guid: e6295185a01ad184d82522993475a07e,
+    type: 3}

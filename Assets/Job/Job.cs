@@ -5,13 +5,15 @@ using UnityEngine.EventSystems;
 public class Job : MonoBehaviour
 {
 
-    public enum jobState { AVALIABLE, SUCCESS, SUPERSUCCESS, FAIL, DONE };
-    public jobState thisJobState;
-    private jobPopUp jobPopUp;
+    public enum jobState { AVALIABLE, SUCCESS, SUPERSUCCESS, FAIL };
+    public jobState thisJobState = jobState.AVALIABLE;
+    private jobPopUp jobPopUp; //refer to pop-up script
+    private SpriteRenderer rend;
 
     [Header("For Testing")]
+    [Tooltip("Number of clothing items currently worn which the company likes")]
     [Range(0,2)]
-    public int correctItems = 0;
+    [SerializeField] private int correctItems = 0;
 
     [Header("Job Stats")]
     [SerializeField] private int salary = 20;
@@ -29,15 +31,26 @@ public class Job : MonoBehaviour
     void Start()
     {
         jobPopUp = gameObject.GetComponent<jobPopUp>();
+        rend = gameObject.GetComponent<SpriteRenderer>();
+        rend.color = Color.white;
     }
 
-    //Fail & Success Conditions
+    
+    //Tool tip
     private void OnMouseOver()
     {
         //DISPLAY TOOL TIP
         Debug.Log("TOOLTIP");
+        rend.color = Color.green;
     }
 
+    private void OnMouseExit()
+    {
+        rend.color = Color.white;
+    }
+
+
+    //Fail & Success Conditions
     private void OnMouseDown()
     {
         // If there is a UI open, stop player from clicking on other jobs.
@@ -53,7 +66,7 @@ public class Job : MonoBehaviour
             {
                 thisJobState = jobState.SUCCESS;
                 GameManager.instance.fishCoin += salary; //money
-                var tempPopUp = Instantiate(successPopUp);
+                var tempPopUp = Instantiate(successPopUp); //pop up message
                 tempPopUp.transform.parent = gameObject.transform;
                 Debug.Log("Success." + GameManager.instance.day + " $" + GameManager.instance.fishCoin);
             }
@@ -63,9 +76,9 @@ public class Job : MonoBehaviour
             else if (correctItems == 0)
             {
                 thisJobState = jobState.FAIL;
-                var tempPopUp = Instantiate(failPopUp);
-                tempPopUp.transform.parent = gameObject.transform;
-                Debug.Log("Fail." + GameManager.instance.day + " $" + GameManager.instance.fishCoin);
+                var tempPopUp = Instantiate(failPopUp); //pop up message
+                tempPopUp.transform.parent = gameObject.transform; 
+                Debug.Log("Fail." + GameManager.instance.day + " $" + GameManager.instance.fishCoin);  
             }
 
             //Super Success
@@ -73,9 +86,9 @@ public class Job : MonoBehaviour
             else if (correctItems == 2)
             {
                 thisJobState = jobState.SUPERSUCCESS;
-                var tempPopUp = Instantiate(superSuccessPopUp);
+                GameManager.instance.fishCoin += Mathf.FloorToInt(salary * ssBonusMultiplier); //money
+                var tempPopUp = Instantiate(superSuccessPopUp); //pop up message
                 tempPopUp.transform.parent = gameObject.transform;
-                GameManager.instance.fishCoin += Mathf.FloorToInt(salary * ssBonusMultiplier);
                 Debug.Log("SUPERSUCCESS." + GameManager.instance.day + " $" + GameManager.instance.fishCoin);
             }
 
@@ -83,13 +96,15 @@ public class Job : MonoBehaviour
         }
     }
 
-    public void disappearAnimation()
+    public void disappearOnSuccess()
     {
+        if (thisJobState == Job.jobState.SUCCESS || thisJobState == Job.jobState.SUPERSUCCESS)
         {
             //var FX = Instantiate(fireworksFX, new Vector2(transform.position.x, transform.position.y), Quaternion.identity);
             //Destroy(FX.gameObject, 3f);
-            Debug.Log("Disappear" + gameObject.name); //TODO: DESTROY THE FUCKING BUILDING
-            Destroy(gameObject, 3f);        
+            Debug.Log("Disappear" + gameObject.name);
+            Destroy(gameObject, 1f);
+            SpawnManager.totalJobs--;
         }
     }
 }
