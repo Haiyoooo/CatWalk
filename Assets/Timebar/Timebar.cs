@@ -16,7 +16,7 @@ public class Timebar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        barValue = GameManager.instance.day * (1 / GameManager.instance.countDown);
-        Debug.Log(barValue);
+        //barValue = GameManager.instance.day * (1 / GameManager.instance.countDown);
+        //Debug.Log(barValue);
     }
 }
