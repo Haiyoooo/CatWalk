@@ -2,16 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class jobPopUp : MonoBehaviour
+public class jobPopUp : Job
 {
-    public void Start()
-    {
-        hidePopUp();
-    }
+    private GameObject[] jobs;
 
-    public bool hidePopUp()
+    public void hidePopUp()
     {
-        transform.parent.gameObject.SetActive(false);
-        return true;
+        disappearAnimation();
+        Debug.Log("Call");
+        Destroy(transform.parent.gameObject,1f);
     }
 }
