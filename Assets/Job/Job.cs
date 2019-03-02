@@ -9,6 +9,10 @@ public class Job : MonoBehaviour
     public jobState thisJobState;
     private jobPopUp jobPopUp;
 
+    [Header("For Testing")]
+    [Range(0,2)]
+    public int correctItems = 0;
+
     [Header("Job Stats")]
     [SerializeField] private int salary = 20;
     [SerializeField] private float ssBonusMultiplier = 1.5f;
@@ -27,38 +31,15 @@ public class Job : MonoBehaviour
         jobPopUp = gameObject.GetComponent<jobPopUp>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        //switch(thisJobState)
-        //{
-        //    case jobState.AVALIABLE:
-        //        //do nothing
-        //        break;
-        //    case jobState.SUCCESS:
-        //        success();
-        //        break;
-        //    case jobState.SUPERSUCCESS:
-        //        supersuccess();
-        //        break;
-        //    case jobState.FAIL:
-        //        fail();
-        //        break;
-        //    default:
-        //        break;
-        //}
-
-    }
-    
     //Fail & Success Conditions
     private void OnMouseOver()
     {
         //DISPLAY TOOL TIP
         Debug.Log("TOOLTIP");
+    }
 
-        //move the code below to OnMouseDown when doing the actual game
-        //move out day++
-
+    private void OnMouseDown()
+    {
         // If there is a UI open, stop player from clicking on other jobs.
         /* Description:
          * Checks if the mouse was clicked over a UI element
@@ -68,7 +49,7 @@ public class Job : MonoBehaviour
         {
             //Success
             //player is wearing 1 item that the job likes
-            if (Input.GetMouseButtonDown(0))
+            if (correctItems == 1)
             {
                 thisJobState = jobState.SUCCESS;
                 GameManager.instance.fishCoin += salary; //money
@@ -79,7 +60,7 @@ public class Job : MonoBehaviour
 
             //Fail
             //player is wearing 0 items that the job likes
-            else if (Input.GetMouseButtonDown(1))
+            else if (correctItems == 0)
             {
                 thisJobState = jobState.FAIL;
                 var tempPopUp = Instantiate(failPopUp);
@@ -89,7 +70,7 @@ public class Job : MonoBehaviour
 
             //Super Success
             //player is wearing 2 items that the job likes
-            else if (Input.GetMouseButtonDown(2))
+            else if (correctItems == 2)
             {
                 thisJobState = jobState.SUPERSUCCESS;
                 var tempPopUp = Instantiate(superSuccessPopUp);
@@ -100,18 +81,15 @@ public class Job : MonoBehaviour
 
             GameManager.instance.day++;
         }
-
     }
 
-    protected void disappearAnimation()
+    public void disappearAnimation()
     {
-        //if(thisJobState == jobState.SUCCESS || thisJobState == jobState.SUPERSUCCESS)
         {
             //var FX = Instantiate(fireworksFX, new Vector2(transform.position.x, transform.position.y), Quaternion.identity);
             //Destroy(FX.gameObject, 3f);
             Debug.Log("Disappear" + gameObject.name); //TODO: DESTROY THE FUCKING BUILDING
-            Destroy(gameObject, 3f); 
-            
+            Destroy(gameObject, 3f);        
         }
     }
 }
