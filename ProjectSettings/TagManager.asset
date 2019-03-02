@@ -13,8 +13,8 @@ TagManager:
   - UI
   - 
   - 
-  - Background_color
-  - Backround_countries
+  - 
+  - 
   - 
   - 
   - 
@@ -40,4 +40,16 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 3559212699
+    locked: 0
+  - name: UI
+    uniqueID: 1228227225
+    locked: 0
+  - name: Job & Parties
+    uniqueID: 1910586061
+    locked: 0
+  - name: UI Message
+    uniqueID: 3284674259
     locked: 0

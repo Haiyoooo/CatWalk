@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class TrendManager : MonoBehaviour
 {
-    public int day;
     float degree;
     int[] style;
     public int inSeason;
@@ -14,7 +13,7 @@ public class TrendManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        day = 1;
+        GameManager.instance.day = 1;
         style = new int[12];
         inSeason = 1;
         passSeason = 12;
@@ -24,23 +23,23 @@ public class TrendManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        degree = (day - 1) * 30;
+        degree = (GameManager.instance.day - 1) * 30;
         transform.rotation = Quaternion.Euler(transform.rotation.x, transform.rotation.y, degree);
         StyleChange();
     }
 
     void StyleChange()
     {
-        if (day % 12 == 0)
+        if (GameManager.instance.day % 12 == 0)
             inSeason = 12;
         else
-            inSeason = day % 12;
-        if (day % 12 - 1 == 0)
+            inSeason = GameManager.instance.day % 12;
+        if (GameManager.instance.day % 12 - 1 == 0)
             passSeason = 12;
-        else if (day % 12 - 1 == -1)
+        else if (GameManager.instance.day % 12 - 1 == -1)
             passSeason = 11;
         else
-            passSeason = day % 12 - 1;
-        nextSeason = day % 12 + 1;
+            passSeason = GameManager.instance.day % 12 - 1;
+        nextSeason = GameManager.instance.day % 12 + 1;
     }
 }
