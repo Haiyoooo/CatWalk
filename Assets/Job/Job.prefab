@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 945904642881673512}
   m_Layer: 0
   m_Name: Job
-  m_TagString: Untagged
+  m_TagString: Job
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -93,15 +93,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5accf828c8ca8a4cb4ec950c28beb42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  thisJobState: 0
   salary: 20
   ssBonusMultiplier: 1.5
-  successPopUp: {fileID: 5559444867806590934, guid: 46aa517b115aa4c458fa192be0b32c33,
+  successPopUp: {fileID: 8172979687867616142, guid: df3bb26ddf5cf024080d13fad02c4921,
     type: 3}
-  superSuccessPopUp: {fileID: 6102078959326915653, guid: 73bd727dfebcc274ea5e12b447bc6038,
+  superSuccessPopUp: {fileID: 6043879422129177668, guid: 3e1f61cbd9f269145bd63b6f6aee33a2,
     type: 3}
   failPopUp: {fileID: 6173009843578361738, guid: 17865f39a7c8b854caf97d3db73b9f6f,
     type: 3}
-  fireworksFX: {fileID: 0}
+  fireworksFX: {fileID: 2593405589089741789, guid: 2c1ae68e75909e04186ded2c3f28d136,
+    type: 3}
 --- !u!61 &945904642881673512
 BoxCollider2D:
   m_ObjectHideFlags: 0
