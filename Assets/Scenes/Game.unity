@@ -504,6 +504,7 @@ GameObject:
   m_Component:
   - component: {fileID: 283029949}
   - component: {fileID: 283029950}
+  - component: {fileID: 283029951}
   m_Layer: 0
   m_Name: City2
   m_TagString: City
@@ -573,6 +574,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &283029951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 283029948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed7a53fe61e5d50458f3eb1b0a10a35c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isEmpty: 1
 --- !u!1 &304154893
 GameObject:
   m_ObjectHideFlags: 0
@@ -621,6 +635,7 @@ GameObject:
   m_Component:
   - component: {fileID: 314138171}
   - component: {fileID: 314138172}
+  - component: {fileID: 314138173}
   m_Layer: 0
   m_Name: City3
   m_TagString: City
@@ -690,6 +705,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &314138173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 314138170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed7a53fe61e5d50458f3eb1b0a10a35c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isEmpty: 1
 --- !u!1001 &327900149
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -773,6 +801,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 4a8a44fed326c824d9ead630fc0fab51,
         type: 3}
+    - target: {fileID: 4854006287314692748, guid: e6295185a01ad184d82522993475a07e,
+        type: 3}
+      propertyPath: correctItems
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6295185a01ad184d82522993475a07e, type: 3}
 --- !u!1 &330554865
@@ -2561,6 +2594,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1005667469}
   - component: {fileID: 1005667470}
+  - component: {fileID: 1005667471}
   m_Layer: 0
   m_Name: City8
   m_TagString: City
@@ -2630,6 +2664,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1005667471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1005667468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed7a53fe61e5d50458f3eb1b0a10a35c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isEmpty: 1
 --- !u!1 &1021157943
 GameObject:
   m_ObjectHideFlags: 0
@@ -2640,6 +2687,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1021157944}
   - component: {fileID: 1021157945}
+  - component: {fileID: 1021157946}
   m_Layer: 0
   m_Name: City1
   m_TagString: City
@@ -2709,6 +2757,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1021157946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1021157943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed7a53fe61e5d50458f3eb1b0a10a35c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isEmpty: 1
 --- !u!1 &1076501206
 GameObject:
   m_ObjectHideFlags: 0
@@ -3180,6 +3241,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1240878822}
   - component: {fileID: 1240878823}
+  - component: {fileID: 1240878824}
   m_Layer: 0
   m_Name: City5
   m_TagString: City
@@ -3249,6 +3311,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1240878824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1240878821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed7a53fe61e5d50458f3eb1b0a10a35c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isEmpty: 1
 --- !u!1001 &1299813399
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3264,21 +3339,6 @@ PrefabInstance:
     - target: {fileID: 6228153254992704044, guid: bc0bc96241ac477468910fce4bfc34e5,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6228153254992704045, guid: bc0bc96241ac477468910fce4bfc34e5,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6228153254992704045, guid: bc0bc96241ac477468910fce4bfc34e5,
-        type: 3}
-      propertyPath: m_SortingLayerID
-      value: -735754597
-      objectReference: {fileID: 0}
-    - target: {fileID: 6228153254992704045, guid: bc0bc96241ac477468910fce4bfc34e5,
-        type: 3}
-      propertyPath: m_SortingLayer
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6228153254992704046, guid: bc0bc96241ac477468910fce4bfc34e5,
@@ -3346,6 +3406,21 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0.44016078
       objectReference: {fileID: 0}
+    - target: {fileID: 6228153254992704045, guid: bc0bc96241ac477468910fce4bfc34e5,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6228153254992704045, guid: bc0bc96241ac477468910fce4bfc34e5,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: -735754597
+      objectReference: {fileID: 0}
+    - target: {fileID: 6228153254992704045, guid: bc0bc96241ac477468910fce4bfc34e5,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc0bc96241ac477468910fce4bfc34e5, type: 3}
 --- !u!1 &1326576352
@@ -3358,6 +3433,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1326576353}
   - component: {fileID: 1326576354}
+  - component: {fileID: 1326576355}
   m_Layer: 0
   m_Name: City4
   m_TagString: City
@@ -3427,6 +3503,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1326576355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1326576352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed7a53fe61e5d50458f3eb1b0a10a35c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isEmpty: 1
 --- !u!1 &1351409649
 GameObject:
   m_ObjectHideFlags: 0
@@ -3905,6 +3994,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1516914296}
   - component: {fileID: 1516914297}
+  - component: {fileID: 1516914298}
   m_Layer: 0
   m_Name: City6
   m_TagString: City
@@ -3974,6 +4064,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1516914298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1516914295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed7a53fe61e5d50458f3eb1b0a10a35c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isEmpty: 1
 --- !u!1 &1524555645
 GameObject:
   m_ObjectHideFlags: 0
@@ -4173,6 +4276,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1862072577}
     m_Modifications:
+    - target: {fileID: 5881061401034424296, guid: 1afdc0f4803143e4e87b715d87048a0e,
+        type: 3}
+      propertyPath: m_Name
+      value: TimeBar
+      objectReference: {fileID: 0}
     - target: {fileID: 5881061401034424297, guid: 1afdc0f4803143e4e87b715d87048a0e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4236,7 +4344,7 @@ PrefabInstance:
     - target: {fileID: 5881061401034424297, guid: 1afdc0f4803143e4e87b715d87048a0e,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -4.42
+      value: -4.4200134
       objectReference: {fileID: 0}
     - target: {fileID: 5881061401034424297, guid: 1afdc0f4803143e4e87b715d87048a0e,
         type: 3}
@@ -4287,11 +4395,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.y
       value: 0.040000003
-      objectReference: {fileID: 0}
-    - target: {fileID: 5881061401034424296, guid: 1afdc0f4803143e4e87b715d87048a0e,
-        type: 3}
-      propertyPath: m_Name
-      value: TimeBar
       objectReference: {fileID: 0}
     - target: {fileID: 5881061399585071846, guid: 1afdc0f4803143e4e87b715d87048a0e,
         type: 3}
@@ -4439,6 +4542,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1681713953}
   - component: {fileID: 1681713954}
+  - component: {fileID: 1681713955}
   m_Layer: 0
   m_Name: City7
   m_TagString: City
@@ -4508,6 +4612,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1681713955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1681713952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed7a53fe61e5d50458f3eb1b0a10a35c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isEmpty: 1
 --- !u!1001 &1731849677
 PrefabInstance:
   m_ObjectHideFlags: 0
