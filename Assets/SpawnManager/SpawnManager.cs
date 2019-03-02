@@ -30,11 +30,11 @@ public class SpawnManager : MonoBehaviour
 
         Debug.Log("city length" + cities.Length);
 
-        if (totalJobs == 0)
+        /*if (totalJobs == 0)
         {
             Debug.Log("spawn party");
             Instantiate(partyPrefab, cities[5].transform.position, Quaternion.identity);
-        }
+        }*/
 
         PartySpawner();
         
@@ -48,7 +48,7 @@ public class SpawnManager : MonoBehaviour
             Debug.Log("parties " + totalParties);
             int rng = Random.Range(0, cities.Length - 1 );
 
-            //if (cities[rng].GetComponent<City>().isEmpty) //TODO: stop it from spawning on things with exisiting stuff
+            if (cities[rng].GetComponent<City>().isEmpty) //TODO: stop it from spawning on things with exisiting stuff
             {
                 Instantiate(partyPrefab, cities[rng].transform.position, Quaternion.identity);
                 totalParties++;

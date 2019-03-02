@@ -6,12 +6,13 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance = null;
-    public int day = 0;
+    public float day = 0;
     public int fishCoin = 10;
-    public float countDown = 5;
+    private float countDown = 7;
     public Slider timeBar;
     private float timeValue;
     private float timeLength;
+    private float indexDay = 0;
 
     private void Awake()
     {
@@ -27,7 +28,12 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        timeBar.value = ((day - 1) * (1 / (countDown - 1))) % countDown;
-        if (timeBar.value > 1) timeBar.value = 0;
+        indexDay = day % countDown;
+        if (indexDay != 0)
+            timeBar.value = (indexDay - 1) * (1 / (countDown - 1));
+        else
+            timeBar.value = 1;
+        Debug.Log(timeBar.value);
+        //if (day % countDown == 0) timeBar.value = 0;
     }
 }
