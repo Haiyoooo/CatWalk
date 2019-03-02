@@ -5,32 +5,32 @@ using UnityEngine;
 public class ItemBehavoir : MonoBehaviour
 {
 
-    bool mouseHeld;
-    enum foundIn { store, closet };
-    foundIn location;
-    enum style { Western, Goth, Pirate/*, Formal, Neon, Skater, Sporty, Cute, Graceful, Southern, Royal */}
-    bool equipped;
+    bool mouseOver = false;
+    bool mouseHeld = false;
+    bool equipped = false;
+    public enum foundIn { store, closet };
+    public foundIn location = foundIn.store;
+
+    enum trend { Western, Goth, Pirate/*, Formal, Neon, Skater, Sporty, Cute, Graceful, Southern, Royal */}
+    [SerializeField] trend style; 
     enum putOn { head, body };
-    putOn wornOn;
-    bool mouseOver;
+    [SerializeField] putOn wornOn;
+    
 
     void Start()
     {
-        mouseHeld = false;
-        location = foundIn.store;
-        equipped = false;
-        mouseOver = false;
+        
     }
 
     
     void Update()
     {
         // Mouse grab code
-
         // grabs the item
-        if ( mouseOver && Input.GetMouseButtonDown(0) )
+        if ( mouseOver && (location == foundIn.store) && Input.GetMouseButtonDown(0) )
         {
             mouseHeld = true;
+            print(style);
         }
 
         // move with the mouse
@@ -43,18 +43,37 @@ public class ItemBehavoir : MonoBehaviour
             if (Input.GetMouseButtonUp(0))
             {
                 mouseHeld = false;
+
+                // moving from the store to closet
+                if ( (transform.position.x > 0.5) /*&& (transform.position.y > -3)*/ ) // yes, I did it manually
+                {
+                    location = foundIn.closet;
+                    //AUDIO
+                    //money -= cost;
+                }
+
             }
+        }
+
+
+        // equip code
+        if ( (location == foundIn.closet) && mouseOver && Input.GetMouseButtonDown(0))
+        {
+            //equipped = true;
+            /* some code that finds the item that was previously equipped on the
+             * player in the same spot (head or body) and sets its equipped = false
+             */
         }
 
     }
 
-    protected void OnMouseOver()
+    private void OnMouseOver()
     {
         mouseOver = true;
     }
-    protected void OnMouseExit()
+    private void OnMouseExit()
     {
         mouseOver = false;
     }
-
+    
 }
