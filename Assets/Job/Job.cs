@@ -5,8 +5,9 @@ using UnityEngine;
 public class Job : MonoBehaviour
 {
 
-    //private enum jobState { AVALIABLE, SUCCESS, SUPERSUCCESS, FAIL, DONE };
-    //private jobState thisJobState;
+    private enum jobState { AVALIABLE, SUCCESS, SUPERSUCCESS, FAIL, DONE };
+    private jobState thisJobState;
+    private jobPopUp jobPopUp;
 
     [Header("Job Stats")]
     [SerializeField] private int salary = 20;
@@ -23,7 +24,7 @@ public class Job : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        jobPopUp = gameObject.GetComponent<jobPopUp>();
     }
 
     // Update is called once per frame
@@ -92,8 +93,13 @@ public class Job : MonoBehaviour
 
     private void disappearAnimation()
     {
-        var FX = Instantiate(fireworksFX, new Vector2(transform.position.x, transform.position.y), Quaternion.identity);
-        Destroy(FX.gameObject, 3f);
+        if(    jobPopUp.hidePopUp()
+            && (thisJobState != jobState.FAIL || thisJobState != jobState.AVALIABLE) )
+        {
+            var FX = Instantiate(fireworksFX, new Vector2(transform.position.x, transform.position.y), Quaternion.identity);
+            Destroy(FX.gameObject, 3f);
+        }
+
 
     }
 }

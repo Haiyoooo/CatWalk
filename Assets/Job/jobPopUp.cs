@@ -9,8 +9,9 @@ public class jobPopUp : MonoBehaviour
         hidePopUp();
     }
 
-    public void hidePopUp()
+    public bool hidePopUp()
     {
         transform.parent.gameObject.SetActive(false);
+        return true;
     }
 }
