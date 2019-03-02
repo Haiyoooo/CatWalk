@@ -4245,6 +4245,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   day: 0
+  inSeason: 0
+  passSeason: 0
+  nextSeason: 0
 --- !u!1 &1351409649
 GameObject:
   m_ObjectHideFlags: 0
