@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class TrendManager : MonoBehaviour
 {
+    public static TrendManager instance = null;
     float degree;
     public float inSeason;
     public float passSeason;
