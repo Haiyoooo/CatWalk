@@ -440,12 +440,12 @@ PrefabInstance:
     - target: {fileID: 835744635720740310, guid: 11c158a1ae4cac14aba8f82e2797122e,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.373
+      value: 2.41
       objectReference: {fileID: 0}
     - target: {fileID: 835744635720740310, guid: 11c158a1ae4cac14aba8f82e2797122e,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.83
+      value: 4.58
       objectReference: {fileID: 0}
     - target: {fileID: 835744635720740310, guid: 11c158a1ae4cac14aba8f82e2797122e,
         type: 3}
@@ -504,7 +504,6 @@ GameObject:
   m_Component:
   - component: {fileID: 283029949}
   - component: {fileID: 283029950}
-  - component: {fileID: 283029951}
   m_Layer: 0
   m_Name: City2
   m_TagString: City
@@ -574,19 +573,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &283029951
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 283029948}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed7a53fe61e5d50458f3eb1b0a10a35c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isEmpty: 1
 --- !u!1 &304154893
 GameObject:
   m_ObjectHideFlags: 0
@@ -635,7 +621,6 @@ GameObject:
   m_Component:
   - component: {fileID: 314138171}
   - component: {fileID: 314138172}
-  - component: {fileID: 314138173}
   m_Layer: 0
   m_Name: City3
   m_TagString: City
@@ -705,19 +690,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &314138173
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 314138170}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed7a53fe61e5d50458f3eb1b0a10a35c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isEmpty: 1
 --- !u!1001 &327900149
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -733,12 +705,12 @@ PrefabInstance:
     - target: {fileID: 945904642881673510, guid: e6295185a01ad184d82522993475a07e,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.81
+      value: -1.8928
       objectReference: {fileID: 0}
     - target: {fileID: 945904642881673510, guid: e6295185a01ad184d82522993475a07e,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.6
+      value: 4.598
       objectReference: {fileID: 0}
     - target: {fileID: 945904642881673510, guid: e6295185a01ad184d82522993475a07e,
         type: 3}
@@ -785,6 +757,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 945904642881673510, guid: e6295185a01ad184d82522993475a07e,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.03282468
+      objectReference: {fileID: 0}
+    - target: {fileID: 945904642881673510, guid: e6295185a01ad184d82522993475a07e,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.03355018
+      objectReference: {fileID: 0}
     - target: {fileID: 945904642881673511, guid: e6295185a01ad184d82522993475a07e,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -799,12 +781,17 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 4a8a44fed326c824d9ead630fc0fab51,
+      objectReference: {fileID: 21300000, guid: 2c1135efed50c604282684dc17a5cb29,
         type: 3}
-    - target: {fileID: 4854006287314692748, guid: e6295185a01ad184d82522993475a07e,
+    - target: {fileID: 945904642881673512, guid: e6295185a01ad184d82522993475a07e,
         type: 3}
-      propertyPath: correctItems
-      value: 0
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 19.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 945904642881673512, guid: e6295185a01ad184d82522993475a07e,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 19.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6295185a01ad184d82522993475a07e, type: 3}
@@ -2106,12 +2093,12 @@ PrefabInstance:
     - target: {fileID: 945904642881673510, guid: e6295185a01ad184d82522993475a07e,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.08
+      value: -0.6077
       objectReference: {fileID: 0}
     - target: {fileID: 945904642881673510, guid: e6295185a01ad184d82522993475a07e,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.6
+      value: 4.5732
       objectReference: {fileID: 0}
     - target: {fileID: 945904642881673510, guid: e6295185a01ad184d82522993475a07e,
         type: 3}
@@ -2158,6 +2145,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 945904642881673510, guid: e6295185a01ad184d82522993475a07e,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.03355018
+      objectReference: {fileID: 0}
+    - target: {fileID: 945904642881673510, guid: e6295185a01ad184d82522993475a07e,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.03282468
+      objectReference: {fileID: 0}
     - target: {fileID: 945904642881673511, guid: e6295185a01ad184d82522993475a07e,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -2172,12 +2169,22 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 4a8a44fed326c824d9ead630fc0fab51,
+      objectReference: {fileID: 21300000, guid: 2c1135efed50c604282684dc17a5cb29,
         type: 3}
     - target: {fileID: 4854006287314692748, guid: e6295185a01ad184d82522993475a07e,
         type: 3}
       propertyPath: correctItems
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 945904642881673512, guid: e6295185a01ad184d82522993475a07e,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 19.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 945904642881673512, guid: e6295185a01ad184d82522993475a07e,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 19.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6295185a01ad184d82522993475a07e, type: 3}
@@ -2369,12 +2376,12 @@ PrefabInstance:
     - target: {fileID: 945904642881673510, guid: e6295185a01ad184d82522993475a07e,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.95
+      value: -1.2483
       objectReference: {fileID: 0}
     - target: {fileID: 945904642881673510, guid: e6295185a01ad184d82522993475a07e,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.6
+      value: 4.5732
       objectReference: {fileID: 0}
     - target: {fileID: 945904642881673510, guid: e6295185a01ad184d82522993475a07e,
         type: 3}
@@ -2421,6 +2428,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 945904642881673510, guid: e6295185a01ad184d82522993475a07e,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.03355018
+      objectReference: {fileID: 0}
+    - target: {fileID: 945904642881673510, guid: e6295185a01ad184d82522993475a07e,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.03282468
+      objectReference: {fileID: 0}
     - target: {fileID: 945904642881673511, guid: e6295185a01ad184d82522993475a07e,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -2435,12 +2452,22 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 4a8a44fed326c824d9ead630fc0fab51,
+      objectReference: {fileID: 21300000, guid: 2c1135efed50c604282684dc17a5cb29,
         type: 3}
     - target: {fileID: 4854006287314692748, guid: e6295185a01ad184d82522993475a07e,
         type: 3}
       propertyPath: correctItems
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 945904642881673512, guid: e6295185a01ad184d82522993475a07e,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.63
+      objectReference: {fileID: 0}
+    - target: {fileID: 945904642881673512, guid: e6295185a01ad184d82522993475a07e,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.66
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6295185a01ad184d82522993475a07e, type: 3}
@@ -2594,7 +2621,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1005667469}
   - component: {fileID: 1005667470}
-  - component: {fileID: 1005667471}
   m_Layer: 0
   m_Name: City8
   m_TagString: City
@@ -2664,19 +2690,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1005667471
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1005667468}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed7a53fe61e5d50458f3eb1b0a10a35c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isEmpty: 1
 --- !u!1 &1021157943
 GameObject:
   m_ObjectHideFlags: 0
@@ -2687,7 +2700,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1021157944}
   - component: {fileID: 1021157945}
-  - component: {fileID: 1021157946}
   m_Layer: 0
   m_Name: City1
   m_TagString: City
@@ -2757,19 +2769,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1021157946
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1021157943}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed7a53fe61e5d50458f3eb1b0a10a35c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isEmpty: 1
 --- !u!1 &1076501206
 GameObject:
   m_ObjectHideFlags: 0
@@ -3241,7 +3240,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1240878822}
   - component: {fileID: 1240878823}
-  - component: {fileID: 1240878824}
   m_Layer: 0
   m_Name: City5
   m_TagString: City
@@ -3311,19 +3309,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1240878824
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1240878821}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed7a53fe61e5d50458f3eb1b0a10a35c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isEmpty: 1
 --- !u!1001 &1299813399
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3433,7 +3418,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1326576353}
   - component: {fileID: 1326576354}
-  - component: {fileID: 1326576355}
   m_Layer: 0
   m_Name: City4
   m_TagString: City
@@ -3503,19 +3487,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1326576355
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1326576352}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed7a53fe61e5d50458f3eb1b0a10a35c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isEmpty: 1
 --- !u!1 &1351409649
 GameObject:
   m_ObjectHideFlags: 0
@@ -3994,7 +3965,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1516914296}
   - component: {fileID: 1516914297}
-  - component: {fileID: 1516914298}
   m_Layer: 0
   m_Name: City6
   m_TagString: City
@@ -4064,19 +4034,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1516914298
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1516914295}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed7a53fe61e5d50458f3eb1b0a10a35c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isEmpty: 1
 --- !u!1 &1524555645
 GameObject:
   m_ObjectHideFlags: 0
@@ -4344,7 +4301,7 @@ PrefabInstance:
     - target: {fileID: 5881061401034424297, guid: 1afdc0f4803143e4e87b715d87048a0e,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -4.4200134
+      value: -4.42
       objectReference: {fileID: 0}
     - target: {fileID: 5881061401034424297, guid: 1afdc0f4803143e4e87b715d87048a0e,
         type: 3}
@@ -4542,7 +4499,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1681713953}
   - component: {fileID: 1681713954}
-  - component: {fileID: 1681713955}
   m_Layer: 0
   m_Name: City7
   m_TagString: City
@@ -4612,19 +4568,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1681713955
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1681713952}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed7a53fe61e5d50458f3eb1b0a10a35c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isEmpty: 1
 --- !u!1001 &1731849677
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4640,12 +4583,12 @@ PrefabInstance:
     - target: {fileID: 835744635720740310, guid: 11c158a1ae4cac14aba8f82e2797122e,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.59
+      value: 3.627
       objectReference: {fileID: 0}
     - target: {fileID: 835744635720740310, guid: 11c158a1ae4cac14aba8f82e2797122e,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.83
+      value: 4.58
       objectReference: {fileID: 0}
     - target: {fileID: 835744635720740310, guid: 11c158a1ae4cac14aba8f82e2797122e,
         type: 3}
@@ -5499,12 +5442,12 @@ PrefabInstance:
     - target: {fileID: 835744635720740310, guid: 11c158a1ae4cac14aba8f82e2797122e,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.19
+      value: 1.2270002
       objectReference: {fileID: 0}
     - target: {fileID: 835744635720740310, guid: 11c158a1ae4cac14aba8f82e2797122e,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.83
+      value: 4.58
       objectReference: {fileID: 0}
     - target: {fileID: 835744635720740310, guid: 11c158a1ae4cac14aba8f82e2797122e,
         type: 3}
@@ -5555,6 +5498,16 @@ PrefabInstance:
         type: 3}
       propertyPath: correctItems
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3871854816797552947, guid: 11c158a1ae4cac14aba8f82e2797122e,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 3.33
+      objectReference: {fileID: 0}
+    - target: {fileID: 3871854816797552947, guid: 11c158a1ae4cac14aba8f82e2797122e,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 2.59
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 11c158a1ae4cac14aba8f82e2797122e, type: 3}

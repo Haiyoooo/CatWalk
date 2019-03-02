@@ -28,8 +28,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2650468526807148236}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.0201535, y: 2.8392437, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -8.3161, y: 3.8199, z: 0}
+  m_LocalScale: {x: 0.2216466, y: 0.24273494, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -71,7 +71,7 @@ SpriteRenderer:
   m_SortingLayerID: 1910586061
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 31ef1b158726c8c42acfa5e8214b7a97, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 614813ec56aca8342b97bbbbc371d7ac, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -97,7 +97,8 @@ MonoBehaviour:
   thisPartyState: 0
   correctItems: 1
   hints: []
-  successPopUp: {fileID: 100000, guid: 4aac74e2916cb8140ae7efa4e8838d4f, type: 3}
+  successPopUp: {fileID: 1910181527918815715, guid: 4aac74e2916cb8140ae7efa4e8838d4f,
+    type: 3}
   superSuccessPopUp: {fileID: 8067101070582754992, guid: 7fefdb9a0e6e2974b8136efcd6c11268,
     type: 3}
   failPopUp: {fileID: 240324955938900470, guid: 959e96668534d1d4ca4bc631724c8aba,
@@ -118,9 +119,9 @@ BoxCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
+    border: {x: 0, y: 0, z: 0.01, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.06, y: 1.06}
+    oldSize: {x: 3.33, y: 2.59}
     newSize: {x: 1.06, y: 1.06}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
