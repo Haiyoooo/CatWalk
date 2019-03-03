@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class TestSpawn : MonoBehaviour
+public class SpawnManager : MonoBehaviour
 {
     public GameObject[] cities;
     public GameObject jobPrefab;
@@ -38,21 +38,21 @@ public class TestSpawn : MonoBehaviour
         GameObject newEvent;
         if (index == 1)
         {
-            obj.GetComponent<TestCity>().type = TestCity.cityType.job;
+            obj.GetComponent<City>().type = City.cityType.job;
             //obj.GetComponent<Image>().color = Color.blue;
             newEvent = Instantiate(jobPrefab, obj.transform.position, Quaternion.identity);
             newEvent.transform.parent = obj.transform;
         }
         if (index == 2)
         {
-            obj.GetComponent<TestCity>().type = TestCity.cityType.party;
+            obj.GetComponent<City>().type = City.cityType.party;
             //obj.GetComponent<Image>().color = Color.red;
             newEvent = Instantiate(partyPrefab, obj.transform.position, Quaternion.identity);
             newEvent.transform.parent = obj.transform;
         }
         if (index == 3)
         {
-            obj.GetComponent<TestCity>().type = TestCity.cityType.none;
+            obj.GetComponent<City>().type = City.cityType.none;
             //obj.GetComponent<Image>().color = Color.white;
             newEvent = Instantiate(emptyPrefab, obj.transform.position, Quaternion.identity);
             newEvent.transform.parent = obj.transform;
@@ -76,7 +76,7 @@ public class TestSpawn : MonoBehaviour
         for(int i = 0; i < 8; i++)
             if(job[i] >= 0)
                 //if (cities[job[i]].GetComponent<Image>().color == Color.white)
-                if(cities[job[i]].GetComponent<TestCity>().type == TestCity.cityType.none)
+                if(cities[job[i]].GetComponent<City>().type == City.cityType.none)
                 {
                     Destroy(cities[job[i]].transform.GetChild(0).gameObject, 0.2f);
                     Debug.Log("destroied");
@@ -85,7 +85,7 @@ public class TestSpawn : MonoBehaviour
                 }
 
         //if (cities[party[0]].GetComponent<Image>().color == Color.white)
-        if (cities[party[0]].GetComponent<TestCity>().type == TestCity.cityType.none)
+        if (cities[party[0]].GetComponent<City>().type == City.cityType.none)
         {
             if (jobNum < 8)
             {
@@ -108,7 +108,7 @@ public class TestSpawn : MonoBehaviour
                 
         }
         //if (cities[party[1]].GetComponent<Image>().color == Color.white)
-        if (cities[party[1]].GetComponent<TestCity>().type == TestCity.cityType.none)
+        if (cities[party[1]].GetComponent<City>().type == City.cityType.none)
         {
             if (jobNum < 8)
             {

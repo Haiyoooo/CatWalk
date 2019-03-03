@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class TestCity : MonoBehaviour
+public class City : MonoBehaviour
 {
     //public void FinishJob()
     //{
