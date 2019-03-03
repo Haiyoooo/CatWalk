@@ -56,7 +56,7 @@ public class Job : MonoBehaviour
     private void OnMouseOver()
     {
         childObj.gameObject.SetActive(true);
-        transform.localScale += new Vector3(0.1f, 0.1f, 0);
+        //transform.localScale += new Vector3(0.1f, 0.1f, 0);
     }
 
     private void OnMouseExit()
