@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
+
+
 public class Job : MonoBehaviour
 {
-
-
     public enum jobState { AVALIABLE, SUCCESS, SUPERSUCCESS, FAIL };
     public jobState thisJobState = jobState.AVALIABLE;
     private jobPopUp jobPopUp; //refer to pop-up script
@@ -28,13 +29,21 @@ public class Job : MonoBehaviour
 
     [Header("Disasppear Animation")]
     [SerializeField] private GameObject fireworksFX;
-    private 
+
+    [Header("Tooltips Setup")]
+    [SerializeField] private Text nameTooltip;
+    [SerializeField] private Text salaryTooltip;
+    private string jobName = "Zac's Pte Ltd";
+    
     // Start is called before the first frame update
     void Start()
     {
         jobPopUp = gameObject.GetComponent<jobPopUp>();
         rend = gameObject.GetComponent<SpriteRenderer>();
         rend.color = Color.white;
+
+        nameTooltip.text = jobName;
+        salaryTooltip.text = salary.ToString();
     }
 
     
@@ -108,7 +117,6 @@ public class Job : MonoBehaviour
             //Destroy(FX.gameObject, 3f);
             Debug.Log("Disappear" + gameObject.name);
             Destroy(gameObject, 0.2f);
-            SpawnManager.totalJobs--;
         }
     }
 }

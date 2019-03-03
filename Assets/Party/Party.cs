@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
+
 
 public class Party : MonoBehaviour
 {
 
     public enum partyState { AVALIABLE, SUCCESS, SUPERSUCCESS, FAIL };
     public partyState thisPartyState = partyState.AVALIABLE;
-
 
     [Header("For Testing")]
     [Tooltip("Number of clothing items currently worn which are in Theme")]
@@ -26,9 +27,18 @@ public class Party : MonoBehaviour
     [Header("Disasppear Animation")]
     [SerializeField] private GameObject fireworksFX;
 
+    [Header("Tooltips Setup")]
+    [SerializeField] private Text nameTooltip;
+    [SerializeField] private Text themeTooltip;
+
+
+    private string partyName = "Yi Tong's 21st"; //ZAC
+    private string theme = "Mario"; //ZAC : not sure if this should be string or enum
+
     void Start()
     {
-
+        nameTooltip.text = partyName;
+        themeTooltip.text = theme;
     }
 
     //Tool tip
@@ -79,7 +89,6 @@ public class Party : MonoBehaviour
             //Destroy(FX.gameObject, 3f);
             Debug.Log("Disappear" + gameObject.name);
             Destroy(gameObject, 0.2f);
-            SpawnManager.totalParties--;
         }
     }
 }

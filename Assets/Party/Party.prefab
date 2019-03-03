@@ -345,8 +345,7 @@ GameObject:
   - component: {fileID: 1253197869393691444}
   - component: {fileID: 6186050553272161959}
   - component: {fileID: 7769150756287140082}
-  - component: {fileID: 277094790512985106}
-  - component: {fileID: 1899582906421019563}
+  - component: {fileID: 1942229988641955111}
   m_Layer: 0
   m_Name: Party
   m_TagString: Untagged
@@ -439,6 +438,8 @@ MonoBehaviour:
   failPopUp: {fileID: 240324955938900470, guid: 959e96668534d1d4ca4bc631724c8aba,
     type: 3}
   fireworksFX: {fileID: 0}
+  nameTooltip: {fileID: 997772482}
+  themeTooltip: {fileID: 380538951}
 --- !u!50 &7769150756287140082
 Rigidbody2D:
   serializedVersion: 4
@@ -460,7 +461,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &277094790512985106
+--- !u!61 &1942229988641955111
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -473,36 +474,10 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.1665, y: -0.1295}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0.001, w: 0}
-    pivot: {x: 0, y: 1}
-    oldSize: {x: 0.333, y: 0.259}
-    newSize: {x: 1.06, y: 1.06}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.333, y: 0.259}
-  m_EdgeRadius: 0
---- !u!61 &1899582906421019563
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2650468526807148236}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.1665, y: -0.1295}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0.001, w: 0}
-    pivot: {x: 0, y: 1}
+    pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 0.333, y: 0.259}
     newSize: {x: 1.06, y: 1.06}
     adaptiveTilingThreshold: 0.5

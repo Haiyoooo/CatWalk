@@ -107,6 +107,8 @@ MonoBehaviour:
     type: 3}
   fireworksFX: {fileID: 2593405589089741789, guid: 2c1ae68e75909e04186ded2c3f28d136,
     type: 3}
+  nameTooltip: {fileID: 716384055182899069}
+  salaryTooltip: {fileID: 7344254847035978339}
 --- !u!50 &530243817402584221
 Rigidbody2D:
   serializedVersion: 4
