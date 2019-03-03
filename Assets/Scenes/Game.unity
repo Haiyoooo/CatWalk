@@ -1267,42 +1267,42 @@ MonoBehaviour:
   storeSpace: {fileID: 717911212}
   closetSpace: {fileID: 138496181}
   AllItemList:
-  - prefab: {fileID: 1833679522901875022, guid: 7499a8e86c045ea458729b0b51533cdc,
+  - prefab: {fileID: 4033900069754432056, guid: f39b034e87149c9488f2826213520efa,
       type: 3}
     cost: 3
-  - prefab: {fileID: 2779081703225607381, guid: a376e1d9aa425ea44a81c75eb9d34e8b,
+  - prefab: {fileID: 5254537916315319614, guid: 372ca658e50344f4386b82a000e11106,
       type: 3}
     cost: 4
-  - prefab: {fileID: 3338574476334180608, guid: 5c6b8966515694043a6503605dfa2a28,
+  - prefab: {fileID: 8248576141903073064, guid: fecb912ca229a754c8f0570f7e8cb397,
       type: 3}
     cost: 5
-  - prefab: {fileID: 3338574476334180608, guid: 5c6b8966515694043a6503605dfa2a28,
+  - prefab: {fileID: 8248576141903073064, guid: fecb912ca229a754c8f0570f7e8cb397,
       type: 3}
     cost: 5
-  - prefab: {fileID: 3338574476334180608, guid: 5c6b8966515694043a6503605dfa2a28,
+  - prefab: {fileID: 8248576141903073064, guid: fecb912ca229a754c8f0570f7e8cb397,
       type: 3}
     cost: 5
-  - prefab: {fileID: 3338574476334180608, guid: 5c6b8966515694043a6503605dfa2a28,
+  - prefab: {fileID: 8248576141903073064, guid: fecb912ca229a754c8f0570f7e8cb397,
       type: 3}
     cost: 5
-  - prefab: {fileID: 3338574476334180608, guid: 5c6b8966515694043a6503605dfa2a28,
+  - prefab: {fileID: 8248576141903073064, guid: fecb912ca229a754c8f0570f7e8cb397,
       type: 3}
     cost: 5
-  - prefab: {fileID: 3338574476334180608, guid: 5c6b8966515694043a6503605dfa2a28,
+  - prefab: {fileID: 8248576141903073064, guid: fecb912ca229a754c8f0570f7e8cb397,
       type: 3}
     cost: 5
-  - prefab: {fileID: 3338574476334180608, guid: 5c6b8966515694043a6503605dfa2a28,
+  - prefab: {fileID: 8248576141903073064, guid: fecb912ca229a754c8f0570f7e8cb397,
       type: 3}
     cost: 5
-  - prefab: {fileID: 3338574476334180608, guid: 5c6b8966515694043a6503605dfa2a28,
+  - prefab: {fileID: 8248576141903073064, guid: fecb912ca229a754c8f0570f7e8cb397,
       type: 3}
     cost: 5
-  - prefab: {fileID: 3338574476334180608, guid: 5c6b8966515694043a6503605dfa2a28,
+  - prefab: {fileID: 8248576141903073064, guid: fecb912ca229a754c8f0570f7e8cb397,
       type: 3}
     cost: 5
   storeItems: []
   closetItems: []
-  shopManager: {fileID: 0}
+  shopManager: {fileID: 1365139171}
 --- !u!212 &503240342
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2481,12 +2481,12 @@ PrefabInstance:
     - target: {fileID: 7688173126033494404, guid: 29f2fc98702d1a2408a726ca8fc8cd16,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.94
+      value: -6.71
       objectReference: {fileID: 0}
     - target: {fileID: 7688173126033494404, guid: 29f2fc98702d1a2408a726ca8fc8cd16,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.234
+      value: 4.3
       objectReference: {fileID: 0}
     - target: {fileID: 7688173126033494404, guid: 29f2fc98702d1a2408a726ca8fc8cd16,
         type: 3}
@@ -2825,12 +2825,12 @@ PrefabInstance:
     - target: {fileID: 6415534674455069435, guid: a09c175d062158347bb3d0560ed73dfb,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.993
+      value: -6
       objectReference: {fileID: 0}
     - target: {fileID: 6415534674455069435, guid: a09c175d062158347bb3d0560ed73dfb,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.204219
+      value: 4.3
       objectReference: {fileID: 0}
     - target: {fileID: 6415534674455069435, guid: a09c175d062158347bb3d0560ed73dfb,
         type: 3}
@@ -2879,6 +2879,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a09c175d062158347bb3d0560ed73dfb, type: 3}
+--- !u!1 &1365139171 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7688173126033494400, guid: 29f2fc98702d1a2408a726ca8fc8cd16,
+    type: 3}
+  m_PrefabInstance: {fileID: 1240489227}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1393390542
 GameObject:
   m_ObjectHideFlags: 0

@@ -5,7 +5,7 @@ using UnityEngine;
 public class CompanyManager : MonoBehaviour
 {
 
-    public enum trend { Western, Goth, Formal, Neon, Skater, Sporty, Cute, Graceful, Pirate, Southern, MiddleEast, Royal }
+    public enum trend { Western, Goth, Formal, Neon, Skater, Sporty, Cute, Graceful, Pirate, Southern, MiddleEast, Royal };
     [Header("accept and give money")]
     [Header("It Wants: What styles the company will")]
     [Header("want over all the games")]

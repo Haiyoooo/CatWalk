@@ -15,10 +15,10 @@ public class ItemBehavoir : MonoBehaviour
     [SerializeField] GameObject equipMark;
     GameObject checkMark;
 
-    [HideInInspector]
+    //[HideInInspector]
     public Text costText; // ERNES
 
-    enum trend { Western, Goth, Pirate/*, Formal, Neon, Skater, Sporty, Cute, Graceful, Southern, Royal */}
+    enum trend { Western, Goth, Formal, Neon, Skater, Sporty, Cute, Graceful, Pirate, Southern, MiddleEast, Royal };
     [SerializeField] trend style; 
     enum putOn { head, body };
     [SerializeField] putOn wornOn;
@@ -28,13 +28,13 @@ public class ItemBehavoir : MonoBehaviour
     {
        
         checkMark = Instantiate(equipMark, this.gameObject.transform);
-        checkMark.transform.position = transform.position + Vector3.up + Vector3.right;
+        checkMark.transform.position = transform.position + 0.8f*Vector3.up + 0.8f*Vector3.right; 
 
-        //Change Scale to 0, 0 ,0 
-        this.transform.localScale.Set(0f, 0f, 0f);
+        // start scale at (0, 0 ,0)
+        transform.localScale = Vector3.zero;
 
         cost = 1;
-        costText = gameObject.GetComponentInChildren<Text>();
+        //costText = gameObject.GetComponentInChildren<Text>();  ERNES, also can you make the buying sound a cha-ching sound, the pop gives no indication that money was exchanged
     }
 
     
@@ -42,7 +42,7 @@ public class ItemBehavoir : MonoBehaviour
     {
 
         //Display Cost on  Item
-        costText.text = cost + "FC";
+        //costText.text = cost + "FC";  ERNES
 
         Debug.Log(costText);
 
