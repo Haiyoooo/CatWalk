@@ -33,6 +33,7 @@ public class Job : MonoBehaviour
     [Header("Tooltips Setup")]
     [SerializeField] private Text nameTooltip;
     [SerializeField] private Text salaryTooltip;
+    private Transform childObj;
     private string jobName = "Zac's Pte Ltd";
     
     // Start is called before the first frame update
@@ -44,22 +45,23 @@ public class Job : MonoBehaviour
 
         nameTooltip.text = jobName;
         salaryTooltip.text = salary.ToString();
+
+        //tooltip is a child object of this event prefab
+        childObj = transform.Find("Tooltip(Canvas)");
+        childObj.gameObject.SetActive(false);
     }
 
-    
+
     //Tool tip
     private void OnMouseOver()
     {
-        //DISPLAY TOOL TIP
-        Debug.Log("TOOLTIP");
-        rend.color = Color.green;
-        mouseOn = true;
+        childObj.gameObject.SetActive(true);
+        transform.localScale += new Vector3(0.1f, 0.1f, 0);
     }
 
     private void OnMouseExit()
     {
-        rend.color = Color.white;
-        mouseOn = false;
+        childObj.gameObject.SetActive(false);
     }
 
 

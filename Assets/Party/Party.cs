@@ -30,8 +30,7 @@ public class Party : MonoBehaviour
     [Header("Tooltips Setup")]
     [SerializeField] private Text nameTooltip;
     [SerializeField] private Text themeTooltip;
-
-
+    private Transform childObj;
     private string partyName = "Yi Tong's 21st"; //ZAC
     private string theme = "Mario"; //ZAC : not sure if this should be string or enum
 
@@ -39,12 +38,21 @@ public class Party : MonoBehaviour
     {
         nameTooltip.text = partyName;
         themeTooltip.text = theme;
+        
+        //tooltip is a child object of this event prefab
+        childObj = transform.Find("Tooltip(Canvas)");
+        childObj.gameObject.SetActive(false);
     }
 
     //Tool tip
     private void OnMouseOver()
     {
-        Debug.Log("TOOLTIP");
+        childObj.gameObject.SetActive(true);
+    }
+
+    private void OnMouseExit()
+    {
+        childObj.gameObject.SetActive(false);
     }
 
     //Fail & Success Conditions
