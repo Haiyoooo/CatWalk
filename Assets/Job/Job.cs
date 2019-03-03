@@ -15,7 +15,7 @@ public class Job : MonoBehaviour
 
     [Header("For Testing")]
     [Tooltip("Number of clothing items currently worn which the company likes")]
-    [Range(0,2)]
+    [Range(0, 2)]
     [SerializeField] private int correctItems = 0;
 
     [Header("Job Stats")]
@@ -34,7 +34,7 @@ public class Job : MonoBehaviour
     [SerializeField] private Text nameTooltip;
     [SerializeField] private Text salaryTooltip;
     private Transform childObj;
-    private string jobName = "Zac's Pte Ltd";
+    [SerializeField] private string jobName;
     
     // Start is called before the first frame update
     void Start()
@@ -43,6 +43,7 @@ public class Job : MonoBehaviour
         rend = gameObject.GetComponent<SpriteRenderer>();
         rend.color = Color.white;
 
+        jobName = GameObject.FindGameObjectWithTag("Company Manager").GetComponent<CompanyManager>().CompanyList[Random.Range(0, 9)].name;
         nameTooltip.text = jobName;
         salaryTooltip.text = salary.ToString();
 

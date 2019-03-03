@@ -32,12 +32,16 @@ public class Party : MonoBehaviour
     [SerializeField] private Text themeTooltip;
     private Transform childObj;
     private string partyName = "Yi Tong's 21st"; //ZAC
-    private string theme = "Mario"; //ZAC : not sure if this should be string or enum
+    private CompanyManager.trend theme;
+    private string themeString;
 
     void Start()
     {
+        theme = (CompanyManager.trend)Random.Range(0, 12); // picks a random theme
+        themeString = theme.ToString(); // gets the theme name string to display
+
         nameTooltip.text = partyName;
-        themeTooltip.text = theme;
+        themeTooltip.text = themeString;
         
         //tooltip is a child object of this event prefab
         childObj = transform.Find("Tooltip(Canvas)");

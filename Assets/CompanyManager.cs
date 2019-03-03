@@ -26,7 +26,7 @@ public class CompanyManager : MonoBehaviour
 
             comp.itWants[0] = comp.itLikes[rand1]; // add the likes index to the wants list
             comp.itWants[1] = comp.itLikes[rand2]; // add the likes index to the wants list
-
+            string test = comp.itWants[1].ToString();
 
         }
 
