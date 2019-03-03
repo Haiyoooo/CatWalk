@@ -6,7 +6,7 @@ public class ItemBehavoir : MonoBehaviour
 {
 
     private bool mouseOver = false;
-    bool equipped = false;
+    public bool equipped = false;
     public int cost = 1;
     public enum foundIn { store, closet };
     public foundIn location = foundIn.store;
@@ -30,16 +30,30 @@ public class ItemBehavoir : MonoBehaviour
     void Update()
     {
         // Buying Code
-        if ( mouseOver && (location == foundIn.store) && Input.GetMouseButtonDown(0) )
+        if (mouseOver && (location == foundIn.store) && Input.GetMouseButtonDown(0))
         {
             location = foundIn.closet;
             //AUDIO
             //money -= cost;
         }
 
-        
+        // Unequip Code
+        else if (mouseOver && (location == foundIn.closet) && Input.GetMouseButtonDown(0) && equipped)
+        {
+            equipped = !equipped;
+            //AUDIO
+            if (wornOn == putOn.head) // head
+            {
+                GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerBehavior>().headItem = null;
+            }
+            else if (wornOn == putOn.body) // body
+            {
+                GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerBehavior>().bodyItem = null;
+            }
+        }
+
         // Equip Code
-        else if ( mouseOver && (location == foundIn.closet) && Input.GetMouseButtonDown(0) )
+        else if (mouseOver && (location == foundIn.closet) && Input.GetMouseButtonDown(0))
         {
             // if this is a headpiece, look through all the items that are also 
             // headpieces and unequip the one that was previously equipped

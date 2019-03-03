@@ -10,13 +10,14 @@ public class PlayerBehavior : MonoBehaviour
 
     void Start()
     {
-        headItem = this.gameObject.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite;
-        bodyItem = this.gameObject.transform.GetChild(1).GetComponent<SpriteRenderer>().sprite;
+        //headItem = this.gameObject.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite;
+        //bodyItem = this.gameObject.transform.GetChild(1).GetComponent<SpriteRenderer>().sprite;
     }
 
     
     void Update()
     {
-        
+        this.gameObject.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = headItem;
+        this.gameObject.transform.GetChild(1).GetComponent<SpriteRenderer>().sprite = bodyItem;
     }
 }
