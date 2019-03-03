@@ -13,6 +13,7 @@ public class ItemBehavoir : MonoBehaviour
     [SerializeField] Sprite wornItemSprite;
     [SerializeField] GameObject equipMark;
     GameObject checkMark;
+    GameObject costText; // ERNES
 
     enum trend { Western, Goth, Pirate/*, Formal, Neon, Skater, Sporty, Cute, Graceful, Southern, Royal */}
     [SerializeField] trend style; 
