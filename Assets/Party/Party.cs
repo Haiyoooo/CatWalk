@@ -97,6 +97,7 @@ public class Party : MonoBehaviour
             //Destroy(FX.gameObject, 3f);
             Debug.Log("Disappear" + gameObject.name);
             //Destroy(gameObject, 0.2f);
+            transform.GetComponentInParent<TestCity>().type = TestCity.cityType.none;
         }
     }
 }

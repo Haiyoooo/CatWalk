@@ -35,26 +35,29 @@ public class TestSpawn : MonoBehaviour
 
     void ChangeStatus(GameObject obj, int index)
     {
-        //int index = Random.Range(1, 4);
+        GameObject newEvent;
         if (index == 1)
         {
             obj.GetComponent<TestCity>().type = TestCity.cityType.job;
             //obj.GetComponent<Image>().color = Color.blue;
-            Instantiate(jobPrefab, obj.transform.position, Quaternion.identity);
+            newEvent = Instantiate(jobPrefab, obj.transform.position, Quaternion.identity);
+            newEvent.transform.parent = obj.transform;
         }
         if (index == 2)
         {
             obj.GetComponent<TestCity>().type = TestCity.cityType.party;
             //obj.GetComponent<Image>().color = Color.red;
-            Instantiate(partyPrefab, obj.transform.position, Quaternion.identity);
+            newEvent = Instantiate(partyPrefab, obj.transform.position, Quaternion.identity);
+            newEvent.transform.parent = obj.transform;
         }
         if (index == 3)
         {
             obj.GetComponent<TestCity>().type = TestCity.cityType.none;
             //obj.GetComponent<Image>().color = Color.white;
-            Instantiate(emptyPrefab, obj.transform.position, Quaternion.identity);
+            newEvent = Instantiate(emptyPrefab, obj.transform.position, Quaternion.identity);
+            newEvent.transform.parent = obj.transform;
         }
-
+        
     }
 
     void RandomSpawn()
@@ -75,7 +78,8 @@ public class TestSpawn : MonoBehaviour
                 //if (cities[job[i]].GetComponent<Image>().color == Color.white)
                 if(cities[job[i]].GetComponent<TestCity>().type == TestCity.cityType.none)
                 {
-                    Destroy(cities[job[i]].gameObject, 0.2f);
+                    Destroy(cities[job[i]].transform.GetChild(0).gameObject, 0.2f);
+                    Debug.Log("destroied");
                     job[i] = -1;
                     jobNum--;
                 }
@@ -86,7 +90,8 @@ public class TestSpawn : MonoBehaviour
             if (jobNum < 8)
             {
                 lastParty = party[0];
-                Destroy(cities[lastParty].gameObject, 0.2f);
+                Destroy(cities[lastParty].transform.GetChild(0).gameObject, 0.2f);
+                Debug.Log("destroied");
                 do { party[0] = Random.Range(0, 10); } while (CheckConflict(party[0]) || party[0] == party[1] || party[0] == lastParty);
                 ChangeStatus(cities[party[0]], 2);
                 do { job[jobNum] = Random.Range(0, 10); } while (CheckConflict(job[jobNum]) || job[jobNum] == party[0] || job[jobNum] == party[1]);
@@ -96,7 +101,8 @@ public class TestSpawn : MonoBehaviour
             else
             {
                 lastParty = party[0];
-                Destroy(cities[lastParty].gameObject, 0.2f);
+                Destroy(cities[lastParty].transform.GetChild(0).gameObject, 0.2f);
+                Debug.Log("destroied");
                 ChangeStatus(cities[party[0]], 2);
             }
                 
@@ -107,7 +113,8 @@ public class TestSpawn : MonoBehaviour
             if (jobNum < 8)
             {
                 lastParty = party[1];
-                Destroy(cities[lastParty].gameObject, 0.2f);
+                Destroy(cities[lastParty].transform.GetChild(0).gameObject, 0.2f);
+                Debug.Log("destroied");
                 do { party[1] = Random.Range(0, 10); } while (CheckConflict(party[1]) || party[1] == party[0] || party[1] == lastParty);
                 ChangeStatus(cities[party[1]], 2);
                 do { job[jobNum] = Random.Range(0, 10); } while (CheckConflict(job[jobNum]) || job[jobNum] == party[0] || job[jobNum] == party[1]);
@@ -117,7 +124,8 @@ public class TestSpawn : MonoBehaviour
             else
             {
                 lastParty = party[1];
-                Destroy(cities[lastParty].gameObject, 0.2f);
+                Destroy(cities[lastParty].transform.GetChild(0).gameObject, 0.2f);
+                Debug.Log("destroied");
                 ChangeStatus(cities[party[1]], 2);
             }
         }
