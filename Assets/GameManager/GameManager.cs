@@ -21,6 +21,11 @@ public class GameManager : MonoBehaviour
     private Text debtText;
     private Text fameStatusText;
 
+    public AudioSource[] sounds;
+
+    public AudioSource equip;
+    public AudioSource unequip;
+
     private void Awake()
     {
         if (instance == null)
@@ -35,6 +40,13 @@ public class GameManager : MonoBehaviour
         cashMoney = GameObject.Find("Cash").GetComponent<Text>();
         debtText = GameObject.Find("Debt").GetComponent<Text>();
         fameStatusText = GameObject.Find("Fame Status").GetComponent<Text>();
+
+        sounds = GetComponents<AudioSource>();
+
+        //AUDIO
+        equip = sounds[1];
+        unequip = sounds[2];
+
     }
 
 

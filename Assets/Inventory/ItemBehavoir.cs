@@ -41,7 +41,8 @@ public class ItemBehavoir : MonoBehaviour
         else if (mouseOver && (location == foundIn.closet) && Input.GetMouseButtonDown(0) && equipped)
         {
             equipped = !equipped;
-            //AUDIO
+            GameManager.instance.unequip.Play();
+
             if (wornOn == putOn.head) // head
             {
                 GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerBehavior>().headItem = null;
@@ -90,7 +91,7 @@ public class ItemBehavoir : MonoBehaviour
                 }
             }
             equipped = true;
-            //AUDIO
+            GameManager.instance.equip.Play();
         }
 
         checkMark.SetActive(equipped);
