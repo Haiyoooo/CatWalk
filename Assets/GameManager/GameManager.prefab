@@ -47,3 +47,4 @@ MonoBehaviour:
   fishCoin: 0
   countDown: 5
   timeBar: {fileID: 0}
+  debt: 0

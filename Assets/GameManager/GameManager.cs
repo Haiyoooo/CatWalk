@@ -7,12 +7,13 @@ using TMPro;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance = null;
-    public int day = 0;
+    public float day = 0;
     public int fishCoin = 10;
-    public float countDown = 5;
+    private float countDown = 7;
     public Slider timeBar;
     private float timeValue;
     private float timeLength;
+    private float dayIndex = 1;
 
     public int debt;
 
@@ -39,8 +40,12 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        timeBar.value = ((day - 1) * (1 / (countDown - 1))) % countDown;
-        if (timeBar.value > 1) timeBar.value = 0;
+        dayIndex = day % countDown - 1;
+        if (day % countDown == 0)
+            timeBar.value = 1;
+        else
+            timeBar.value = dayIndex * (1 / (countDown - 1));
+        //if (timeBar.value > 1) timeBar.value = 0;
 
         displayText();
     }

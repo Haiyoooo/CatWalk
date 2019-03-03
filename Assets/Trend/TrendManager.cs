@@ -7,9 +7,9 @@ public class TrendManager : MonoBehaviour
     public static TrendManager instance = null;
     float degree;
     int[] style;
-    public int inSeason;
-    public int passSeason;
-    public int nextSeason;
+    public float inSeason;
+    public float passSeason;
+    public float nextSeason;
     
     // Start is called before the first frame update
     void Start()
