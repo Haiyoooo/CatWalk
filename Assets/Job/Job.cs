@@ -107,7 +107,7 @@ public class Job : MonoBehaviour
             //var FX = Instantiate(fireworksFX, new Vector2(transform.position.x, transform.position.y), Quaternion.identity);
             //Destroy(FX.gameObject, 3f);
             Debug.Log("Disappear" + gameObject.name);
-            Destroy(gameObject, 1f);
+            Destroy(gameObject, 0.5f);
             SpawnManager.totalJobs--;
         }
     }
