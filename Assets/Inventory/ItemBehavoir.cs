@@ -34,7 +34,7 @@ public class ItemBehavoir : MonoBehaviour
         if (mouseOver && (location == foundIn.store) && Input.GetMouseButtonDown(0))
         {
             location = foundIn.closet;
-            GameManager.instance.item_select.Play();
+            AudioManager.instance.item_select.Play();
             //money -= cost;
         }
 
@@ -42,7 +42,7 @@ public class ItemBehavoir : MonoBehaviour
         else if (mouseOver && (location == foundIn.closet) && Input.GetMouseButtonDown(0) && equipped)
         {
             equipped = !equipped;
-            GameManager.instance.unequip.Play();
+            AudioManager.instance.unequip.Play();
 
             if (wornOn == putOn.head) // head
             {
@@ -92,7 +92,7 @@ public class ItemBehavoir : MonoBehaviour
                 }
             }
             equipped = true;
-            GameManager.instance.equip.Play();
+            AudioManager.instance.equip.Play();
         }
 
         checkMark.SetActive(equipped);

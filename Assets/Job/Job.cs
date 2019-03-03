@@ -84,6 +84,9 @@ public class Job : MonoBehaviour
                 var tempPopUp = Instantiate(successPopUp); //pop up message
                 tempPopUp.transform.parent = gameObject.transform;
                 Debug.Log("Success." + GameManager.instance.day + " $" + GameManager.instance.fishCoin);
+
+                //AUDIO
+                //AudioManager.instance.job_success.Play();
             }
 
             //Fail
@@ -94,6 +97,9 @@ public class Job : MonoBehaviour
                 var tempPopUp = Instantiate(failPopUp); //pop up message
                 tempPopUp.transform.parent = gameObject.transform; 
                 Debug.Log("Fail." + GameManager.instance.day + " $" + GameManager.instance.fishCoin);  
+
+                //AUDIO
+
             }
 
             //Super Success
