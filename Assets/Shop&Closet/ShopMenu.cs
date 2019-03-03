@@ -23,11 +23,22 @@ public class ShopMenu : MonoBehaviour
         {
             opened = !opened;
             // code that changes the game manager to the store/inventory mode
+
+            //AUDIO
+            if (opened)
+            {
+                AudioManager.instance.open_shop.Play();
+            }
+            else
+            {
+                AudioManager.instance.close_shop.Play();
+            }
             
         }
 
         if (opened)
         {
+
             // closet icon moves to the top right of the screen
             Vector3 targetVector = new Vector3( -transform.position.x, transform.position.y, 0 );
             closetIcon.transform.position = Vector3.Lerp(closetIcon.transform.position, targetVector, 0.1f);

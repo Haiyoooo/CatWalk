@@ -86,7 +86,7 @@ public class Job : MonoBehaviour
                 Debug.Log("Success." + GameManager.instance.day + " $" + GameManager.instance.fishCoin);
 
                 //AUDIO
-                //AudioManager.instance.job_success.Play();
+                AudioManager.instance.job_success.Play();
             }
 
             //Fail
@@ -96,10 +96,10 @@ public class Job : MonoBehaviour
                 thisJobState = jobState.FAIL;
                 var tempPopUp = Instantiate(failPopUp); //pop up message
                 tempPopUp.transform.parent = gameObject.transform; 
-                Debug.Log("Fail." + GameManager.instance.day + " $" + GameManager.instance.fishCoin);  
+                Debug.Log("Fail." + GameManager.instance.day + " $" + GameManager.instance.fishCoin);
 
                 //AUDIO
-
+                AudioManager.instance.job_fail.Play();
             }
 
             //Super Success
