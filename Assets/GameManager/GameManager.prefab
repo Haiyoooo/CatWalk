@@ -51,13 +51,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   day: 0
-  fishCoin: 0
+  countDown: 7
   timeBar: {fileID: 0}
-  debt: 0
-  sounds: []
-  equip: {fileID: 0}
-  unequip: {fileID: 0}
-  item_select: {fileID: 0}
+  fishCoin: 10
+  debt: 20
+  cashText: {fileID: 0}
+  debtText: {fileID: 0}
+  endGame: {fileID: 0}
+  endGameText: {fileID: 0}
 --- !u!114 &3795843876292029058
 MonoBehaviour:
   m_ObjectHideFlags: 0
