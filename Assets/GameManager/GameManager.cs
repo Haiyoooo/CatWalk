@@ -42,6 +42,8 @@ public class GameManager : MonoBehaviour
         TimebarValue();
         DisplayCashDebt();
         PayOnDeadline();
+        if (day % countDown == 1)
+            isPaied = false;
     }
 
     private void TimebarValue()
@@ -61,7 +63,7 @@ public class GameManager : MonoBehaviour
 
     private void PayOnDeadline()
     {
-        if (day == countDown && !isPaied)
+        if (day % countDown == 0 && day > 1 && !isPaied)
         {
             fishCoin -= debt;
             isPaied = true;
