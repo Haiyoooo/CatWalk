@@ -75,6 +75,7 @@ public class TestSpawn : MonoBehaviour
                 //if (cities[job[i]].GetComponent<Image>().color == Color.white)
                 if(cities[job[i]].GetComponent<TestCity>().type == TestCity.cityType.none)
                 {
+                    Destroy(cities[job[i]].gameObject, 0.2f);
                     job[i] = -1;
                     jobNum--;
                 }
@@ -84,7 +85,8 @@ public class TestSpawn : MonoBehaviour
         {
             if (jobNum < 8)
             {
-                lastParty = party[1];
+                lastParty = party[0];
+                Destroy(cities[lastParty].gameObject, 0.2f);
                 do { party[0] = Random.Range(0, 10); } while (CheckConflict(party[0]) || party[0] == party[1] || party[0] == lastParty);
                 ChangeStatus(cities[party[0]], 2);
                 do { job[jobNum] = Random.Range(0, 10); } while (CheckConflict(job[jobNum]) || job[jobNum] == party[0] || job[jobNum] == party[1]);
@@ -92,7 +94,12 @@ public class TestSpawn : MonoBehaviour
                 jobNum++;
             }
             else
+            {
+                lastParty = party[0];
+                Destroy(cities[lastParty].gameObject, 0.2f);
                 ChangeStatus(cities[party[0]], 2);
+            }
+                
         }
         //if (cities[party[1]].GetComponent<Image>().color == Color.white)
         if (cities[party[1]].GetComponent<TestCity>().type == TestCity.cityType.none)
@@ -100,6 +107,7 @@ public class TestSpawn : MonoBehaviour
             if (jobNum < 8)
             {
                 lastParty = party[1];
+                Destroy(cities[lastParty].gameObject, 0.2f);
                 do { party[1] = Random.Range(0, 10); } while (CheckConflict(party[1]) || party[1] == party[0] || party[1] == lastParty);
                 ChangeStatus(cities[party[1]], 2);
                 do { job[jobNum] = Random.Range(0, 10); } while (CheckConflict(job[jobNum]) || job[jobNum] == party[0] || job[jobNum] == party[1]);
@@ -107,7 +115,11 @@ public class TestSpawn : MonoBehaviour
                 jobNum++;
             }
             else
+            {
+                lastParty = party[1];
+                Destroy(cities[lastParty].gameObject, 0.2f);
                 ChangeStatus(cities[party[1]], 2);
+            }
         }
     }
 
