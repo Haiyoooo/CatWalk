@@ -1644,7 +1644,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.7490196, g: 0.8117648, b: 0.9921569, a: 0}
+  m_BackGroundColor: {r: 0.80451226, g: 0.833135, b: 0.9528302, a: 0}
   m_projectionMatrixMode: 1
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
@@ -2171,11 +2171,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 2c1135efed50c604282684dc17a5cb29,
         type: 3}
-    - target: {fileID: 4854006287314692748, guid: e6295185a01ad184d82522993475a07e,
-        type: 3}
-      propertyPath: correctItems
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 945904642881673512, guid: e6295185a01ad184d82522993475a07e,
         type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
@@ -2185,6 +2180,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 19.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4854006287314692748, guid: e6295185a01ad184d82522993475a07e,
+        type: 3}
+      propertyPath: correctItems
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6295185a01ad184d82522993475a07e, type: 3}
@@ -2454,11 +2454,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 2c1135efed50c604282684dc17a5cb29,
         type: 3}
-    - target: {fileID: 4854006287314692748, guid: e6295185a01ad184d82522993475a07e,
-        type: 3}
-      propertyPath: correctItems
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 945904642881673512, guid: e6295185a01ad184d82522993475a07e,
         type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
@@ -2468,6 +2463,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 0.66
+      objectReference: {fileID: 0}
+    - target: {fileID: 4854006287314692748, guid: e6295185a01ad184d82522993475a07e,
+        type: 3}
+      propertyPath: correctItems
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6295185a01ad184d82522993475a07e, type: 3}
@@ -5252,7 +5252,7 @@ SpriteRenderer:
   m_SortingLayerID: 1228227225
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: fd555a45b49d33d4a84beb29446de1a0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e72477aa6e5518e42b850e401bb9c883, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
