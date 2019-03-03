@@ -2482,6 +2482,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Job
       objectReference: {fileID: 0}
+    - target: {fileID: 945904642881673508, guid: e6295185a01ad184d82522993475a07e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 945904642881673510, guid: e6295185a01ad184d82522993475a07e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3499,6 +3504,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Job (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 945904642881673508, guid: e6295185a01ad184d82522993475a07e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 945904642881673510, guid: e6295185a01ad184d82522993475a07e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4427,6 +4437,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Job (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 945904642881673508, guid: e6295185a01ad184d82522993475a07e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 945904642881673510, guid: e6295185a01ad184d82522993475a07e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4500,6 +4515,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Party
+      objectReference: {fileID: 0}
+    - target: {fileID: 2650468526807148236, guid: 11c158a1ae4cac14aba8f82e2797122e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 835744635720740310, guid: 11c158a1ae4cac14aba8f82e2797122e,
         type: 3}
