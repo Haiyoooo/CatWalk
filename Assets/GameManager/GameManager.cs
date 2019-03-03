@@ -25,6 +25,7 @@ public class GameManager : MonoBehaviour
 
     public AudioSource equip;
     public AudioSource unequip;
+    public AudioSource item_select;
 
     private void Awake()
     {
@@ -46,6 +47,7 @@ public class GameManager : MonoBehaviour
         //AUDIO
         equip = sounds[1];
         unequip = sounds[2];
+        item_select = sounds[3];
 
     }
 

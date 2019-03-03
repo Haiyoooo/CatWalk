@@ -33,7 +33,7 @@ public class ItemBehavoir : MonoBehaviour
         if (mouseOver && (location == foundIn.store) && Input.GetMouseButtonDown(0))
         {
             location = foundIn.closet;
-            //AUDIO
+            GameManager.instance.item_select.Play();
             //money -= cost;
         }
 
