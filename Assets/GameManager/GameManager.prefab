@@ -58,12 +58,15 @@ MonoBehaviour:
   day: 0
   countDown: 7
   timeBar: {fileID: 0}
+  lastWeek: 4
+  currentWeek: 1
   fishCoin: 10
   debt: 20
+  debtList: 1400000064000000fa00000090010000
   cashText: {fileID: 0}
   debtText: {fileID: 0}
-  endGame: {fileID: 0}
-  endGameText: {fileID: 0}
+  endWeek: {fileID: 0}
+  endWeekText: {fileID: 0}
 --- !u!114 &3795843876292029058
 MonoBehaviour:
   m_ObjectHideFlags: 0

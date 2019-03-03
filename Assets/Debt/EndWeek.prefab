@@ -118,7 +118,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 653824543786869750}
-        m_MethodName: QuitGame
+        m_MethodName: NextWeek
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -139,18 +139,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 653824543786869749}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0fc7510358e7f57448f9d57c81f0c092, type: 3}
+  m_Script: {fileID: 11500000, guid: 767ae264dc371b2498d3c1c94c5280a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  day: 0
-  countDown: 7
-  timeBar: {fileID: 0}
-  fishCoin: 10
-  debt: 20
-  cashText: {fileID: 0}
-  debtText: {fileID: 0}
-  endGame: {fileID: 0}
-  endGameText: {fileID: 0}
+  panel: {fileID: 3954573507725035709}
 --- !u!1 &2174178206680420625
 GameObject:
   m_ObjectHideFlags: 0
@@ -163,7 +155,7 @@ GameObject:
   - component: {fileID: 8199892081028187350}
   - component: {fileID: 796945003623809956}
   m_Layer: 5
-  m_Name: EndGameText
+  m_Name: EndWeekText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -216,7 +208,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: EndGameText
+  m_text: EndWeekText
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -293,11 +285,11 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 0
+  m_havePropertiesChanged: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 0
+  m_isInputParsingRequired: 1
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -323,12 +315,12 @@ GameObject:
   - component: {fileID: 5594872526928365826}
   - component: {fileID: 3141017846607639616}
   m_Layer: 5
-  m_Name: EndGame
+  m_Name: EndWeek
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &7997212644434372379
 RectTransform:
   m_ObjectHideFlags: 0

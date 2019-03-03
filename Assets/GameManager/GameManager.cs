@@ -10,33 +10,31 @@ public class GameManager : MonoBehaviour
     public float day = 0;
     public float countDown = 7;
     public Slider timeBar;
-    private float timeValue;
-    private float timeLength;
+    public int lastWeek = 4;
+    public int currentWeek = 1;
     private float dayIndex = 1;
 
     public int fishCoin = 10;
     public int debt = 20;
+    public int[] debtList;
     private bool isPaied = false;
 
     public GameObject cashText;
     public GameObject debtText;
     private Text fameStatusText;
-    public GameObject endGame;
-    public GameObject endGameText;
+    public GameObject endWeek;
+    public GameObject endWeekText;
 
     private void Awake()
     {
         if (instance == null)
-        {
             instance = this;
-        }
-        else if(instance != this)
-        {
+        else if (instance != this)
             Destroy(this.gameObject);
-        }
 
         fameStatusText = GameObject.Find("Fame Status").GetComponent<Text>();
 
+        debt = debtList[0];
     }
 
     private void Update()
@@ -67,21 +65,22 @@ public class GameManager : MonoBehaviour
         {
             fishCoin -= debt;
             isPaied = true;
-            if (fishCoin <= 0)
-            {
-                endGame.SetActive(true);
-                endGameText.GetComponent<TextMeshProUGUI>().text = "You lost lah!";
-            }
+
+            if (fishCoin <= 0) //GAME OVER
+                endWeekText.GetComponent<TextMeshProUGUI>().text = "You lost lah!";
             else
             {
-                endGame.SetActive(true);
-                endGameText.GetComponent<TextMeshProUGUI>().text = "Meow, you won!";
+                if (currentWeek == lastWeek) //WON
+                    endWeekText.GetComponent<TextMeshProUGUI>().text = "Meow, you won!";
+                else //NEXTWEEK
+                    endWeekText.GetComponent<TextMeshProUGUI>().text = "Yay, you paid " + debt + " FishCoin on time!";
             }
+            endWeek.SetActive(true);
+
+            debt = debtList[currentWeek];
+            currentWeek++;
         }
     }
 
-    public void QuitGame()
-    {
-        Application.Quit();
-    }
+
 }
