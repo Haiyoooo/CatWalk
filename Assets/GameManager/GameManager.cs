@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
@@ -13,6 +14,12 @@ public class GameManager : MonoBehaviour
     private float timeValue;
     private float timeLength;
 
+    public int debt;
+
+    private Text cashMoney;
+    private Text debtText;
+    private Text fameStatusText;
+
     private void Awake()
     {
         if (instance == null)
@@ -23,11 +30,25 @@ public class GameManager : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+
+        cashMoney = GameObject.Find("Cash").GetComponent<Text>();
+        debtText = GameObject.Find("Debt").GetComponent<Text>();
+        fameStatusText = GameObject.Find("Fame Status").GetComponent<Text>();
     }
+
 
     private void Update()
     {
         timeBar.value = ((day - 1) * (1 / (countDown - 1))) % countDown;
         if (timeBar.value > 1) timeBar.value = 0;
+
+        displayText();
+    }
+
+    private void displayText()
+    {
+        cashMoney.text = "You have: " + fishCoin;
+        debtText.text = "You owe: " + debt;
+        fameStatusText.text = "Nobody knows you...";
     }
 }
