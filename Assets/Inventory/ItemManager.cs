@@ -9,6 +9,7 @@ public class ItemManager : MonoBehaviour
     public ItemLog[] AllItemList = new ItemLog[3];
     [SerializeField] List<GameObject> storeItems = new List<GameObject>();
     [SerializeField] List<GameObject> closetItems = new List<GameObject>();
+    [SerializeField] GameObject shopManager;
 
     void Start()
     {
@@ -22,12 +23,13 @@ public class ItemManager : MonoBehaviour
 
     void Update()
     {
-        // divides all items into store or closet lists
-        if (true /* TODO: INSERT CODE THAT CHECKS IF THE STORE/CLOSET IS OPEN*/ )
+
+        if (shopManager.GetComponent<ShopMenu>().itemsOn) // if the inventory is open to items
         {
+            // divides all items into store or closet lists
             storeItems.Clear();
             closetItems.Clear();
-            foreach ( ItemBehavoir item in GameObject.FindObjectsOfType<ItemBehavoir>() )
+            foreach (ItemBehavoir item in GameObject.FindObjectsOfType<ItemBehavoir>())
             {
                 if (item.location == ItemBehavoir.foundIn.store)
                 {
@@ -38,32 +40,42 @@ public class ItemManager : MonoBehaviour
                     closetItems.Add(item.gameObject);
                 }
             }
+
+            // organize the items in the store
+            int i = 0;
+            foreach (GameObject item in storeItems)
+            {
+                Vector3 targetVector = new Vector3((-5.75f + (2 * (i % 3))), (3 - 2 * (i / 3)), 0);
+                if (transform.position != targetVector)
+                {
+                    item.transform.position = Vector3.Lerp(item.transform.position, targetVector, 0.4f);
+                }
+                i++;
+            }
+
+            // organize the items in the closet
+            int j = 0;
+            foreach (GameObject item in closetItems)
+            {
+                Vector3 targetVector = new Vector3((1.75f + (2 * (j % 3))), (3 - 2 * (j / 3)), 0);
+
+                if (transform.position != targetVector)
+                {
+                    item.transform.position = Vector3.Lerp(item.transform.position, targetVector, 0.1f);
+                }
+                j++;
+            }
+        }
+
+        else // if the inventory is closed to items
+        {
+            // send all the items back to the item manager location
+            foreach (ItemBehavoir item in GameObject.FindObjectsOfType<ItemBehavoir>())
+            {
+                item.transform.position = Vector3.Lerp(item.transform.position, transform.position, 0.1f);
+            }
         }
         
-        // organize the items in the store
-        int i = 0;
-        foreach (GameObject item in storeItems)
-        {
-            Vector3 targetVector = new Vector3((-5.75f + (2 * (i % 3))), (3 - 2 * (i / 3)), 0);
-            if (transform.position != targetVector)
-            {
-                item.transform.position = Vector3.Lerp(item.transform.position, targetVector, 0.60f);
-            }
-            i++;
-        }
-        
-        // organize the items in the closet
-        int j = 0;
-        foreach (GameObject item in closetItems)
-        {
-            Vector3 targetVector = new Vector3((1.75f + (2 * (j % 3))), (3 - 2 * (j / 3)), 0);
-            
-            if (transform.position != targetVector)
-            {
-                item.transform.position = Vector3.Lerp(item.transform.position, targetVector, 0.1f);
-            }
-            j++;
-        }
         
     }
 }
