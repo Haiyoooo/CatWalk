@@ -432,7 +432,8 @@ MonoBehaviour:
   thisPartyState: 0
   correctItems: 0
   hints: []
-  successPopUp: {fileID: 100000, guid: 4aac74e2916cb8140ae7efa4e8838d4f, type: 3}
+  successPopUp: {fileID: 1298474162068425067, guid: 383ceb9d5829fe04fa9f393660e9711c,
+    type: 3}
   superSuccessPopUp: {fileID: 8067101070582754992, guid: 7fefdb9a0e6e2974b8136efcd6c11268,
     type: 3}
   failPopUp: {fileID: 240324955938900470, guid: 959e96668534d1d4ca4bc631724c8aba,
