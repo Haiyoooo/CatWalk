@@ -67,6 +67,8 @@ MonoBehaviour:
   debtText: {fileID: 0}
   endWeek: {fileID: 0}
   endWeekText: {fileID: 0}
+  nextweekButton: {fileID: 0}
+  quitButton: {fileID: 0}
 --- !u!114 &3795843876292029058
 MonoBehaviour:
   m_ObjectHideFlags: 0

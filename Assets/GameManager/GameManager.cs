@@ -24,6 +24,8 @@ public class GameManager : MonoBehaviour
     private Text fameStatusText;
     public GameObject endWeek;
     public GameObject endWeekText;
+    public GameObject nextweekButton;
+    public GameObject quitButton;
 
     private void Awake()
     {
@@ -68,14 +70,28 @@ public class GameManager : MonoBehaviour
             fishCoin -= debt;
             isPaied = true;
 
-            if (fishCoin <= 0) //GAME OVER
+            if (fishCoin <= 0)
+            {//GAME OVER
                 endWeekText.GetComponent<TextMeshProUGUI>().text = "You lost lah!";
+                quitButton.SetActive(true);
+                nextweekButton.SetActive(false);
+            }
             else
             {
                 if (currentWeek == lastWeek) //WON
+                {
                     endWeekText.GetComponent<TextMeshProUGUI>().text = "Meow, you won!";
+                    quitButton.SetActive(true);
+                    nextweekButton.SetActive(false);
+                }
+
                 else //NEXTWEEK
+
+                {
                     endWeekText.GetComponent<TextMeshProUGUI>().text = "Yay, you paid " + debt + " FishCoin on time!";
+                    quitButton.SetActive(false);
+                    nextweekButton.SetActive(true);
+                } 
             }
             endWeek.SetActive(true);
 
