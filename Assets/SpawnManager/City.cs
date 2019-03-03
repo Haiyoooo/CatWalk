@@ -13,21 +13,21 @@ public class City : MonoBehaviour
 
     }
 
-    private void Update()
-    {
-        switch(myType)
-        {
-            case type.NOTHING:
-                break;
-            case type.JOB:
-                Job();
-                break;
-            case type.PARTY:
-                Party();
-                break;
-            default:
-                myType = type.JOB;
-                break;
-        }
-    }
+    //private void Update()
+    //{
+    //    switch(myType)
+    //    {
+    //        case type.NOTHING:
+    //            break;
+    //        case type.JOB:
+    //            Job();
+    //            break;
+    //        case type.PARTY:
+    //            Party();
+    //            break;
+    //        default:
+    //            myType = type.JOB;
+    //            break;
+    //    }
+    //}
 }
