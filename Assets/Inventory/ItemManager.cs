@@ -49,6 +49,7 @@ public class ItemManager : MonoBehaviour
                 if (transform.position != targetVector)
                 {
                     item.transform.position = Vector3.Lerp(item.transform.position, targetVector, 0.4f);
+                    item.transform.localScale = Vector3.Lerp(item.transform.localScale, Vector3.one, 0.1f);
                 }
                 i++;
             }
@@ -62,6 +63,7 @@ public class ItemManager : MonoBehaviour
                 if (transform.position != targetVector)
                 {
                     item.transform.position = Vector3.Lerp(item.transform.position, targetVector, 0.1f);
+                    item.transform.localScale = Vector3.Lerp(item.transform.localScale, Vector3.one, 0.1f);
                 }
                 j++;
             }
@@ -73,6 +75,7 @@ public class ItemManager : MonoBehaviour
             foreach (ItemBehavoir item in GameObject.FindObjectsOfType<ItemBehavoir>())
             {
                 item.transform.position = Vector3.Lerp(item.transform.position, transform.position, 0.1f);
+                item.transform.localScale = Vector3.Lerp(item.transform.localScale, Vector3.zero, 0.1f);
             }
         }
         
