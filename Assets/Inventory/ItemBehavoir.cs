@@ -10,6 +10,9 @@ public class ItemBehavoir : MonoBehaviour
     public int cost = 1;
     public enum foundIn { store, closet };
     public foundIn location = foundIn.store;
+    [SerializeField] Sprite wornItemSprite;
+    [SerializeField] GameObject equipMark;
+    GameObject checkMark;
 
     enum trend { Western, Goth, Pirate/*, Formal, Neon, Skater, Sporty, Cute, Graceful, Southern, Royal */}
     [SerializeField] trend style; 
@@ -19,7 +22,8 @@ public class ItemBehavoir : MonoBehaviour
 
     void Start()
     {
-        
+        checkMark = Instantiate(equipMark, this.gameObject.transform);
+        checkMark.transform.position = transform.position + Vector3.up + Vector3.right;
     }
 
     
@@ -35,14 +39,47 @@ public class ItemBehavoir : MonoBehaviour
 
         
         // Equip Code
-        if ( mouseOver && (location == foundIn.closet) && Input.GetMouseButtonDown(0) )
+        else if ( mouseOver && (location == foundIn.closet) && Input.GetMouseButtonDown(0) )
         {
-            //equipped = true;
-            /* some code that finds the item that was previously equipped on the
-             * player in the same spot (head or body) and sets its equipped = false
-             */
+            // if this is a headpiece, look through all the items that are also 
+            // headpieces and unequip the one that was previously equipped
+            if (wornOn == putOn.head) // head
+            {
+                GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerBehavior>().headItem = wornItemSprite;
+                foreach (ItemBehavoir item in GameObject.FindObjectsOfType<ItemBehavoir>())
+                {
+                    if (item.wornOn == putOn.head)
+                    {
+                        if (item.equipped)
+                        {
+                            item.equipped = false;
+                            continue;
+                        }
+                    }
+                }
+            }
+            // if this is a bodypiece, look through all the items that are also 
+            // bodypieces and unequip the one that was previously equipped
+            else if (wornOn == putOn.body) // body
+            {
+                GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerBehavior>().bodyItem = wornItemSprite;
+                foreach (ItemBehavoir item in GameObject.FindObjectsOfType<ItemBehavoir>())
+                {
+                    if (item.wornOn == putOn.body)
+                    {
+                        if (item.equipped)
+                        {
+                            item.equipped = false;
+                            continue;
+                        }
+                    }
+                }
+            }
+            equipped = true;
+            //AUDIO
         }
 
+        checkMark.SetActive(equipped);
     }
 
     private void OnMouseEnter()

@@ -128,6 +128,18 @@ PrefabInstance:
       propertyPath: location
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 775032932263548355, guid: 90b171c8ff4e1b64ab11c852717af9f9,
+        type: 3}
+      propertyPath: wornItemSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ff09a3b169aa0954598b1633aa4cbb7f,
+        type: 3}
+    - target: {fileID: 775032932263548355, guid: 90b171c8ff4e1b64ab11c852717af9f9,
+        type: 3}
+      propertyPath: equipMark
+      value: 
+      objectReference: {fileID: 567130096844705344, guid: f238f577b01aedc4a922882a595f1f3b,
+        type: 3}
     - target: {fileID: 8673176376762313847, guid: 90b171c8ff4e1b64ab11c852717af9f9,
         type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
