@@ -95,7 +95,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisPartyState: 0
-  correctItems: 1
+  correctItems: 2
   hints: []
   successPopUp: {fileID: 1910181527918815715, guid: 4aac74e2916cb8140ae7efa4e8838d4f,
     type: 3}

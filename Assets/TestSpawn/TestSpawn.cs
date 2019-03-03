@@ -6,20 +6,31 @@ using UnityEngine.UI;
 public class TestSpawn : MonoBehaviour
 {
     public GameObject[] cities;
+    public GameObject jobPrefab;
+    public GameObject partyPrefab;
+    public GameObject emptyPrefab;
 
-    private enum cityType {job, party, none};
-    private cityType type;
+    private int[] job;
+    private int[] party;
+    private int lastParty;
+    private int jobNum;
+    //private TestCity testCity;
 
     // Start is called before the first frame update
     void Start()
     {
+        job = new int[8];
+        for (int i = 0; i < 8; i++) job[i] = -1;
+        party = new int[2];
+        for (int i = 0; i < 2; i++) party[i] = -1;
         RandomSpawn();
+        //testCity = gameObject.GetComponent<TestCity>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        CheckChange();
     }
 
     void ChangeStatus(GameObject obj, int index)
@@ -27,37 +38,89 @@ public class TestSpawn : MonoBehaviour
         //int index = Random.Range(1, 4);
         if (index == 1)
         {
-            type = cityType.job;
-            obj.GetComponent<Image>().color = Color.blue;
+            obj.GetComponent<TestCity>().type = TestCity.cityType.job;
+            //obj.GetComponent<Image>().color = Color.blue;
+            Instantiate(jobPrefab, obj.transform.position, Quaternion.identity);
         }
         if (index == 2)
         {
-            type = cityType.party;
-            obj.GetComponent<Image>().color = Color.red;
+            obj.GetComponent<TestCity>().type = TestCity.cityType.party;
+            //obj.GetComponent<Image>().color = Color.red;
+            Instantiate(partyPrefab, obj.transform.position, Quaternion.identity);
         }
         if (index == 3)
         {
-            type = cityType.none;
-            obj.GetComponent<Image>().color = Color.white;
+            obj.GetComponent<TestCity>().type = TestCity.cityType.none;
+            //obj.GetComponent<Image>().color = Color.white;
+            Instantiate(emptyPrefab, obj.transform.position, Quaternion.identity);
         }
 
     }
 
     void RandomSpawn()
     {
-        int job1 = Random.Range(0, 10);
-        ChangeStatus(cities[job1], 1);
-        int party1;
-        do { party1 = Random.Range(0, 10); } while (party1 == job1);
-        ChangeStatus(cities[party1], 2);
-        int party2;
-        do { party2 = Random.Range(0, 10); } while (party2 == job1 && party2 == party1);
-        ChangeStatus(cities[party2], 2);
-
-        Debug.Log("job1 " + job1);
-        Debug.Log("party1 " + party1);
-        Debug.Log("party2 " + party2);
+        job[0] = Random.Range(0, 10);
+        ChangeStatus(cities[job[0]], 1);
+        do { party[0] = Random.Range(0, 10); } while (party[0] == job[0]);
+        ChangeStatus(cities[party[0]], 2);
+        do { party[1] = Random.Range(0, 10); } while (party[1] == job[0] || party[1] == party[0]);
+        ChangeStatus(cities[party[1]], 2);
+        jobNum = 1;
     }
 
-    
+    void CheckChange()
+    {
+        for(int i = 0; i < 8; i++)
+            if(job[i] >= 0)
+                //if (cities[job[i]].GetComponent<Image>().color == Color.white)
+                if(cities[job[i]].GetComponent<TestCity>().type == TestCity.cityType.none)
+                {
+                    job[i] = -1;
+                    jobNum--;
+                }
+
+        //if (cities[party[0]].GetComponent<Image>().color == Color.white)
+        if (cities[party[0]].GetComponent<TestCity>().type == TestCity.cityType.none)
+        {
+            if (jobNum < 8)
+            {
+                lastParty = party[1];
+                do { party[0] = Random.Range(0, 10); } while (CheckConflict(party[0]) || party[0] == party[1] || party[0] == lastParty);
+                ChangeStatus(cities[party[0]], 2);
+                do { job[jobNum] = Random.Range(0, 10); } while (CheckConflict(job[jobNum]) || job[jobNum] == party[0] || job[jobNum] == party[1]);
+                ChangeStatus(cities[job[jobNum]], 1);
+                jobNum++;
+            }
+            else
+                ChangeStatus(cities[party[0]], 2);
+        }
+        //if (cities[party[1]].GetComponent<Image>().color == Color.white)
+        if (cities[party[1]].GetComponent<TestCity>().type == TestCity.cityType.none)
+        {
+            if (jobNum < 8)
+            {
+                lastParty = party[1];
+                do { party[1] = Random.Range(0, 10); } while (CheckConflict(party[1]) || party[1] == party[0] || party[1] == lastParty);
+                ChangeStatus(cities[party[1]], 2);
+                do { job[jobNum] = Random.Range(0, 10); } while (CheckConflict(job[jobNum]) || job[jobNum] == party[0] || job[jobNum] == party[1]);
+                ChangeStatus(cities[job[jobNum]], 1);
+                jobNum++;
+            }
+            else
+                ChangeStatus(cities[party[1]], 2);
+        }
+    }
+
+
+    //Note to Eunice:
+    //If there is no Job on the spot... job[i] = -1
+    //If there is a Job on the spot... job[i] = spot's number (eg. job[7] = 8 ...
+    //means this is the 7th job spawn, in city number 8
+    bool CheckConflict(int n) //check the city doesn't have job when spawn party or new job
+    {
+        for(int i = 0; i < 8; i++)
+            if(i != jobNum && job[i] != -1)
+                if (n == job[i]) return true;
+        return false;
+    }
 }

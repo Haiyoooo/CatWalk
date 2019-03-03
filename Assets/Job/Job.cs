@@ -10,6 +10,7 @@ public class Job : MonoBehaviour
     public jobState thisJobState = jobState.AVALIABLE;
     private jobPopUp jobPopUp; //refer to pop-up script
     private SpriteRenderer rend;
+    private bool mouseOn = false;
 
     [Header("For Testing")]
     [Tooltip("Number of clothing items currently worn which the company likes")]
@@ -27,7 +28,7 @@ public class Job : MonoBehaviour
 
     [Header("Disasppear Animation")]
     [SerializeField] private GameObject fireworksFX;
-
+    private 
     // Start is called before the first frame update
     void Start()
     {
@@ -43,11 +44,13 @@ public class Job : MonoBehaviour
         //DISPLAY TOOL TIP
         Debug.Log("TOOLTIP");
         rend.color = Color.green;
+        mouseOn = true;
     }
 
     private void OnMouseExit()
     {
         rend.color = Color.white;
+        mouseOn = false;
     }
 
 
