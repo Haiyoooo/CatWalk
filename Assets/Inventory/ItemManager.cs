@@ -12,19 +12,14 @@ public class ItemManager : MonoBehaviour
 
     void Start()
     {
-        int i = 0;
         foreach (ItemLog pair in AllItemList)
         {
-            Instantiate(pair.prefab, new Vector3((float)(-5.75 + (2 * (i % 3))), (float)(3 - 2*(i / 3)), 0), Quaternion.identity);
-            i++;
-
-
+            GameObject temp = Instantiate(pair.prefab, transform.position, Quaternion.identity);
+            temp.GetComponent<ItemBehavoir>().cost = pair.cost;
         }
-
-
+        
     }
 
-    // Update is called once per frame
     void Update()
     {
         // divides all items into store or closet lists
@@ -38,29 +33,38 @@ public class ItemManager : MonoBehaviour
                 {
                     storeItems.Add(item.gameObject);
                 }
-                else /*if (pair.prefab.GetComponent<ItemBehavoir>().location == ItemBehavoir.foundIn.closet)*/
+                else
                 {
                     closetItems.Add(item.gameObject);
                 }
             }
         }
-
+        
         // organize the items in the store
         int i = 0;
         foreach (GameObject item in storeItems)
         {
-            item.transform.position = Vector3.MoveTowards(transform.position, new Vector3((float)(-5.75 + (2 * (i % 3))), (float)(3 - 2 * (i / 3)), 0), 100);
+            Vector3 targetVector = new Vector3((-5.75f + (2 * (i % 3))), (3 - 2 * (i / 3)), 0);
+            if (transform.position != targetVector)
+            {
+                item.transform.position = Vector3.Lerp(item.transform.position, targetVector, 0.60f);
+            }
             i++;
         }
-
+        
         // organize the items in the closet
         int j = 0;
         foreach (GameObject item in closetItems)
         {
-            item.transform.position = Vector3.MoveTowards(transform.position, new Vector3((float)(1.75 + (2 * (j % 3))), (float)(3 - 2 * (j / 3)), 0), 100);
+            Vector3 targetVector = new Vector3((1.75f + (2 * (j % 3))), (3 - 2 * (j / 3)), 0);
+            
+            if (transform.position != targetVector)
+            {
+                item.transform.position = Vector3.Lerp(item.transform.position, targetVector, 0.1f);
+            }
             j++;
         }
-
+        
     }
 }
 
