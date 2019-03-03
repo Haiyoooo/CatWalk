@@ -8,6 +8,7 @@ TagManager:
   - City
   - Item
   - fishCoin
+  - Company Manager
   layers:
   - Default
   - TransparentFX
@@ -53,6 +54,12 @@ TagManager:
     locked: 0
   - name: UI
     uniqueID: 1228227225
+    locked: 0
+  - name: Closet Icon
+    uniqueID: 3903709829
+    locked: 0
+  - name: Shop Icon
+    uniqueID: 439054305
     locked: 0
   - name: UI Message
     uniqueID: 3284674259
