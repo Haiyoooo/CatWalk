@@ -6,12 +6,12 @@ using UnityEngine.UI;
 public class PartyPopUp : MonoBehaviour
 {
     private Party party;
-    private Job job;
+    //private Job job;
 
     void Start()
     {
         party = transform.parent.parent.GetComponent<Party>();
-        job = transform.parent.parent.GetComponent<Job>();
+        //job = transform.parent.parent.GetComponent<Job>();
 
     }
 
@@ -21,7 +21,7 @@ public class PartyPopUp : MonoBehaviour
         //remove the event if success.... TODO: refactor. needed the if function because my script is stupid
         if (transform.parent.parent.tag == "Job")
         {
-            job.disappearOnSuccess();
+            //job.disappearOnSuccess();
         }
         else
         {
