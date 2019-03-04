@@ -19,6 +19,7 @@ public class ClosetMenu : MonoBehaviour
         if (mouseOver && Input.GetMouseButtonDown(0))
         {
             shopIcon.GetComponent<ShopMenu>().opened = !shopIcon.GetComponent<ShopMenu>().opened;
+            shopIcon.GetComponent<ShopMenu>().childObj.gameObject.SetActive(shopIcon.GetComponent<ShopMenu>().opened);
 
             //AUDIO
             if (shopIcon.GetComponent<ShopMenu>().opened)

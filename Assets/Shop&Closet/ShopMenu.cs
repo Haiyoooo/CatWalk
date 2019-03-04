@@ -10,7 +10,7 @@ public class ShopMenu : MonoBehaviour
     [SerializeField] GameObject closetIcon;
     [SerializeField] GameObject storeWindow;
     [SerializeField] GameObject closetWindow;
-    private Transform childObj;
+    public Transform childObj;
     private Vector3 windowScale;
 
     void Start()
