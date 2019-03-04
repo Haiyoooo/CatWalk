@@ -184,6 +184,21 @@ PrefabInstance:
       propertyPath: m_PlayOnAwake
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 408831208427372766, guid: 8d4c81fa5903aa94faa54e2423ba4dc1,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: c5b2332b86e0acc4bb635823e9015bac, type: 3}
+    - target: {fileID: 408831208427372766, guid: 8d4c81fa5903aa94faa54e2423ba4dc1,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 408831208427372766, guid: 8d4c81fa5903aa94faa54e2423ba4dc1,
+        type: 3}
+      propertyPath: DopplerLevel
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d4c81fa5903aa94faa54e2423ba4dc1, type: 3}
 --- !u!1 &109954972
