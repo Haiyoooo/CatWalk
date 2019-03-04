@@ -91,7 +91,7 @@ public class EventBehavior : MonoBehaviour
             eventSpriteRenderer.sprite = partySprite;
             salary = 0;
             themeTooltip.text = themeString;
-            eventName = partyNameOptions[Random.Range(1, partyNameOptions.Length)];
+            eventName = partyNameOptions[Random.Range(0, partyNameOptions.Length)];
         }
 
         nameTooltip.text = eventName;
