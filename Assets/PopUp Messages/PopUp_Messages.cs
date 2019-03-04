@@ -16,6 +16,18 @@ public class PopUp_Messages : MonoBehaviour
     public string[] fail_job;
     public string[] super_job;
 
+    [Header("Job Sprites")]
+    [SerializeField] private Sprite success_job_img;
+    [SerializeField] private Sprite fail_job_img;
+    [SerializeField] private Sprite superSuccess_job_img;
+
+    [Header("Party Sprites")]
+    [SerializeField] private Sprite success_party_img;
+    [SerializeField] private Sprite fail_party_img;
+    [SerializeField] private Sprite superSuccess_party_img;
+
+
+
     private int tempMessage;
 
     private EventBehavior parent;  
