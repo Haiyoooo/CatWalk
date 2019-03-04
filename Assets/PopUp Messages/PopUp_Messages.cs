@@ -16,39 +16,22 @@ public class PopUp_Messages : MonoBehaviour
     public string[] fail_job;
     public string[] super_job;
 
-    [Header("Job Sprites")]
-    [SerializeField] private Sprite success_job_img;
-    [SerializeField] private Sprite fail_job_img;
-    [SerializeField] private Sprite superSuccess_job_img;
-
-    [Header("Party Sprites")]
-    [SerializeField] private Sprite success_party_img;
-    [SerializeField] private Sprite fail_party_img;
-    [SerializeField] private Sprite superSuccess_party_img;
-
-
+    [Header("Sprites")]
+    [SerializeField] private GameObject partyJob_fail_img;
+    [SerializeField] private GameObject party_success_img;
+    [SerializeField] private GameObject job_sucess_img;
 
     private int tempMessage;
-
     private EventBehavior parent;  
-
     private Text msgText;
-
     private Text goldText; 
-
     private CompanyManager companyManager;
-
     private Image goldFishCoin;
 
    // private CompanyManager.trend trend;   //COOL ENUM STUFF!!! DIDN'T KNOW IT'S A TYPE LIKE THIS (note for Ernes; don't erase
-
     private string companyName;
-
     private string style;
-
     private int numberOfCompanies;
-
-
 
     private void Start()
     {
@@ -90,26 +73,34 @@ public class PopUp_Messages : MonoBehaviour
                 case (EventBehavior.eventState.SUCCESS):
 
                     msgText.text = success_job[tempMessage];
-
                     goldText.text = "+" + parent.salary;
+
+                    partyJob_fail_img.SetActive(false);
+                    party_success_img.SetActive(false);
+                    job_sucess_img.SetActive(false);
 
                     break;
 
                 case (EventBehavior.eventState.SUPERSUCCESS):
 
                     msgText.text = super_job[tempMessage];
-
                     goldText.text = "+" + parent.salary;
+
+                    partyJob_fail_img.SetActive(false);
+                    party_success_img.SetActive(false);
+                    job_sucess_img.SetActive(false);
 
                     break;
 
                 case (EventBehavior.eventState.FAIL):
 
                     msgText.text = fail_job[tempMessage];
-
                     goldText.text = "";
-
                     goldFishCoin.enabled = false;
+
+                    partyJob_fail_img.SetActive(false);
+                    party_success_img.SetActive(false);
+                    job_sucess_img.SetActive(false);
 
                     break;
             }
@@ -120,7 +111,6 @@ public class PopUp_Messages : MonoBehaviour
         else if (parent.isJob == false)
         {
             goldText.text = "";
-
             goldFishCoin.enabled = false;
 
             switch (parent.thisEventState)              //TODO FIGURE OUT HOW TO BOLD
@@ -129,18 +119,27 @@ public class PopUp_Messages : MonoBehaviour
 
                     msgText.text = "" + success_party[0] + " " + "<b><color=green>" + companyName + "</color></b>" + " likes " + "<b><color=green>" + style + "</color></b>" + " clothes...";
 
+                    partyJob_fail_img.SetActive(false);
+                    party_success_img.SetActive(false);
+                    job_sucess_img.SetActive(false);
                     break;
 
                 case (EventBehavior.eventState.SUPERSUCCESS):
 
                     msgText.text = "" + super_party[0] + " " + "<b><color=green>" + companyName + "</color></b>" + " likes " + "<b><color=green>" + style + "</color></b>" + " clothes...";
 
+                    partyJob_fail_img.SetActive(false);
+                    party_success_img.SetActive(false);
+                    job_sucess_img.SetActive(false);
                     break;
 
                 case (EventBehavior.eventState.FAIL):
 
                     msgText.text = fail_party[tempMessage];
 
+                    partyJob_fail_img.SetActive(false);
+                    party_success_img.SetActive(false);
+                    job_sucess_img.SetActive(false);
                     break;
             }
         }
