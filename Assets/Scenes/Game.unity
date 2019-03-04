@@ -5389,6 +5389,11 @@ PrefabInstance:
       propertyPath: quitButton
       value: 
       objectReference: {fileID: 482526274901849316}
+    - target: {fileID: 3245642327944956456, guid: d4c9672a76d84294aa4e1bf4d4e9f9f5,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d4c9672a76d84294aa4e1bf4d4e9f9f5, type: 3}
 --- !u!224 &7997212644434372379 stripped

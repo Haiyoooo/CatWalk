@@ -34,7 +34,7 @@ public class ItemBehavoir : MonoBehaviour
         transform.localScale = Vector3.zero;
 
         cost = 1;
-        //costText = gameObject.GetComponentInChildren<Text>();  ERNES, also can you make the buying sound a cha-ching sound, the pop gives no indication that money was exchanged
+        costText = gameObject.GetComponentInChildren<Text>();
     }
 
     
@@ -42,7 +42,7 @@ public class ItemBehavoir : MonoBehaviour
     {
 
         //Display Cost on  Item
-        //costText.text = cost + "FC";  ERNES
+        costText.text = cost + "FC"; // ERNES
 
         Debug.Log(costText);
 
@@ -50,7 +50,7 @@ public class ItemBehavoir : MonoBehaviour
         if (mouseOver && (location == foundIn.store) && Input.GetMouseButtonDown(0))
         {
             location = foundIn.closet;
-            AudioManager.instance.item_select.Play();
+            AudioManager.instance.job_success.Play();
             //money -= cost;
         }
 
