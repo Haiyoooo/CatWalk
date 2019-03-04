@@ -100,12 +100,14 @@ public class ItemManager : MonoBehaviour
         if ( (Input.GetKeyDown(KeyCode.W)) && (shopAnchor.transform.position.y > 5) )
         {
             shopAnchor.transform.position = shopAnchor.transform.position + new Vector3(0, -2, 0);
+            AudioManager.instance.scroll.Play();
         }
 
         // store down button
         if ((Input.GetKeyDown(KeyCode.S)) && (shopAnchor.transform.position.y < 13))
         {
             shopAnchor.transform.position = shopAnchor.transform.position + new Vector3(0, 2, 0);
+            AudioManager.instance.scroll.Play();
         }
 
     }
