@@ -111,7 +111,11 @@ public class EventBehavior : MonoBehaviour
         if (playStanderd)
             transform.localScale = Vector3.Lerp(transform.localScale, FinalScale, Time.deltaTime * 2);
         if (transform.localScale == FinalScale)
+        {
             playStanderd = false;
+            childObj.gameObject.SetActive(false);
+        }
+            
         if (playDisappear)
             transform.localScale = Vector3.Lerp(transform.localScale, InitialScale, Time.deltaTime * 2);
         if (playBigger)
