@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
     public Slider timeBar;
     public GameObject[] dayNumberText;
     public int[] dayNumber;
-    public int lastWeek = 4;
+    public int lastWeek = 1;
     public int currentWeek = 1;
     private float dayIndex = 1;
 
@@ -54,10 +54,12 @@ public class GameManager : MonoBehaviour
     private void TimebarValue()
     {
         dayIndex = day % countDown - 1;
+        float goalValue = dayIndex * (1 / (countDown - 1));
+
         if (day % countDown == 0)
             timeBar.value = 1;
         else
-            timeBar.value = dayIndex * (1 / (countDown - 1));
+            timeBar.value = Mathf.Lerp(timeBar.value, goalValue, 0.02f);
     }
 
     private void DisplayCashDebt()

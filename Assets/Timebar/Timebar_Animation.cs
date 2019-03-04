@@ -6,27 +6,38 @@ using UnityEngine.UI;
 public class Timebar_Animation : MonoBehaviour
 {
     [Header("Icon Images")]
-    [SerializeField] private Sprite future; //day hasn't been passed yet
-    [SerializeField] private Sprite past; //day is in the past
+    [SerializeField] private Sprite noFill; //day hasn't been passed yet
+    [SerializeField] private Sprite fill; //day is in the past
     private Image image;
+    [SerializeField] private RectTransform deadlineCatRect; //deadline cat icon
 
     // Start is called before the first frame update
     void Start()
     {
+        RectTransform rectTransform = GetComponent<RectTransform>();
         image = GetComponent<Image>();
-        image.sprite = future;
+        image.sprite = noFill;
     }
 
+    //fill colour when Arrow handle (current day) hits the Day Marker box
     private void OnTriggerStay2D(Collider2D other)
     {
         if (other.gameObject.tag == "Time Bar Handle") //the arrow indicator, object name 'handle'
         {
-            image.sprite = past;
+            image.sprite = fill;
         }
+
+        //deadlineCatWriggle();
     }
 
+    //reset all to no fill
     public void ResetDayMarkerColor()
     {
-        image.sprite = future;
+        image.sprite = noFill;
     }
+
+    //public void deadlineCatWriggle()
+    //{
+    //    deadlineCatRect.Rotate(new Vector3(0, 0, 45));
+    //}
 }
