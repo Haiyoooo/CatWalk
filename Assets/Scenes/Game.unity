@@ -3271,6 +3271,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6530547261869404061, guid: a09c175d062158347bb3d0560ed73dfb,
+        type: 3}
+      propertyPath: shopIcon
+      value: 
+      objectReference: {fileID: 1365139171}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a09c175d062158347bb3d0560ed73dfb, type: 3}
 --- !u!1 &1365139171 stripped
@@ -4124,26 +4129,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: TimeBar
       objectReference: {fileID: 0}
-    - target: {fileID: 5881061399939458485, guid: 1afdc0f4803143e4e87b715d87048a0e,
-        type: 3}
-      propertyPath: m_Name
-      value: Day3Text
-      objectReference: {fileID: 0}
-    - target: {fileID: 5881061399585071840, guid: 1afdc0f4803143e4e87b715d87048a0e,
-        type: 3}
-      propertyPath: m_Name
-      value: Day1Text
-      objectReference: {fileID: 0}
-    - target: {fileID: 5881061400680972565, guid: 1afdc0f4803143e4e87b715d87048a0e,
-        type: 3}
-      propertyPath: m_Name
-      value: Day4Text
-      objectReference: {fileID: 0}
-    - target: {fileID: 6650213002876104719, guid: 1afdc0f4803143e4e87b715d87048a0e,
-        type: 3}
-      propertyPath: m_Name
-      value: Day5Text
-      objectReference: {fileID: 0}
     - target: {fileID: 5881061401034424297, guid: 1afdc0f4803143e4e87b715d87048a0e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4259,16 +4244,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0.040000003
       objectReference: {fileID: 0}
-    - target: {fileID: 6872173480605689514, guid: 1afdc0f4803143e4e87b715d87048a0e,
-        type: 3}
-      propertyPath: m_Name
-      value: Day6Text
-      objectReference: {fileID: 0}
-    - target: {fileID: 5881061400066560181, guid: 1afdc0f4803143e4e87b715d87048a0e,
-        type: 3}
-      propertyPath: m_Name
-      value: Day2Text
-      objectReference: {fileID: 0}
     - target: {fileID: 5881061399585071846, guid: 1afdc0f4803143e4e87b715d87048a0e,
         type: 3}
       propertyPath: m_havePropertiesChanged
@@ -4328,6 +4303,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6650213002876104719, guid: 1afdc0f4803143e4e87b715d87048a0e,
+        type: 3}
+      propertyPath: m_Name
+      value: Day5Text
+      objectReference: {fileID: 0}
+    - target: {fileID: 5881061399585071840, guid: 1afdc0f4803143e4e87b715d87048a0e,
+        type: 3}
+      propertyPath: m_Name
+      value: Day1Text
+      objectReference: {fileID: 0}
+    - target: {fileID: 5881061399939458485, guid: 1afdc0f4803143e4e87b715d87048a0e,
+        type: 3}
+      propertyPath: m_Name
+      value: Day3Text
+      objectReference: {fileID: 0}
+    - target: {fileID: 5881061400066560181, guid: 1afdc0f4803143e4e87b715d87048a0e,
+        type: 3}
+      propertyPath: m_Name
+      value: Day2Text
+      objectReference: {fileID: 0}
+    - target: {fileID: 5881061400680972565, guid: 1afdc0f4803143e4e87b715d87048a0e,
+        type: 3}
+      propertyPath: m_Name
+      value: Day4Text
+      objectReference: {fileID: 0}
+    - target: {fileID: 6872173480605689514, guid: 1afdc0f4803143e4e87b715d87048a0e,
+        type: 3}
+      propertyPath: m_Name
+      value: Day6Text
       objectReference: {fileID: 0}
     - target: {fileID: 6644705226983758257, guid: 1afdc0f4803143e4e87b715d87048a0e,
         type: 3}

@@ -5,7 +5,7 @@ using UnityEngine;
 public class ShopMenu : MonoBehaviour
 {
     private bool mouseOver = false;
-    private bool opened = false;
+    public bool opened = false;
     public bool itemsOn = false;
     [SerializeField] GameObject closetIcon;
     [SerializeField] GameObject storeWindow;
@@ -57,6 +57,9 @@ public class ShopMenu : MonoBehaviour
                 // closet window opens
                 closetWindow.transform.localScale = Vector3.Lerp(closetWindow.transform.localScale, windowScale, 0.2f);
 
+                // enable the closet icon's circle colider
+                closetIcon.GetComponent<CircleCollider2D>().enabled = true;
+
                 itemsOn = true;
             }
             
@@ -73,6 +76,9 @@ public class ShopMenu : MonoBehaviour
 
             // closet window opens
             closetWindow.transform.localScale = Vector3.Lerp(closetWindow.transform.localScale, Vector3.zero, 0.1f);
+
+            // disable the closet icon's circle colider
+            closetIcon.GetComponent<CircleCollider2D>().enabled = false;
 
             itemsOn = false;
         }
