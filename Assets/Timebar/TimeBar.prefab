@@ -297,6 +297,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   noFill: {fileID: 21300000, guid: 0e386dd016c38864dbf6eb4f6c46bec7, type: 3}
   fill: {fileID: 21300000, guid: b3c7bb77f9aeead469129a982e4a979e, type: 3}
+  deadlineCatRect: {fileID: 0}
 --- !u!1 &5881061399585071840
 GameObject:
   m_ObjectHideFlags: 0
@@ -371,8 +372,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -596,6 +597,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   noFill: {fileID: 21300000, guid: 0e386dd016c38864dbf6eb4f6c46bec7, type: 3}
   fill: {fileID: 21300000, guid: b3c7bb77f9aeead469129a982e4a979e, type: 3}
+  deadlineCatRect: {fileID: 0}
 --- !u!1 &5881061399765840944
 GameObject:
   m_ObjectHideFlags: 0
@@ -735,6 +737,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   noFill: {fileID: 21300000, guid: 0e386dd016c38864dbf6eb4f6c46bec7, type: 3}
   fill: {fileID: 21300000, guid: b3c7bb77f9aeead469129a982e4a979e, type: 3}
+  deadlineCatRect: {fileID: 0}
 --- !u!1 &5881061399765938600
 GameObject:
   m_ObjectHideFlags: 0
@@ -874,6 +877,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   noFill: {fileID: 21300000, guid: 0e386dd016c38864dbf6eb4f6c46bec7, type: 3}
   fill: {fileID: 21300000, guid: b3c7bb77f9aeead469129a982e4a979e, type: 3}
+  deadlineCatRect: {fileID: 0}
 --- !u!1 &5881061399803812105
 GameObject:
   m_ObjectHideFlags: 0
@@ -1022,8 +1026,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1182,8 +1186,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1407,6 +1411,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   noFill: {fileID: 21300000, guid: 0e386dd016c38864dbf6eb4f6c46bec7, type: 3}
   fill: {fileID: 21300000, guid: b3c7bb77f9aeead469129a982e4a979e, type: 3}
+  deadlineCatRect: {fileID: 0}
 --- !u!1 &5881061400516855956
 GameObject:
   m_ObjectHideFlags: 0
@@ -1481,8 +1486,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1715,8 +1720,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1940,6 +1945,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   noFill: {fileID: 21300000, guid: 0e386dd016c38864dbf6eb4f6c46bec7, type: 3}
   fill: {fileID: 21300000, guid: b3c7bb77f9aeead469129a982e4a979e, type: 3}
+  deadlineCatRect: {fileID: 0}
 --- !u!1 &5881061401034424296
 GameObject:
   m_ObjectHideFlags: 0
@@ -2346,8 +2352,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2506,8 +2512,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2972,3 +2978,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   noFill: {fileID: 21300000, guid: 0e386dd016c38864dbf6eb4f6c46bec7, type: 3}
   fill: {fileID: 21300000, guid: b3c7bb77f9aeead469129a982e4a979e, type: 3}
+  deadlineCatRect: {fileID: 0}
