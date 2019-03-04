@@ -364,7 +364,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1228227225
   m_SortingLayer: 3
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1094,8 +1094,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 448192096}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.02, y: 5.08, z: 0}
-  m_LocalScale: {x: 1.0714948, y: 0.9342935, z: 1}
+  m_LocalPosition: {x: 0.151, y: 5.65, z: 0}
+  m_LocalScale: {x: 1.0166402, y: 0.9342935, z: 1}
   m_Children: []
   m_Father: {fileID: 1945619852}
   m_RootOrder: 0
@@ -1136,7 +1136,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1228227225
   m_SortingLayer: 3
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -4029,22 +4029,22 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1031663922492239165, guid: 1afdc0f4803143e4e87b715d87048a0e,
+    - target: {fileID: 6644705226983758257, guid: 1afdc0f4803143e4e87b715d87048a0e,
         type: 3}
       propertyPath: m_havePropertiesChanged
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1031663922492239165, guid: 1afdc0f4803143e4e87b715d87048a0e,
+    - target: {fileID: 6644705226983758257, guid: 1afdc0f4803143e4e87b715d87048a0e,
         type: 3}
       propertyPath: m_isInputParsingRequired
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 6644705226983758257, guid: 1afdc0f4803143e4e87b715d87048a0e,
+    - target: {fileID: 1031663922492239165, guid: 1afdc0f4803143e4e87b715d87048a0e,
         type: 3}
       propertyPath: m_havePropertiesChanged
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 6644705226983758257, guid: 1afdc0f4803143e4e87b715d87048a0e,
+    - target: {fileID: 1031663922492239165, guid: 1afdc0f4803143e4e87b715d87048a0e,
         type: 3}
       propertyPath: m_isInputParsingRequired
       value: 1
