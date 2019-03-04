@@ -31,7 +31,7 @@ public class ItemBehavoir : MonoBehaviour
     {
        
         checkMark = Instantiate(equipMark, this.gameObject.transform);
-        checkMark.transform.position = transform.position + 0.8f*Vector3.up + 0.8f*Vector3.right; 
+        checkMark.transform.position = transform.position + 0.65f*Vector3.up + 0.65f*Vector3.right; 
 
         // start scale at (0, 0 ,0)
         transform.localScale = Vector3.zero;
@@ -51,7 +51,7 @@ public class ItemBehavoir : MonoBehaviour
 
 
         // Buying Code
-        if (mouseOver && (location == foundIn.store) && Input.GetMouseButtonDown(0))
+        if ( mouseOver && (location == foundIn.store) && Input.GetMouseButtonDown(0) && outMaskY() )
         {
             if (GameManager.instance.fishCoin >= cost)
             {
@@ -71,7 +71,7 @@ public class ItemBehavoir : MonoBehaviour
         
 
         // Unequip Code
-        else if (mouseOver && (location == foundIn.closet) && Input.GetMouseButtonDown(0) && equipped)
+        else if ( mouseOver && (location == foundIn.closet) && Input.GetMouseButtonDown(0) && equipped && outMaskY() )
         {
             equipped = !equipped;
             AudioManager.instance.unequip.Play();
@@ -91,7 +91,7 @@ public class ItemBehavoir : MonoBehaviour
 
 
         // Equip Code
-        else if (mouseOver && (location == foundIn.closet) && Input.GetMouseButtonDown(0))
+        else if ( mouseOver && (location == foundIn.closet) && Input.GetMouseButtonDown(0) && outMaskY() )
         {
             // if this is a headpiece, look through all the items that are also 
             // headpieces and unequip the one that was previously equipped
@@ -136,13 +136,19 @@ public class ItemBehavoir : MonoBehaviour
         checkMark.SetActive(equipped);
 
         // hide the cost text
-        if ( (transform.position.y < -1) || (transform.position.y > 4) )
+        if (!outMaskY())
         {
             costText.enabled = false;
+            GetComponent<BoxCollider2D>().enabled = false;
         }
         else if (!costText.enabled && location == foundIn.store)
         {
             costText.enabled = true;
+        }
+
+        if (outMaskY())
+        {
+            GetComponent<BoxCollider2D>().enabled = true;
         }
 
     }
@@ -154,6 +160,16 @@ public class ItemBehavoir : MonoBehaviour
     private void OnMouseExit()
     {
         mouseOver = false;
+    }
+
+    private bool outMaskY()
+    {
+        if ((transform.position.y < -1) || (transform.position.y > 4))
+        {
+            return false;
+        }
+        return true;
+
     }
     
 }
