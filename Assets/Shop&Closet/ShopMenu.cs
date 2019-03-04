@@ -10,10 +10,13 @@ public class ShopMenu : MonoBehaviour
     [SerializeField] GameObject closetIcon;
     [SerializeField] GameObject storeWindow;
     [SerializeField] GameObject closetWindow;
+    private Transform childObj;
 
     void Start()
     {
-        
+        // finds and disables the gray out rect
+        childObj = transform.Find("Canvas");
+        childObj.gameObject.SetActive(false);
     }
 
     
@@ -22,7 +25,7 @@ public class ShopMenu : MonoBehaviour
         if (mouseOver && Input.GetMouseButtonDown(0))
         {
             opened = !opened;
-            // code that changes the game manager to the store/inventory mode
+            childObj.gameObject.SetActive(opened);
 
             //AUDIO
             if (opened)
