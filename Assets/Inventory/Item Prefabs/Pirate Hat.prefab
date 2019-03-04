@@ -305,5 +305,5 @@ MonoBehaviour:
   equipMark: {fileID: 567130096844705344, guid: f238f577b01aedc4a922882a595f1f3b,
     type: 3}
   costText: {fileID: 0}
-  style: 8
+  style: 9
   wornOn: 0

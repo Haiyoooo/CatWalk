@@ -5,7 +5,7 @@ using UnityEngine;
 public class CompanyManager : MonoBehaviour
 {
 
-    public enum trend { Western, Goth, Formal, Neon, Skater, Sporty, Cute, Graceful, Pirate, Southern, MiddleEast, Royal };
+    public enum trend { None, Western, Goth, Formal, Neon, Skater, Sporty, Cute, Graceful, Pirate, Southern, MiddleEast, Royal };
     [Header("accept and give money")]
     [Header("It Wants: What styles the company will")]
     [Header("want over all the games")]
@@ -46,9 +46,8 @@ public class CompanyManager : MonoBehaviour
 [System.Serializable]
 public class Company
 {
-    public enum trend { Western, Goth, Formal, Neon, Skater, Sporty, Cute, Graceful, Pirate, Southern, MiddleEast, Royal }
     public string name;
-    public trend[] itLikes = new trend[4];
-    public trend[] itWants = new trend[2];
+    public CompanyManager.trend[] itLikes = new CompanyManager.trend[4];
+    public CompanyManager.trend[] itWants = new CompanyManager.trend[2];
 }
 

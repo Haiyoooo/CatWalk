@@ -127,7 +127,7 @@ MonoBehaviour:
   equipMark: {fileID: 567130096844705344, guid: f238f577b01aedc4a922882a595f1f3b,
     type: 3}
   costText: {fileID: 0}
-  style: 1
+  style: 2
   wornOn: 0
 --- !u!1 &7441160962922334245
 GameObject:

@@ -7,6 +7,9 @@ public class PlayerBehavior : MonoBehaviour
     [SerializeField] public Sprite headItem;
     [SerializeField] public Sprite bodyItem;
 
+    public CompanyManager.trend headStyle;
+    public CompanyManager.trend bodyStyle;
+
 
     void Start()
     {

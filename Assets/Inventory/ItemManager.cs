@@ -17,7 +17,6 @@ public class ItemManager : MonoBehaviour
         {
             GameObject temp = Instantiate(pair.prefab, transform.position, Quaternion.identity);
             temp.GetComponent<ItemBehavoir>().cost = pair.cost;
-            print("test");
         }
         
     }
