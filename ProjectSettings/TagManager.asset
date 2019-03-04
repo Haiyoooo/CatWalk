@@ -10,6 +10,7 @@ TagManager:
   - fishCoin
   - Company Manager
   - Party
+  - Time Bar Handle
   layers:
   - Default
   - TransparentFX
