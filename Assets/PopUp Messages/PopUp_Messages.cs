@@ -19,6 +19,7 @@ public class PopUp_Messages : MonoBehaviour
     [Header("Sprites")]
     [SerializeField] private GameObject partyJob_fail_img;
     [SerializeField] private GameObject party_success_img;
+    [SerializeField] private GameObject party_superSucess_img;
     [SerializeField] private GameObject job_sucess_img;
 
     private int tempMessage;
@@ -77,7 +78,8 @@ public class PopUp_Messages : MonoBehaviour
 
                     partyJob_fail_img.SetActive(false);
                     party_success_img.SetActive(false);
-                    job_sucess_img.SetActive(false);
+                    job_sucess_img.SetActive(true);
+                    party_superSucess_img.SetActive(false);
 
                     break;
 
@@ -88,7 +90,8 @@ public class PopUp_Messages : MonoBehaviour
 
                     partyJob_fail_img.SetActive(false);
                     party_success_img.SetActive(false);
-                    job_sucess_img.SetActive(false);
+                    job_sucess_img.SetActive(true);
+                    party_superSucess_img.SetActive(false);
 
                     break;
 
@@ -98,9 +101,10 @@ public class PopUp_Messages : MonoBehaviour
                     goldText.text = "";
                     goldFishCoin.enabled = false;
 
-                    partyJob_fail_img.SetActive(false);
+                    partyJob_fail_img.SetActive(true);
                     party_success_img.SetActive(false);
                     job_sucess_img.SetActive(false);
+                    party_superSucess_img.SetActive(false);
 
                     break;
             }
@@ -120,8 +124,9 @@ public class PopUp_Messages : MonoBehaviour
                     msgText.text = "" + success_party[0] + " " + "<b><color=green>" + companyName + "</color></b>" + " likes " + "<b><color=green>" + style + "</color></b>" + " clothes...";
 
                     partyJob_fail_img.SetActive(false);
-                    party_success_img.SetActive(false);
+                    party_success_img.SetActive(true);
                     job_sucess_img.SetActive(false);
+                    party_superSucess_img.SetActive(false);
                     break;
 
                 case (EventBehavior.eventState.SUPERSUCCESS):
@@ -131,15 +136,17 @@ public class PopUp_Messages : MonoBehaviour
                     partyJob_fail_img.SetActive(false);
                     party_success_img.SetActive(false);
                     job_sucess_img.SetActive(false);
+                    party_superSucess_img.SetActive(true);
                     break;
 
                 case (EventBehavior.eventState.FAIL):
 
                     msgText.text = fail_party[tempMessage];
 
-                    partyJob_fail_img.SetActive(false);
+                    partyJob_fail_img.SetActive(true);
                     party_success_img.SetActive(false);
                     job_sucess_img.SetActive(false);
+                    party_superSucess_img.SetActive(false);
                     break;
             }
         }

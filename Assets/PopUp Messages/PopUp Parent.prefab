@@ -264,7 +264,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6180747360848837221}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -425,6 +425,7 @@ RectTransform:
   - {fileID: 3520508646184747308}
   - {fileID: 2253182629752166074}
   - {fileID: 387781892868656861}
+  - {fileID: 2823752991752411926}
   - {fileID: 4886742629985565730}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -526,9 +527,10 @@ MonoBehaviour:
   - They loved you! You're SCRATCHING at the surfact of success!
   - PURR-fect! You''re the best -dressed kitty around!
   - You''re a kitty with FUR-midable fashion sense!
-  partyJob_fail_img: {fileID: 21300000, guid: 3e982baad37a7c34391b052fc8e103df, type: 3}
-  party_success_img: {fileID: 21300000, guid: 552a203cd07459748a722a226845f132, type: 3}
-  job_sucess_img: {fileID: 21300000, guid: d0ca0769c845a2b4ba7c5f7445c5cd65, type: 3}
+  partyJob_fail_img: {fileID: 1443085202978917717}
+  party_success_img: {fileID: 8448836205260884527}
+  party_superSucess_img: {fileID: 5343974960451794578}
+  job_sucess_img: {fileID: 4997452188810234143}
 --- !u!1 &3241370074758260763
 GameObject:
   m_ObjectHideFlags: 0
@@ -897,6 +899,80 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: d0ca0769c845a2b4ba7c5f7445c5cd65, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+--- !u!1 &5343974960451794578
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2823752991752411926}
+  - component: {fileID: 1193827670171946070}
+  - component: {fileID: 267321703869734183}
+  m_Layer: 5
+  m_Name: Party SuperSuccess
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &2823752991752411926
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5343974960451794578}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6180747360848837221}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -101.09999, y: 29.200012}
+  m_SizeDelta: {x: 296.6, y: 158.2}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &1193827670171946070
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5343974960451794578}
+  m_CullTransparentMesh: 0
+--- !u!114 &267321703869734183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5343974960451794578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: 5bb8db21e0668ea4d8aa9b67e9594a60, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
