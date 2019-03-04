@@ -9,6 +9,7 @@ TagManager:
   - Item
   - fishCoin
   - Company Manager
+  - Party
   layers:
   - Default
   - TransparentFX

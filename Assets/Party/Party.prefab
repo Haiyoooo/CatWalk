@@ -348,7 +348,7 @@ GameObject:
   - component: {fileID: 1942229988641955111}
   m_Layer: 0
   m_Name: Party
-  m_TagString: Untagged
+  m_TagString: Party
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -403,7 +403,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1910586061
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: f1b9a50139f321a46870b9f9f3c32a41, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -478,7 +478,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.11, y: 0.86333334}
+    oldSize: {x: 0.4757143, y: 0.37}
     newSize: {x: 1.06, y: 1.06}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

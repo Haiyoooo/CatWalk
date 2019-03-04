@@ -70,7 +70,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1910586061
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 5d651c78b72c2e94a9dd15989e9b2aaa, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -99,16 +99,17 @@ MonoBehaviour:
   correctItems: 1
   salary: 20
   ssBonusMultiplier: 1.5
-  successPopUp: {fileID: 8172979687867616142, guid: df3bb26ddf5cf024080d13fad02c4921,
+  successPopUp: {fileID: 1298474162068425067, guid: 383ceb9d5829fe04fa9f393660e9711c,
     type: 3}
-  superSuccessPopUp: {fileID: 6043879422129177668, guid: 3e1f61cbd9f269145bd63b6f6aee33a2,
+  superSuccessPopUp: {fileID: 8067101070582754992, guid: 7fefdb9a0e6e2974b8136efcd6c11268,
     type: 3}
-  failPopUp: {fileID: 6173009843578361738, guid: 17865f39a7c8b854caf97d3db73b9f6f,
+  failPopUp: {fileID: 240324955938900470, guid: 959e96668534d1d4ca4bc631724c8aba,
     type: 3}
   fireworksFX: {fileID: 2593405589089741789, guid: 2c1ae68e75909e04186ded2c3f28d136,
     type: 3}
   nameTooltip: {fileID: 716384055182899069}
   salaryTooltip: {fileID: 7344254847035978339}
+  jobName: 
 --- !u!50 &530243817402584221
 Rigidbody2D:
   serializedVersion: 4
@@ -147,7 +148,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.384, y: 0.384}
+    oldSize: {x: 0.4304, y: 0.4304}
     newSize: {x: 0.63, y: 0.66}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
