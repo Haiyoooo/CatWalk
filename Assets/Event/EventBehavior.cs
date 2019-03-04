@@ -73,8 +73,11 @@ public class EventBehavior : MonoBehaviour
         var colorIndex = Random.Range(0, eColors.Length);
         var eventColor = eColors[colorIndex];
         eventSpriteRenderer = transform.GetComponent<SpriteRenderer>();
+        Color.RGBToHSV(eventColor, out hue, out S, out V);  //TODO  //NOT WORKING AS HOPED  ¯\_(ツ)_/¯
         eventSpriteRenderer.color = eventColor;
-        Color.RGBToHSV(eventSpriteRenderer.color, out hue, out S, out V);  //TODO  //NOT WORKING AS HOPED  ¯\_(ツ)_/¯
+
+        //Color.
+        Debug.Log(eventColor);
 
 
         assignPartyNames();

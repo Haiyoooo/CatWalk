@@ -4048,31 +4048,6 @@ PrefabInstance:
       propertyPath: m_isInputParsingRequired
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1051881751445309042, guid: 1afdc0f4803143e4e87b715d87048a0e,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.030326033
-      objectReference: {fileID: 0}
-    - target: {fileID: 1051881751445309042, guid: 1afdc0f4803143e4e87b715d87048a0e,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.037878033
-      objectReference: {fileID: 0}
-    - target: {fileID: 1051881751445309042, guid: 1afdc0f4803143e4e87b715d87048a0e,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.030326033
-      objectReference: {fileID: 0}
-    - target: {fileID: 1051881751445309042, guid: 1afdc0f4803143e4e87b715d87048a0e,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 1.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 1051881751445309042, guid: 1afdc0f4803143e4e87b715d87048a0e,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -0.4
-      objectReference: {fileID: 0}
     - target: {fileID: 4519866761960744428, guid: 1afdc0f4803143e4e87b715d87048a0e,
         type: 3}
       propertyPath: m_havePropertiesChanged
@@ -4098,6 +4073,31 @@ PrefabInstance:
       propertyPath: m_margin.x
       value: 21.84238
       objectReference: {fileID: 0}
+    - target: {fileID: 1051881751445309042, guid: 1afdc0f4803143e4e87b715d87048a0e,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.030326033
+      objectReference: {fileID: 0}
+    - target: {fileID: 1051881751445309042, guid: 1afdc0f4803143e4e87b715d87048a0e,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.037878033
+      objectReference: {fileID: 0}
+    - target: {fileID: 1051881751445309042, guid: 1afdc0f4803143e4e87b715d87048a0e,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.030326033
+      objectReference: {fileID: 0}
+    - target: {fileID: 1051881751445309042, guid: 1afdc0f4803143e4e87b715d87048a0e,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 1.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 1051881751445309042, guid: 1afdc0f4803143e4e87b715d87048a0e,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1afdc0f4803143e4e87b715d87048a0e, type: 3}
 --- !u!1 &1593623477 stripped
@@ -4118,7 +4118,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: bf1cd2693e552e34e82efafeb4ee6f6b, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.5
+  m_Volume: 0.75
   m_Pitch: 1
   Loop: 0
   Mute: 0
