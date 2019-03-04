@@ -9,7 +9,7 @@ public class AudioManager : MonoBehaviour
     public AudioSource[] sounds;
 
     [HideInInspector]
-    public AudioSource equip, unequip, item_select, job_success, job_fail, open_shop, close_shop, party_fail, party_success;
+    public AudioSource equip, unequip, item_select, job_success, job_fail, open_shop, close_shop, party_fail, party_success, error;
 
 
     // Start is called before the first frame update
@@ -23,19 +23,21 @@ public class AudioManager : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
-        
+
         //AUDIO
 
         sounds = gameObject.GetComponents<AudioSource>();
-        equip = sounds[1];
-        unequip = sounds[2];
-        item_select = sounds[3];
-        job_success = sounds[4];
-        job_fail = sounds[5];
-        open_shop = sounds[6];
-        close_shop = sounds[7];
-        party_fail = sounds[8];
+
+        equip         = sounds[1];
+        unequip       = sounds[2];
+        item_select   = sounds[3];
+        job_success   = sounds[4];
+        job_fail      = sounds[5];
+        open_shop     = sounds[6];
+        close_shop    = sounds[7];
+        party_fail    = sounds[8];
         party_success = sounds[9];
+        error         = sounds[10];
 
     }
 

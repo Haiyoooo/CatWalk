@@ -25,7 +25,7 @@ public class ItemBehavoir : MonoBehaviour
     [SerializeField] CompanyManager.trend style; 
     enum putOn { head, body };
     [SerializeField] putOn wornOn;
-    
+
 
     void Start()
     {
@@ -39,26 +39,37 @@ public class ItemBehavoir : MonoBehaviour
         cost = 1;
         costText = gameObject.GetComponentInChildren<Text>();
         fishcoin = gameObject.transform.GetChild(0).GetChild(1);
+
     }
 
     
     void Update()
     {
 
-        //Display Cost on  Item
-        costText.text = "" + cost ; // ERNES
 
-        Debug.Log(costText);
+        //Display Money
+        costText.text = "" + cost;
+
 
         // Buying Code
         if (mouseOver && (location == foundIn.store) && Input.GetMouseButtonDown(0))
         {
-            location = foundIn.closet;
-            costText.enabled = false;
-            fishcoin.GetComponent<SpriteRenderer>().enabled = false;
-            AudioManager.instance.job_success.Play();
-            //money -= cost;
+            if (GameManager.instance.fishCoin >= cost)
+            {
+                GameManager.instance.fishCoin -= cost;
+                location = foundIn.closet;
+                costText.enabled = false;
+                fishcoin.GetComponent<SpriteRenderer>().enabled = false;
+                AudioManager.instance.job_success.Play();
+            }
+            else
+            {
+                Debug.Log("You don't have enough money...");
+                AudioManager.instance.error.Play();
+            }
         }
+
+        
 
         // Unequip Code
         else if (mouseOver && (location == foundIn.closet) && Input.GetMouseButtonDown(0) && equipped)
