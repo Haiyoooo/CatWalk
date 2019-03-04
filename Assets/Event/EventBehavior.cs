@@ -88,6 +88,8 @@ public class EventBehavior : MonoBehaviour
 
     private void Update()
     {
+        this.gameObject.GetComponent<BoxCollider2D>().enabled = !FindObjectOfType<ShopMenu>().opened;
+
         transform.localScale = Vector3.Lerp(transform.localScale, FinalScale, Time.deltaTime * 2);
         if (playDisappear)
             transform.localScale = Vector3.Lerp(transform.localScale, InitialScale, Time.deltaTime * 2);
@@ -97,13 +99,19 @@ public class EventBehavior : MonoBehaviour
     //Tool tip
     private void OnMouseOver()
     {
-        childObj.gameObject.SetActive(true);
+        if (!EventSystem.current.IsPointerOverGameObject())
+        {
+            childObj.gameObject.SetActive(true);
+        }
         //transform.localScale += new Vector3(0.1f, 0.1f, 0);
     }
 
     private void OnMouseExit()
     {
-        childObj.gameObject.SetActive(false);
+        if (!EventSystem.current.IsPointerOverGameObject())
+        {
+            childObj.gameObject.SetActive(false);
+        }
     }
 
 
