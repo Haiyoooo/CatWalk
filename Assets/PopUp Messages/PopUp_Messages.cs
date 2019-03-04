@@ -26,6 +26,8 @@ public class PopUp_Messages : MonoBehaviour
 
     private CompanyManager companyManager;
 
+    private Image goldFishCoin;
+
    // private CompanyManager.trend trend;   //COOL ENUM STUFF!!! DIDN'T KNOW IT'S A TYPE LIKE THIS (note for Ernes; don't erase
 
     private string companyName;
@@ -49,6 +51,8 @@ public class PopUp_Messages : MonoBehaviour
 
         goldText = gameObject.transform.GetChild(3).GetComponent<Text>();
 
+        goldFishCoin = gameObject.transform.GetChild(3).GetChild(0).GetComponent<Image>();
+
         numberOfCompanies = companyManager.CompanyList.Length;
 
         var tempRandom = Random.Range(0, numberOfCompanies);
@@ -64,7 +68,7 @@ public class PopUp_Messages : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(parent);
+        Debug.Log(goldFishCoin);
 
         //parent is a job
         if (parent.isJob == true)
@@ -75,11 +79,15 @@ public class PopUp_Messages : MonoBehaviour
 
                     msgText.text = success_job[tempMessage];
 
+                    goldText.text = "+" + parent.salary;
+
                     break;
 
                 case (EventBehavior.eventState.SUPERSUCCESS):
 
                     msgText.text = super_job[tempMessage];
+
+                    goldText.text = "+" + parent.salary;
 
                     break;
 
@@ -88,6 +96,8 @@ public class PopUp_Messages : MonoBehaviour
                     msgText.text = fail_job[tempMessage];
 
                     goldText.text = "";
+
+                    goldFishCoin.enabled = false;
 
                     break;
             }
@@ -98,6 +108,8 @@ public class PopUp_Messages : MonoBehaviour
         else if (parent.isJob == false)
         {
             goldText.text = "";
+
+            goldFishCoin.enabled = false;
 
             switch (parent.thisEventState)              //TODO FIGURE OUT HOW TO BOLD
             {
