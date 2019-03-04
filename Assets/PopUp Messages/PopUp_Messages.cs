@@ -87,6 +87,8 @@ public class PopUp_Messages : MonoBehaviour
 
                     msgText.text = fail_job[tempMessage];
 
+                    goldText.text = "";
+
                     break;
             }
 
@@ -101,13 +103,13 @@ public class PopUp_Messages : MonoBehaviour
             {
                 case (EventBehavior.eventState.SUCCESS):
 
-                    msgText.text = success_party[0] + " " + companyName + " likes " + style + " clothes...";
+                    msgText.text = "" + success_party[0] + " " + "<b><color=green>" + companyName + "</color></b>" + " likes " + "<b><color=green>" + style + "</color></b>" + " clothes...";
 
                     break;
 
                 case (EventBehavior.eventState.SUPERSUCCESS):
 
-                    msgText.text = super_party[0] + " " + companyName + " likes " + style + " clothes...";
+                    msgText.text = "" + super_party[0] + " " + "<b><color=green>" + companyName + "</color></b>" + " likes " + "<b><color=green>" + style + "</color></b>" + " clothes...";
 
                     break;
 
@@ -118,5 +120,7 @@ public class PopUp_Messages : MonoBehaviour
                     break;
             }
         }
+
+
     }
 }
