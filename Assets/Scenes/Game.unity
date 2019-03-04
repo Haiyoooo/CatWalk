@@ -211,6 +211,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d4c81fa5903aa94faa54e2423ba4dc1, type: 3}
+--- !u!1 &106126203 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5881061400516855956, guid: 1afdc0f4803143e4e87b715d87048a0e,
+    type: 3}
+  m_PrefabInstance: {fileID: 1546691179}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &107720875 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5881061399939458485, guid: 1afdc0f4803143e4e87b715d87048a0e,
@@ -3853,26 +3859,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: TimeBar
       objectReference: {fileID: 0}
-    - target: {fileID: 5881061399939458485, guid: 1afdc0f4803143e4e87b715d87048a0e,
-        type: 3}
-      propertyPath: m_Name
-      value: Day3Text
-      objectReference: {fileID: 0}
-    - target: {fileID: 5881061399585071840, guid: 1afdc0f4803143e4e87b715d87048a0e,
-        type: 3}
-      propertyPath: m_Name
-      value: Day1Text
-      objectReference: {fileID: 0}
-    - target: {fileID: 5881061400680972565, guid: 1afdc0f4803143e4e87b715d87048a0e,
-        type: 3}
-      propertyPath: m_Name
-      value: Day4Text
-      objectReference: {fileID: 0}
-    - target: {fileID: 6650213002876104719, guid: 1afdc0f4803143e4e87b715d87048a0e,
-        type: 3}
-      propertyPath: m_Name
-      value: Day5Text
-      objectReference: {fileID: 0}
     - target: {fileID: 5881061401034424297, guid: 1afdc0f4803143e4e87b715d87048a0e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3988,16 +3974,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0.040000003
       objectReference: {fileID: 0}
-    - target: {fileID: 6872173480605689514, guid: 1afdc0f4803143e4e87b715d87048a0e,
-        type: 3}
-      propertyPath: m_Name
-      value: Day6Text
-      objectReference: {fileID: 0}
-    - target: {fileID: 5881061400066560181, guid: 1afdc0f4803143e4e87b715d87048a0e,
-        type: 3}
-      propertyPath: m_Name
-      value: Day2Text
-      objectReference: {fileID: 0}
     - target: {fileID: 5881061399585071846, guid: 1afdc0f4803143e4e87b715d87048a0e,
         type: 3}
       propertyPath: m_havePropertiesChanged
@@ -4057,6 +4033,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6650213002876104719, guid: 1afdc0f4803143e4e87b715d87048a0e,
+        type: 3}
+      propertyPath: m_Name
+      value: Day5Text
+      objectReference: {fileID: 0}
+    - target: {fileID: 5881061399585071840, guid: 1afdc0f4803143e4e87b715d87048a0e,
+        type: 3}
+      propertyPath: m_Name
+      value: Day1Text
+      objectReference: {fileID: 0}
+    - target: {fileID: 5881061399939458485, guid: 1afdc0f4803143e4e87b715d87048a0e,
+        type: 3}
+      propertyPath: m_Name
+      value: Day3Text
+      objectReference: {fileID: 0}
+    - target: {fileID: 5881061400066560181, guid: 1afdc0f4803143e4e87b715d87048a0e,
+        type: 3}
+      propertyPath: m_Name
+      value: Day2Text
+      objectReference: {fileID: 0}
+    - target: {fileID: 5881061400680972565, guid: 1afdc0f4803143e4e87b715d87048a0e,
+        type: 3}
+      propertyPath: m_Name
+      value: Day4Text
+      objectReference: {fileID: 0}
+    - target: {fileID: 6872173480605689514, guid: 1afdc0f4803143e4e87b715d87048a0e,
+        type: 3}
+      propertyPath: m_Name
+      value: Day6Text
       objectReference: {fileID: 0}
     - target: {fileID: 6644705226983758257, guid: 1afdc0f4803143e4e87b715d87048a0e,
         type: 3}
@@ -5542,49 +5548,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 834445241352930398, guid: d4c9672a76d84294aa4e1bf4d4e9f9f5,
         type: 3}
-      propertyPath: dayNumberText.Array.size
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 834445241352930398, guid: d4c9672a76d84294aa4e1bf4d4e9f9f5,
-        type: 3}
-      propertyPath: dayNumber.Array.size
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 834445241352930398, guid: d4c9672a76d84294aa4e1bf4d4e9f9f5,
-        type: 3}
       propertyPath: timeBar
       value: 
       objectReference: {fileID: 852659194}
-    - target: {fileID: 834445241352930398, guid: d4c9672a76d84294aa4e1bf4d4e9f9f5,
-        type: 3}
-      propertyPath: cashText
-      value: 
-      objectReference: {fileID: 225162198}
-    - target: {fileID: 834445241352930398, guid: d4c9672a76d84294aa4e1bf4d4e9f9f5,
-        type: 3}
-      propertyPath: debtText
-      value: 
-      objectReference: {fileID: 1331238884}
-    - target: {fileID: 834445241352930398, guid: d4c9672a76d84294aa4e1bf4d4e9f9f5,
-        type: 3}
-      propertyPath: endWeek
-      value: 
-      objectReference: {fileID: 3954573507725035709}
-    - target: {fileID: 834445241352930398, guid: d4c9672a76d84294aa4e1bf4d4e9f9f5,
-        type: 3}
-      propertyPath: endWeekText
-      value: 
-      objectReference: {fileID: 2174178206680420625}
-    - target: {fileID: 834445241352930398, guid: d4c9672a76d84294aa4e1bf4d4e9f9f5,
-        type: 3}
-      propertyPath: nextweekButton
-      value: 
-      objectReference: {fileID: 482526274901849315}
-    - target: {fileID: 834445241352930398, guid: d4c9672a76d84294aa4e1bf4d4e9f9f5,
-        type: 3}
-      propertyPath: quitButton
-      value: 
-      objectReference: {fileID: 482526274901849316}
     - target: {fileID: 834445241352930398, guid: d4c9672a76d84294aa4e1bf4d4e9f9f5,
         type: 3}
       propertyPath: dayNumberText.Array.data[0]
@@ -5617,39 +5583,39 @@ PrefabInstance:
       objectReference: {fileID: 857172605}
     - target: {fileID: 834445241352930398, guid: d4c9672a76d84294aa4e1bf4d4e9f9f5,
         type: 3}
-      propertyPath: dayNumber.Array.data[0]
-      value: 1
-      objectReference: {fileID: 0}
+      propertyPath: dayNumberText.Array.data[6]
+      value: 
+      objectReference: {fileID: 106126203}
     - target: {fileID: 834445241352930398, guid: d4c9672a76d84294aa4e1bf4d4e9f9f5,
         type: 3}
-      propertyPath: dayNumber.Array.data[1]
-      value: 2
-      objectReference: {fileID: 0}
+      propertyPath: cashText
+      value: 
+      objectReference: {fileID: 225162198}
     - target: {fileID: 834445241352930398, guid: d4c9672a76d84294aa4e1bf4d4e9f9f5,
         type: 3}
-      propertyPath: dayNumber.Array.data[2]
-      value: 3
-      objectReference: {fileID: 0}
+      propertyPath: debtText
+      value: 
+      objectReference: {fileID: 1331238884}
     - target: {fileID: 834445241352930398, guid: d4c9672a76d84294aa4e1bf4d4e9f9f5,
         type: 3}
-      propertyPath: dayNumber.Array.data[3]
-      value: 4
-      objectReference: {fileID: 0}
+      propertyPath: endWeek
+      value: 
+      objectReference: {fileID: 3954573507725035709}
     - target: {fileID: 834445241352930398, guid: d4c9672a76d84294aa4e1bf4d4e9f9f5,
         type: 3}
-      propertyPath: dayNumber.Array.data[4]
-      value: 5
-      objectReference: {fileID: 0}
+      propertyPath: endWeekText
+      value: 
+      objectReference: {fileID: 2174178206680420625}
     - target: {fileID: 834445241352930398, guid: d4c9672a76d84294aa4e1bf4d4e9f9f5,
         type: 3}
-      propertyPath: dayNumber.Array.data[5]
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 3245642327944956456, guid: d4c9672a76d84294aa4e1bf4d4e9f9f5,
+      propertyPath: nextweekButton
+      value: 
+      objectReference: {fileID: 482526274901849315}
+    - target: {fileID: 834445241352930398, guid: d4c9672a76d84294aa4e1bf4d4e9f9f5,
         type: 3}
-      propertyPath: m_PlayOnAwake
-      value: 0
-      objectReference: {fileID: 0}
+      propertyPath: quitButton
+      value: 
+      objectReference: {fileID: 482526274901849316}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d4c9672a76d84294aa4e1bf4d4e9f9f5, type: 3}
 --- !u!224 &7997212644434372379 stripped
