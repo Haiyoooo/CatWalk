@@ -250,12 +250,12 @@ SpriteRenderer:
   m_SortingLayerID: 1228227225
   m_SortingLayer: 3
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 2b0c6973a43e8aa4aa0a8e4af25dcf3c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d64fe925fdf46d14585234fc9a6b564c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.6, y: 1.6}
+  m_Size: {x: 4.8, y: 4.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -278,8 +278,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.6, y: 1.6}
-    newSize: {x: 1.6, y: 1.6}
+    oldSize: {x: 4.8, y: 4.8}
+    newSize: {x: 4.8, y: 4.8}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -302,7 +302,7 @@ MonoBehaviour:
   equipped: 0
   cost: 0
   location: 0
-  wornItemSprite: {fileID: 21300000, guid: 43afa6863fc43e84998a05b307b27376, type: 3}
+  wornItemSprite: {fileID: 21300000, guid: 9234617d613f85c4ba5efee4f85528b2, type: 3}
   equipMark: {fileID: 567130096844705344, guid: f238f577b01aedc4a922882a595f1f3b,
     type: 3}
   costText: {fileID: 0}

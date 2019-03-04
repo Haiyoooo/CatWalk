@@ -192,7 +192,7 @@ GameObject:
   - component: {fileID: 2668915738651545168}
   - component: {fileID: 7886092513006653023}
   m_Layer: 0
-  m_Name: Pirate Hat 1
+  m_Name: Sporty Hat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -250,12 +250,12 @@ SpriteRenderer:
   m_SortingLayerID: 1228227225
   m_SortingLayer: 3
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: bc15534369970ef43b62a5cf3eb6f41e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a1439fca52556ae408d3e1fa7db8e6a8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.6, y: 1.6}
+  m_Size: {x: 4.8, y: 4.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -278,8 +278,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.6, y: 1.6}
-    newSize: {x: 1.6, y: 1.6}
+    oldSize: {x: 4.8, y: 4.8}
+    newSize: {x: 4.8, y: 4.8}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -302,7 +302,7 @@ MonoBehaviour:
   equipped: 0
   cost: 0
   location: 0
-  wornItemSprite: {fileID: 21300000, guid: f0f3f1390e050ce489d827ec5b6811bb, type: 3}
+  wornItemSprite: {fileID: 21300000, guid: 549cf1f65dc82a24bad0485ac03792c4, type: 3}
   equipMark: {fileID: 567130096844705344, guid: f238f577b01aedc4a922882a595f1f3b,
     type: 3}
   costText: {fileID: 0}

@@ -123,7 +123,7 @@ MonoBehaviour:
   equipped: 0
   cost: 0
   location: 0
-  wornItemSprite: {fileID: 21300000, guid: bdad157ac6a352a4cbb243f7d776f407, type: 3}
+  wornItemSprite: {fileID: 21300000, guid: e54c857c912e29b4b9d6afdbe71892ce, type: 3}
   equipMark: {fileID: 567130096844705344, guid: f238f577b01aedc4a922882a595f1f3b,
     type: 3}
   costText: {fileID: 0}
