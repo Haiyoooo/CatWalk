@@ -87,7 +87,7 @@ public class EventBehavior : MonoBehaviour
             companyNumber = Random.Range(0, 9);
             eventName = GameObject.FindGameObjectWithTag("Company Manager").GetComponent<CompanyManager>().CompanyList[companyNumber].name;
             eventSpriteRenderer.sprite = jobSprite;
-            salaryTooltip.text = salary.ToString();
+            salaryTooltip.text = "Salary: " + salary.ToString();
         }
         else // is a party 
         {
@@ -129,13 +129,10 @@ public class EventBehavior : MonoBehaviour
         this.gameObject.GetComponent<BoxCollider2D>().enabled = !FindObjectOfType<ShopMenu>().opened;
 
         if (playStanderd)
-            transform.localScale = Vector3.Lerp(transform.localScale, FinalScale, Time.deltaTime * 2);
-        if (transform.localScale == FinalScale)
         {
-            playStanderd = false;
-            childObj.gameObject.SetActive(false);
+            transform.localScale = Vector3.Lerp(transform.localScale, FinalScale, Time.deltaTime * 2);
+            if (!playBigger) childObj.gameObject.SetActive(false);
         }
-            
         if (playDisappear)
             transform.localScale = Vector3.Lerp(transform.localScale, InitialScale, Time.deltaTime * 2);
         if (playBigger)
