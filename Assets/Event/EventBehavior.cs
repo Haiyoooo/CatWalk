@@ -91,6 +91,16 @@ public class EventBehavior : MonoBehaviour
         BigScale = new Vector3(1.5f, 1.5f, 1.5f);
         transform.localScale = InitialScale;
 
+
+        if (transform.parent.name == "City1"
+                || transform.parent.name == "City2"
+                || transform.parent.name == "City6"
+                || transform.parent.name == "City10")
+        {
+            childObj.gameObject.transform.position = new Vector3(childObj.gameObject.transform.position.x - 0.5f,
+                childObj.gameObject.transform.position.y, childObj.gameObject.transform.position.z);
+            Debug.Log("left");
+        }
     }
 
     private void Update()
