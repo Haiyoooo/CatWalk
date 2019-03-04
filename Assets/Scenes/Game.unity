@@ -1386,37 +1386,31 @@ MonoBehaviour:
   AllItemList:
   - prefab: {fileID: 4033900069754432056, guid: f39b034e87149c9488f2826213520efa,
       type: 3}
-    cost: 3
+    cost: 1
   - prefab: {fileID: 5254537916315319614, guid: 372ca658e50344f4386b82a000e11106,
       type: 3}
-    cost: 4
+    cost: 1
   - prefab: {fileID: 8248576141903073064, guid: fecb912ca229a754c8f0570f7e8cb397,
       type: 3}
-    cost: 5
+    cost: 1
   - prefab: {fileID: 8248576141903073064, guid: fecb912ca229a754c8f0570f7e8cb397,
       type: 3}
-    cost: 5
+    cost: 1
   - prefab: {fileID: 8248576141903073064, guid: fecb912ca229a754c8f0570f7e8cb397,
       type: 3}
-    cost: 5
+    cost: 1
   - prefab: {fileID: 8248576141903073064, guid: fecb912ca229a754c8f0570f7e8cb397,
       type: 3}
-    cost: 5
+    cost: 1
   - prefab: {fileID: 8248576141903073064, guid: fecb912ca229a754c8f0570f7e8cb397,
       type: 3}
-    cost: 5
+    cost: 0
   - prefab: {fileID: 8248576141903073064, guid: fecb912ca229a754c8f0570f7e8cb397,
       type: 3}
-    cost: 5
+    cost: 1
   - prefab: {fileID: 8248576141903073064, guid: fecb912ca229a754c8f0570f7e8cb397,
       type: 3}
-    cost: 5
-  - prefab: {fileID: 8248576141903073064, guid: fecb912ca229a754c8f0570f7e8cb397,
-      type: 3}
-    cost: 5
-  - prefab: {fileID: 8248576141903073064, guid: fecb912ca229a754c8f0570f7e8cb397,
-      type: 3}
-    cost: 5
+    cost: 1
   storeItems: []
   closetItems: []
   shopManager: {fileID: 1365139171}
@@ -3859,6 +3853,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: TimeBar
       objectReference: {fileID: 0}
+    - target: {fileID: 5881061399939458485, guid: 1afdc0f4803143e4e87b715d87048a0e,
+        type: 3}
+      propertyPath: m_Name
+      value: Day3Text
+      objectReference: {fileID: 0}
+    - target: {fileID: 5881061399585071840, guid: 1afdc0f4803143e4e87b715d87048a0e,
+        type: 3}
+      propertyPath: m_Name
+      value: Day1Text
+      objectReference: {fileID: 0}
+    - target: {fileID: 5881061400680972565, guid: 1afdc0f4803143e4e87b715d87048a0e,
+        type: 3}
+      propertyPath: m_Name
+      value: Day4Text
+      objectReference: {fileID: 0}
+    - target: {fileID: 6650213002876104719, guid: 1afdc0f4803143e4e87b715d87048a0e,
+        type: 3}
+      propertyPath: m_Name
+      value: Day5Text
+      objectReference: {fileID: 0}
     - target: {fileID: 5881061401034424297, guid: 1afdc0f4803143e4e87b715d87048a0e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3974,6 +3988,16 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0.040000003
       objectReference: {fileID: 0}
+    - target: {fileID: 6872173480605689514, guid: 1afdc0f4803143e4e87b715d87048a0e,
+        type: 3}
+      propertyPath: m_Name
+      value: Day6Text
+      objectReference: {fileID: 0}
+    - target: {fileID: 5881061400066560181, guid: 1afdc0f4803143e4e87b715d87048a0e,
+        type: 3}
+      propertyPath: m_Name
+      value: Day2Text
+      objectReference: {fileID: 0}
     - target: {fileID: 5881061399585071846, guid: 1afdc0f4803143e4e87b715d87048a0e,
         type: 3}
       propertyPath: m_havePropertiesChanged
@@ -4033,36 +4057,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6650213002876104719, guid: 1afdc0f4803143e4e87b715d87048a0e,
-        type: 3}
-      propertyPath: m_Name
-      value: Day5Text
-      objectReference: {fileID: 0}
-    - target: {fileID: 5881061399585071840, guid: 1afdc0f4803143e4e87b715d87048a0e,
-        type: 3}
-      propertyPath: m_Name
-      value: Day1Text
-      objectReference: {fileID: 0}
-    - target: {fileID: 5881061399939458485, guid: 1afdc0f4803143e4e87b715d87048a0e,
-        type: 3}
-      propertyPath: m_Name
-      value: Day3Text
-      objectReference: {fileID: 0}
-    - target: {fileID: 5881061400066560181, guid: 1afdc0f4803143e4e87b715d87048a0e,
-        type: 3}
-      propertyPath: m_Name
-      value: Day2Text
-      objectReference: {fileID: 0}
-    - target: {fileID: 5881061400680972565, guid: 1afdc0f4803143e4e87b715d87048a0e,
-        type: 3}
-      propertyPath: m_Name
-      value: Day4Text
-      objectReference: {fileID: 0}
-    - target: {fileID: 6872173480605689514, guid: 1afdc0f4803143e4e87b715d87048a0e,
-        type: 3}
-      propertyPath: m_Name
-      value: Day6Text
       objectReference: {fileID: 0}
     - target: {fileID: 6644705226983758257, guid: 1afdc0f4803143e4e87b715d87048a0e,
         type: 3}
