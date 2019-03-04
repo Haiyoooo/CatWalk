@@ -61,8 +61,8 @@ public class GameManager : MonoBehaviour
 
     private void DisplayCashDebt()
     {
-        debtText.GetComponent<Text>().text = "You own: " + debt + " FishCoin";
-        cashText.GetComponent<Text>().text = "You have: " + fishCoin + " FishCoin";
+        debtText.GetComponent<Text>().text = "owe: " + debt;
+        cashText.GetComponent<Text>().text = "" + fishCoin;
     }
 
     private void PayOnDeadline()
