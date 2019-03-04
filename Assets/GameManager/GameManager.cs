@@ -29,6 +29,8 @@ public class GameManager : MonoBehaviour
     public GameObject endWeekText;
     public GameObject nextweekButton;
     public GameObject quitButton;
+    [SerializeField] private GameObject gameover;
+    [SerializeField] private GameObject gamewin;
 
     private void Awake()
     {
@@ -83,16 +85,25 @@ public class GameManager : MonoBehaviour
                 endWeekText.GetComponent<TextMeshProUGUI>().text = "What, not enough money to pay your debt? GO TO JAIL.";
                 quitButton.SetActive(true);
                 nextweekButton.SetActive(false);
+
+                //imgs
+                gameover.SetActive(true);
+                gamewin.SetActive(false);
                 //SceneManager.LoadScene(2);
             }
             else
             {
-                if (currentWeek == lastWeek) //WON
-                {
-                    //endWeekText.GetComponent<TextMeshProUGUI>().text = "Meow, you won!";
-                    //quitButton.SetActive(true);
-                    //nextweekButton.SetActive(false);
-                    SceneManager.LoadScene(3);
+                if (currentWeek == lastWeek)
+                { //WON
+                    endWeekText.GetComponent<TextMeshProUGUI>().text = "YOU WON! Debt free & famous!!!";
+                    quitButton.SetActive(true);
+                    nextweekButton.SetActive(false);
+
+                    //imgs
+                    gameover.SetActive(false);
+                    gamewin.SetActive(true);
+
+                    //SceneManager.LoadScene(3);
                 }
 
                 else //NEXTWEEK
