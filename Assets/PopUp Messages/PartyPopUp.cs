@@ -5,12 +5,13 @@ using UnityEngine.UI;
 
 public class PartyPopUp : MonoBehaviour
 {
-
-    private Event event_;
+    private Party party;
+    private Job job;
 
     void Start()
     {
-       event_ = transform.parent.parent.GetComponent<Event>();
+        party = transform.parent.parent.GetComponent<Party>();
+        job = transform.parent.parent.GetComponent<Job>();
 
     }
 
@@ -18,8 +19,14 @@ public class PartyPopUp : MonoBehaviour
     public void hidePopUp()
     {
         //remove the event if success.... TODO: refactor. needed the if function because my script is stupid
-   
-           // event_.disappearOnSuccess();
+        if (transform.parent.parent.tag == "Job")
+        {
+            job.disappearOnSuccess();
+        }
+        else
+        {
+            party.disappearOnSuccess();
+        }
 
 
         Destroy(transform.parent.gameObject); //hide the pop up message
