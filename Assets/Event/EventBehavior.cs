@@ -49,8 +49,10 @@ public class EventBehavior : MonoBehaviour
     // Animation Stuff
     private Vector3 InitialScale;
     private Vector3 FinalScale;
+    private Vector3 BigScale;
     private bool playDisappear = false;
-
+    private bool playBigger = false;
+    private bool playStanderd = true;
 
     // Start is called before the first frame update
     void Start()
@@ -82,6 +84,7 @@ public class EventBehavior : MonoBehaviour
         //Appear animation
         InitialScale = new Vector3(0.1f, 0.1f, 0.1f);
         FinalScale = new Vector3(1, 1, 1);
+        BigScale = new Vector3(1.5f, 1.5f, 1.5f);
         transform.localScale = InitialScale;
 
     }
@@ -90,9 +93,14 @@ public class EventBehavior : MonoBehaviour
     {
         this.gameObject.GetComponent<BoxCollider2D>().enabled = !FindObjectOfType<ShopMenu>().opened;
 
-        transform.localScale = Vector3.Lerp(transform.localScale, FinalScale, Time.deltaTime * 2);
+        if (playStanderd)
+            transform.localScale = Vector3.Lerp(transform.localScale, FinalScale, Time.deltaTime * 2);
+        if (transform.localScale == FinalScale)
+            playStanderd = false;
         if (playDisappear)
             transform.localScale = Vector3.Lerp(transform.localScale, InitialScale, Time.deltaTime * 2);
+        if (playBigger)
+            transform.localScale = Vector3.Lerp(transform.localScale, BigScale, Time.deltaTime * 2);
     }
 
 
@@ -103,7 +111,7 @@ public class EventBehavior : MonoBehaviour
         {
             childObj.gameObject.SetActive(true);
         }
-        //transform.localScale += new Vector3(0.1f, 0.1f, 0);
+        playBigger = true;
     }
 
     private void OnMouseExit()
@@ -112,6 +120,8 @@ public class EventBehavior : MonoBehaviour
         {
             childObj.gameObject.SetActive(false);
         }
+        playBigger = false;
+        playStanderd = true;
     }
 
 
