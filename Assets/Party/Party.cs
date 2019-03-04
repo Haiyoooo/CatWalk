@@ -35,6 +35,10 @@ public class Party : MonoBehaviour
     private CompanyManager.trend theme;
     private string themeString;
 
+    private Vector3 InitialScale;
+    private Vector3 FinalScale;
+    private bool playDisappear = false;
+
     void Start()
     {
         theme = (CompanyManager.trend)Random.Range(0, 12); // picks a random theme
@@ -46,6 +50,18 @@ public class Party : MonoBehaviour
         //tooltip is a child object of this event prefab
         childObj = transform.Find("Tooltip(Canvas)");
         childObj.gameObject.SetActive(false);
+
+        //Appear animation
+        InitialScale = new Vector3(0.1f, 0.1f, 0.1f);
+        FinalScale = new Vector3(1, 1, 1);
+        transform.localScale = InitialScale;
+    }
+
+    private void Update()
+    {
+        transform.localScale = Vector3.Lerp(transform.localScale, FinalScale, Time.deltaTime * 2);
+        if (playDisappear)
+            transform.localScale = Vector3.Lerp(transform.localScale, InitialScale, Time.deltaTime * 2);
     }
 
     //Tool tip
@@ -106,11 +122,8 @@ public class Party : MonoBehaviour
     {
         if (thisPartyState == Party.partyState.SUCCESS || thisPartyState == Party.partyState.SUPERSUCCESS)
         {
-            //var FX = Instantiate(fireworksFX, new Vector2(transform.position.x, transform.position.y), Quaternion.identity);
-            //Destroy(FX.gameObject, 3f);
-            Debug.Log("Disappear" + gameObject.name);
-            //Destroy(gameObject, 0.2f);
             transform.GetComponentInParent<City>().type = City.cityType.none;
+            playDisappear = true;
         }
     }
 }

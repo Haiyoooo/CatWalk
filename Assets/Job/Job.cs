@@ -37,6 +37,10 @@ public class Job : MonoBehaviour
     [SerializeField] private string jobName;
     [SerializeField] private int companyNumber;
 
+    private Vector3 InitialScale;
+    private Vector3 FinalScale;
+    private bool playDisappear = false;
+
 
     // Start is called before the first frame update
     void Start()
@@ -54,8 +58,19 @@ public class Job : MonoBehaviour
         //tooltip is a child object of this event prefab
         childObj = transform.Find("Tooltip(Canvas)");
         childObj.gameObject.SetActive(false);
+
+        //Appear animation
+        InitialScale = new Vector3(0.1f, 0.1f, 0.1f);
+        FinalScale = new Vector3(1, 1, 1);
+        transform.localScale = InitialScale;
     }
 
+    private void Update()
+    {
+        transform.localScale = Vector3.Lerp(transform.localScale, FinalScale, Time.deltaTime * 2);
+        if(playDisappear)
+            transform.localScale = Vector3.Lerp(transform.localScale, InitialScale, Time.deltaTime * 2);
+    }
 
     //Tool tip
     private void OnMouseOver()
@@ -132,11 +147,8 @@ public class Job : MonoBehaviour
     {
         if (thisJobState == Job.jobState.SUCCESS || thisJobState == Job.jobState.SUPERSUCCESS)
         {
-            //var FX = Instantiate(fireworksFX, new Vector2(transform.position.x, transform.position.y), Quaternion.identity);
-            //Destroy(FX.gameObject, 3f);
-            Debug.Log("Disappear" + gameObject.name);
-            //Destroy(gameObject, 0.2f);
             transform.GetComponentInParent<City>().type = City.cityType.none;
+            playDisappear = true;
         }
     }
 
