@@ -16,25 +16,33 @@ public class EventBehavior : MonoBehaviour
     [Range(0, 2)]
     [SerializeField] private int correctItems = 0;
 
-    [Header("Job Stats")]
+    [Header("Job Stuff")]
     [SerializeField] private int salary = 20;
     [SerializeField] private float ssBonusMultiplier = 1.5f;
+
+    [Header("Icon Images")]
+    [SerializeField] private Sprite jobSprite;
+    [SerializeField] private Sprite partySprite;
+    private SpriteRenderer eventSpriteRenderer;
 
     [Header("PopUp Messages")]
     [SerializeField] private GameObject successPopUp;
     [SerializeField] private GameObject superSuccessPopUp;
     [SerializeField] private GameObject failPopUp; //reference the pop-up messages
 
-    [Header("Disasppear Animation")]
+    [Header("Disappear Animation")]
     [SerializeField] private GameObject fireworksFX;
 
     [Header("Tooltips Setup")]
     [SerializeField] private Text nameTooltip;
     [SerializeField] private Text salaryTooltip;
     [SerializeField] private Text themeTooltip;
-    private Transform childObj;
-    [SerializeField] private string eventName;
+
     [SerializeField] private int companyNumber;
+    [SerializeField] private string eventName;
+
+
+    private Transform childObj;
     private CompanyManager.trend theme;
     private string themeString;
 
@@ -47,19 +55,21 @@ public class EventBehavior : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        eventSpriteRenderer = transform.GetComponent<SpriteRenderer>();
+
         if (isJob)
         {
             companyNumber = Random.Range(0, 9);
             eventName = GameObject.FindGameObjectWithTag("Company Manager").GetComponent<CompanyManager>().CompanyList[companyNumber].name;
-
+            eventSpriteRenderer.sprite = jobSprite;
             salaryTooltip.text = salary.ToString();
         }
         else // is a party 
         {
             theme = (CompanyManager.trend)Random.Range(0, 12); // picks a random theme
             themeString = theme.ToString(); // gets the theme name string to display
+            eventSpriteRenderer.sprite = partySprite;
             salary = 0;
-
             themeTooltip.text = themeString;
         }
 
