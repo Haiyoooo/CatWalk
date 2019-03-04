@@ -67,7 +67,7 @@ public class ShopMenu : MonoBehaviour
         else
         {
             // closet icon moves back behind the shop icon
-            Vector3 targetVector = new Vector3(transform.position.x + 0.4f, transform.position.y, 0);
+            Vector3 targetVector = new Vector3(transform.position.x + 0.1f, transform.position.y, 0);
             closetIcon.transform.position = Vector3.Lerp(closetIcon.transform.position, targetVector, 0.1f);
             closetWindow.transform.position = Vector3.Lerp(closetWindow.transform.position, targetVector, 0.1f);
 
