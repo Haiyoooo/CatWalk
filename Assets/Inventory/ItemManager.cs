@@ -10,6 +10,11 @@ public class ItemManager : MonoBehaviour
     [SerializeField] List<GameObject> storeItems = new List<GameObject>();
     [SerializeField] List<GameObject> closetItems = new List<GameObject>();
     [SerializeField] GameObject shopManager;
+    [SerializeField] GameObject shopAnchor;
+    [SerializeField] GameObject closetAnchor;
+
+    [SerializeField] Vector3 shopAnchorSpot;
+    [SerializeField] Vector3 closetAnchorSpot;
 
     void Start()
     {
@@ -18,7 +23,10 @@ public class ItemManager : MonoBehaviour
             GameObject temp = Instantiate(pair.prefab, transform.position, Quaternion.identity);
             temp.GetComponent<ItemBehavoir>().cost = pair.cost;
         }
-        
+
+        shopAnchorSpot = new Vector3(shopAnchor.transform.position.x + 1.36f, shopAnchor.transform.position.y - 1.1f, 0);
+        closetAnchorSpot = new Vector3(closetAnchor.transform.position.x - 5.36f, closetAnchor.transform.position.y - 1.1f, 0);
+
     }
 
     void Update()
@@ -47,7 +55,9 @@ public class ItemManager : MonoBehaviour
             {
                 // 2 is the distance between any two items, the (i%3) divides them into 3 columns, 
                 // the i/3 makes it move to a new row after every 3 items, the -5.75 and 3 are just initial x and y values to start from
-                Vector3 targetVector = new Vector3(-5.35f + (2 * (i % 3)), 3.2f - 2 * (i / 3), 0);
+                //Vector3 targetVector = new Vector3(-5.35f + (2 * (i % 3)), 3.2f - 2 * (i / 3), 0);
+                Vector3 targetVector = shopAnchorSpot + new Vector3(2 * (i % 3), -2 * (i / 3), 0);
+
                 if (transform.position != targetVector)
                 {
                     item.transform.position = Vector3.Lerp(item.transform.position, targetVector, 0.4f);
@@ -60,7 +70,8 @@ public class ItemManager : MonoBehaviour
             int j = 0;
             foreach (GameObject item in closetItems)
             {
-                Vector3 targetVector = new Vector3(1.35f + (2 * (j % 3)), 3.2f - 2 * (j / 3), 0);
+                //Vector3 targetVector = new Vector3(1.35f + (2 * (j % 3)), 3.2f - 2 * (j / 3), 0);
+                Vector3 targetVector = closetAnchorSpot + new Vector3(2 * (j % 3), -2 * (j / 3), 0);
 
                 if (transform.position != targetVector)
                 {
@@ -80,8 +91,23 @@ public class ItemManager : MonoBehaviour
                 item.transform.localScale = Vector3.Lerp(item.transform.localScale, Vector3.zero, 0.1f);
             }
         }
-        
-        
+
+        // update anchor spots
+        shopAnchorSpot = new Vector3(shopAnchor.transform.position.x + 1.36f, shopAnchor.transform.position.y - 1.1f, 0);
+        closetAnchorSpot = new Vector3(closetAnchor.transform.position.x - 5.36f, closetAnchor.transform.position.y - 1.1f, 0);
+
+        // store up button
+        if ( (Input.GetKeyDown(KeyCode.W)) && (shopAnchor.transform.position.y > 5) )
+        {
+            shopAnchor.transform.position = shopAnchor.transform.position + new Vector3(0, -2, 0);
+        }
+
+        // store down button
+        if ((Input.GetKeyDown(KeyCode.S)) && (shopAnchor.transform.position.y < 13))
+        {
+            shopAnchor.transform.position = shopAnchor.transform.position + new Vector3(0, 2, 0);
+        }
+
     }
 }
 
