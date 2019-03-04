@@ -54,10 +54,13 @@ public class EventBehavior : MonoBehaviour
     private bool playBigger = false;
     private bool playStanderd = true;
 
+    public string[] partyNameOptions = new string[20];
+
     // Start is called before the first frame update
     void Start()
     {
         eventSpriteRenderer = transform.GetComponent<SpriteRenderer>();
+        assignPartyNames();
 
         if (isJob)
         {
@@ -73,6 +76,7 @@ public class EventBehavior : MonoBehaviour
             eventSpriteRenderer.sprite = partySprite;
             salary = 0;
             themeTooltip.text = themeString;
+            eventName = partyNameOptions[Random.Range(0,partyNameOptions.Length)];
         }
 
         nameTooltip.text = eventName;
@@ -269,5 +273,29 @@ public class EventBehavior : MonoBehaviour
         }
         
         return result;
+    }
+
+    private void assignPartyNames()
+    {
+        partyNameOptions[0] =  "Some CEO's Birthday Party";
+        partyNameOptions[1] =  "Champagne Party";
+        partyNameOptions[2] =  "Some Office Party";
+        partyNameOptions[3] =  "A Gala Party";
+        partyNameOptions[4] =  "A Magazine Party";
+        partyNameOptions[5] =  "Fashion Week Party";
+        partyNameOptions[6] =  "The Razzle Dazzle";
+        partyNameOptions[7] =  "Rockin’ Rollick Party";
+        partyNameOptions[8] =  "Funky Fest";
+        partyNameOptions[9] =  "Booty Ball";
+        partyNameOptions[10] = "Hollapalooza";
+        partyNameOptions[11] = "Untamed Night";
+        partyNameOptions[12] = "“Bring Your Own Booty” Dance Party";
+        partyNameOptions[13] = "Drink Outside the Box";
+        partyNameOptions[14] = "Muthalovin Dance Party";
+        partyNameOptions[15] = "Thirsty Thursday";
+        partyNameOptions[16] = "Fantastic Fridaze";
+        partyNameOptions[17] = "Alan’s “Old Fart” Birthday Blowout";
+        partyNameOptions[18] = "Sweet Re-Leaf";
+        partyNameOptions[19] = "Fall Wound Up";
     }
 }
