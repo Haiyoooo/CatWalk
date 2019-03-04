@@ -272,8 +272,8 @@ BoxCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 1
+  m_UsedByEffector: 1
+  m_UsedByComposite: 0
   m_Offset: {x: -0.013208389, y: 0.01320827}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
@@ -302,7 +302,7 @@ MonoBehaviour:
   equipped: 0
   cost: 0
   location: 0
-  wornItemSprite: {fileID: 21300000, guid: d6c47ee93538e2f4e9f31e54b0b71dfe, type: 3}
+  wornItemSprite: {fileID: 21300000, guid: b0fe7d74e9eb3154fab8ab5dc8c842ae, type: 3}
   equipMark: {fileID: 567130096844705344, guid: f238f577b01aedc4a922882a595f1f3b,
     type: 3}
   costText: {fileID: 0}

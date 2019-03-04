@@ -178,7 +178,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4.8, y: 4.8}
+    oldSize: {x: 1.6, y: 1.6}
     newSize: {x: 1.6, y: 1.6}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -202,7 +202,7 @@ MonoBehaviour:
   equipped: 0
   cost: 0
   location: 0
-  wornItemSprite: {fileID: 21300000, guid: 301a526066ad1d545b9aa584f923e804, type: 3}
+  wornItemSprite: {fileID: 21300000, guid: 3668bb19335f9ca45827c1af06366a7c, type: 3}
   equipMark: {fileID: 567130096844705344, guid: f238f577b01aedc4a922882a595f1f3b,
     type: 3}
   costText: {fileID: 0}
