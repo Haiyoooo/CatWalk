@@ -72,7 +72,7 @@ public class EventBehavior : MonoBehaviour
         else // is a party 
         {
             theme = (CompanyManager.trend)Random.Range(0, 12); // picks a random theme
-            themeString = theme.ToString(); // gets the theme name string to display
+            themeString = "Theme: " + theme.ToString(); // gets the theme name string to display
             eventSpriteRenderer.sprite = partySprite;
             salary = 0;
             themeTooltip.text = themeString;
