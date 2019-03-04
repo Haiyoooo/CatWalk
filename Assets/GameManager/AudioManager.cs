@@ -9,7 +9,7 @@ public class AudioManager : MonoBehaviour
     public AudioSource[] sounds;
 
     [HideInInspector]
-    public AudioSource equip, unequip, item_select, job_success, job_fail, open_shop, close_shop, party_fail, party_success, error;
+    public AudioSource equip, unequip, item_select, job_success, job_fail, open_shop, close_shop, party_fail, party_success, error, scroll;
 
 
     // Start is called before the first frame update
@@ -38,6 +38,7 @@ public class AudioManager : MonoBehaviour
         party_fail    = sounds[8];
         party_success = sounds[9];
         error         = sounds[10];
+        scroll        = sounds[11];
 
     }
 

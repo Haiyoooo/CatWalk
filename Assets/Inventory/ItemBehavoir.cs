@@ -134,6 +134,17 @@ public class ItemBehavoir : MonoBehaviour
         }
 
         checkMark.SetActive(equipped);
+
+        // hide the cost text
+        if ( (transform.position.y < -1) || (transform.position.y > 4) )
+        {
+            costText.enabled = false;
+        }
+        else if (!costText.enabled && location == foundIn.store)
+        {
+            costText.enabled = true;
+        }
+
     }
 
     private void OnMouseEnter()

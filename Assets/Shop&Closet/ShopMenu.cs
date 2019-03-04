@@ -12,6 +12,8 @@ public class ShopMenu : MonoBehaviour
     [SerializeField] GameObject closetWindow;
     public Transform childObj;
     private Vector3 windowScale;
+    GameObject storeMask;
+    GameObject closetMask;
 
     void Start()
     {
@@ -19,6 +21,9 @@ public class ShopMenu : MonoBehaviour
         childObj = transform.Find("Canvas");
         childObj.gameObject.SetActive(false);
         windowScale = new Vector3(1, 0.725f, 1);
+
+        storeMask = GameObject.Find("Store Mask");
+        closetMask = GameObject.Find("Closet Mask");
     }
 
     
@@ -51,11 +56,17 @@ public class ShopMenu : MonoBehaviour
 
             if (closetIcon.transform.position.x > 1) // if the closet icon gets far enough to the right
             {
+                // mask info
+                
+                Vector3 maskScale = new Vector3(1.4f, 1.7f, 1);
+
                 // store window opens
                 storeWindow.transform.localScale = Vector3.Lerp(storeWindow.transform.localScale, windowScale, 0.2f);
+                storeMask.transform.localScale = Vector3.Lerp(storeMask.transform.localScale, maskScale, 0.2f);
 
                 // closet window opens
                 closetWindow.transform.localScale = Vector3.Lerp(closetWindow.transform.localScale, windowScale, 0.2f);
+                closetMask.transform.localScale = Vector3.Lerp(closetMask.transform.localScale, maskScale, 0.2f);
 
                 // enable the closet icon's circle colider
                 closetIcon.GetComponent<CircleCollider2D>().enabled = true;
