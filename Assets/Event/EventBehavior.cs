@@ -17,7 +17,7 @@ public class EventBehavior : MonoBehaviour
     [SerializeField] private int correctItems = 0;
 
     [Header("Job Stuff")]
-    [SerializeField] private int salary = 20;
+    [SerializeField] public int salary = 20;
     [SerializeField] private float ssBonusMultiplier = 1.5f;
 
     [Header("Icon Images")]
