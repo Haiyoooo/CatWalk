@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
     public Slider timeBar;
     public GameObject[] dayNumberText;
     public int[] dayNumber;
-    public int lastWeek = 1;
+    public int lastWeek = 4;
     public int currentWeek = 1;
     private float dayIndex = 1;
 
@@ -80,10 +80,10 @@ public class GameManager : MonoBehaviour
 
             if (fishCoin <= 0)
             {//GAME OVER
-                //endWeekText.GetComponent<TextMeshProUGUI>().text = "You lost lah!";
-                //quitButton.SetActive(true);
-                //nextweekButton.SetActive(false);
-                SceneManager.LoadScene(2);
+                endWeekText.GetComponent<TextMeshProUGUI>().text = "What, not enough money to pay your debt? GO TO JAIL.";
+                quitButton.SetActive(true);
+                nextweekButton.SetActive(false);
+                //SceneManager.LoadScene(2);
             }
             else
             {
@@ -98,7 +98,7 @@ public class GameManager : MonoBehaviour
                 else //NEXTWEEK
 
                 {
-                    endWeekText.GetComponent<TextMeshProUGUI>().text = "Yay, you paid " + debt + " FishCoin on time!";
+                    endWeekText.GetComponent<TextMeshProUGUI>().text = "Yay, you paid your " + debt + " FishCoin debt on time!";
                     quitButton.SetActive(false);
                     nextweekButton.SetActive(true);
                 } 
