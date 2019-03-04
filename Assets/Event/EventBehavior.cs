@@ -126,13 +126,10 @@ public class EventBehavior : MonoBehaviour
         this.gameObject.GetComponent<BoxCollider2D>().enabled = !FindObjectOfType<ShopMenu>().opened;
 
         if (playStanderd)
-            transform.localScale = Vector3.Lerp(transform.localScale, FinalScale, Time.deltaTime * 2);
-        if (transform.localScale == FinalScale)
         {
-            playStanderd = false;
-            childObj.gameObject.SetActive(false);
+            transform.localScale = Vector3.Lerp(transform.localScale, FinalScale, Time.deltaTime * 2);
+            if (!playBigger) childObj.gameObject.SetActive(false);
         }
-            
         if (playDisappear)
             transform.localScale = Vector3.Lerp(transform.localScale, InitialScale, Time.deltaTime * 2);
         if (playBigger)
