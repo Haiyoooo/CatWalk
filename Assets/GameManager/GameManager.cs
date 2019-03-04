@@ -10,6 +10,8 @@ public class GameManager : MonoBehaviour
     public float day = 0;
     public float countDown = 7;
     public Slider timeBar;
+    public GameObject[] dayNumberText;
+    public int[] dayNumber;
     public int lastWeek = 4;
     public int currentWeek = 1;
     private float dayIndex = 1;
@@ -69,6 +71,7 @@ public class GameManager : MonoBehaviour
         {
             fishCoin -= debt;
             isPaied = true;
+            UpdateDayNumbers();
 
             if (fishCoin <= 0)
             {//GAME OVER
@@ -100,5 +103,12 @@ public class GameManager : MonoBehaviour
         }
     }
 
-
+    private void UpdateDayNumbers()
+    {
+        for(int i = 0; i < dayNumberText.Length; i++)
+        {
+            dayNumber[i] += 7;
+            dayNumberText[i].GetComponent<TextMeshProUGUI>().text = "Day " + dayNumber[i];
+        }
+    }
 }
