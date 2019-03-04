@@ -84,7 +84,7 @@ public class EventBehavior : MonoBehaviour
             companyNumber = Random.Range(0, 9);
             eventName = GameObject.FindGameObjectWithTag("Company Manager").GetComponent<CompanyManager>().CompanyList[companyNumber].name;
             eventSpriteRenderer.sprite = jobSprite;
-            salaryTooltip.text = salary.ToString();
+            salaryTooltip.text = "Salary: " + salary.ToString();
         }
         else // is a party 
         {
