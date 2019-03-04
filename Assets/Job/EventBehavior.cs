@@ -5,7 +5,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 
-public class Job : MonoBehaviour
+public class EventBehavior : MonoBehaviour
 {
     public enum eventState { AVALIABLE, SUCCESS, SUPERSUCCESS, FAIL };
     public eventState thisEventState = eventState.AVALIABLE;

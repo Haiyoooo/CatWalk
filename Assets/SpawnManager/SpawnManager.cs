@@ -6,8 +6,9 @@ using UnityEngine.UI;
 public class SpawnManager : MonoBehaviour
 {
     public GameObject[] cities;
-    public GameObject jobPrefab;
-    public GameObject partyPrefab;
+    //public GameObject jobPrefab;
+    //public GameObject partyPrefab;
+    public GameObject eventPrefab;
     public GameObject emptyPrefab;
 
     private int[] job;
@@ -41,14 +42,18 @@ public class SpawnManager : MonoBehaviour
         {
             obj.GetComponent<City>().type = City.cityType.job;
             //obj.GetComponent<Image>().color = Color.blue;
-            newEvent = Instantiate(jobPrefab, obj.transform.position, Quaternion.identity);
+            //newEvent = Instantiate(jobPrefab, obj.transform.position, Quaternion.identity);
+            newEvent = Instantiate(eventPrefab, obj.transform.position, Quaternion.identity);
+            newEvent.GetComponent<EventBehavior>().isJob = true;
             newEvent.transform.parent = obj.transform;
         }
         if (index == 2)
         {
             obj.GetComponent<City>().type = City.cityType.party;
             //obj.GetComponent<Image>().color = Color.red;
-            newEvent = Instantiate(partyPrefab, obj.transform.position, Quaternion.identity);
+            //newEvent = Instantiate(eventPrefab, obj.transform.position, Quaternion.identity);
+            newEvent = Instantiate(eventPrefab, obj.transform.position, Quaternion.identity);
+            newEvent.GetComponent<EventBehavior>().isJob = false;
             newEvent.transform.parent = obj.transform;
         }
         if (index == 3)
