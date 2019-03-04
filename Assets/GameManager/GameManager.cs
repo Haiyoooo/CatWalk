@@ -50,7 +50,10 @@ public class GameManager : MonoBehaviour
         DisplayCashDebt();
         PayOnDeadline();
         if (day % countDown == 1)
+        {
             isPaied = false;
+            //Timebar_Animation.ResetDayMarkerColor();
+        }
     }
 
     private void TimebarValue()
