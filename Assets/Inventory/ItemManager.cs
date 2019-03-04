@@ -13,6 +13,11 @@ public class ItemManager : MonoBehaviour
     [SerializeField] GameObject shopAnchor;
     [SerializeField] GameObject closetAnchor;
 
+    public bool storeUp = false;
+    public bool storeDown = false;
+    public bool closetUp = false;
+    public bool closetDown = false;
+
     Vector3 shopAnchorSpot;
     Vector3 closetAnchorSpot;
 
@@ -97,18 +102,58 @@ public class ItemManager : MonoBehaviour
         closetAnchorSpot = new Vector3(closetAnchor.transform.position.x - 5.36f, closetAnchor.transform.position.y - 1.1f, 0);
 
         // store up button
-        if ( (Input.GetKeyDown(KeyCode.W)) && (shopAnchor.transform.position.y > 5) )
+        if ( storeUp && (shopAnchor.transform.position.y > 5) )
         {
             shopAnchor.transform.position = shopAnchor.transform.position + new Vector3(0, -2, 0);
             AudioManager.instance.scroll.Play();
+            //storeUp = false;
         }
 
         // store down button
-        if ((Input.GetKeyDown(KeyCode.S)) && (shopAnchor.transform.position.y < 13))
+        if (storeDown && (shopAnchor.transform.position.y < 13))
         {
             shopAnchor.transform.position = shopAnchor.transform.position + new Vector3(0, 2, 0);
             AudioManager.instance.scroll.Play();
+            //storeDown = false;
         }
+
+        // closet up button
+        if (closetUp && (closetAnchor.transform.position.y > 5))
+        {
+            closetAnchor.transform.position = closetAnchor.transform.position + new Vector3(0, -2, 0);
+            AudioManager.instance.scroll.Play();
+            //closetUp = false;
+        }
+
+        // closet down button
+        if (closetDown && (closetAnchor.transform.position.y < 13))
+        {
+            closetAnchor.transform.position = closetAnchor.transform.position + new Vector3(0, 2, 0);
+            AudioManager.instance.scroll.Play();
+            //closetDown = false;
+        }
+
+        // reset the arrow bools
+        
+        if (storeUp)
+        {
+            storeUp = false;
+        }
+        if (storeDown)
+        {
+            storeDown = false;
+        }
+        if (closetUp)
+        {
+            closetUp = false;
+        }
+        if (closetDown)
+        {
+            closetDown = false;
+        }
+
+
+
 
     }
 }

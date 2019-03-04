@@ -15,6 +15,11 @@ public class ShopMenu : MonoBehaviour
     GameObject storeMask;
     GameObject closetMask;
 
+    [SerializeField] GameObject storeUp;
+    [SerializeField] GameObject storeDown;
+    [SerializeField] GameObject closetUp;
+    [SerializeField] GameObject closetDown;
+
     void Start()
     {
         // finds and disables the gray out rect
@@ -68,6 +73,19 @@ public class ShopMenu : MonoBehaviour
                 closetWindow.transform.localScale = Vector3.Lerp(closetWindow.transform.localScale, windowScale, 0.2f);
                 closetMask.transform.localScale = Vector3.Lerp(closetMask.transform.localScale, maskScale, 0.2f);
 
+                // arrows open
+                storeUp.transform.position = Vector3.Lerp(storeUp.transform.position, new Vector3(-3.39f, 4.43f, 0), 0.2f);
+                storeUp.transform.localScale = Vector3.Lerp(storeUp.transform.localScale, 0.05f*Vector3.one, 0.2f);
+
+                storeDown.transform.position = Vector3.Lerp(storeDown.transform.position, new Vector3(-3.39f, -2.06f, 0), 0.2f);
+                storeDown.transform.localScale = Vector3.Lerp(storeDown.transform.localScale, 0.05f * Vector3.one, 0.2f);
+
+                closetUp.transform.position = Vector3.Lerp(closetUp.transform.position, new Vector3(3.39f, 4.43f, 0), 0.2f);
+                closetUp.transform.localScale = Vector3.Lerp(closetUp.transform.localScale, 0.05f * Vector3.one, 0.2f);
+
+                closetDown.transform.position = Vector3.Lerp(closetDown.transform.position, new Vector3(3.39f, -2.06f, 0), 0.2f);
+                closetDown.transform.localScale = Vector3.Lerp(closetDown.transform.localScale, 0.05f * Vector3.one, 0.2f);
+
                 // enable the closet icon's circle colider
                 closetIcon.GetComponent<CircleCollider2D>().enabled = true;
 
@@ -85,8 +103,21 @@ public class ShopMenu : MonoBehaviour
             // store window closes
             storeWindow.transform.localScale = Vector3.Lerp(storeWindow.transform.localScale, Vector3.zero, 0.1f);
 
-            // closet window opens
+            // closet window closes
             closetWindow.transform.localScale = Vector3.Lerp(closetWindow.transform.localScale, Vector3.zero, 0.1f);
+
+            // arrows open
+            storeUp.transform.position = Vector3.Lerp(storeUp.transform.position, transform.position, 0.2f);
+            storeUp.transform.localScale = Vector3.Lerp(storeUp.transform.localScale, Vector3.zero, 0.2f);
+
+            storeDown.transform.position = Vector3.Lerp(storeDown.transform.position, transform.position, 0.2f);
+            storeDown.transform.localScale = Vector3.Lerp(storeDown.transform.localScale, Vector3.zero, 0.2f);
+
+            closetUp.transform.position = Vector3.Lerp(closetUp.transform.position, transform.position, 0.2f);
+            closetUp.transform.localScale = Vector3.Lerp(closetUp.transform.localScale, Vector3.zero, 0.2f);
+
+            closetDown.transform.position = Vector3.Lerp(closetDown.transform.position, transform.position, 0.2f);
+            closetDown.transform.localScale = Vector3.Lerp(closetDown.transform.localScale, Vector3.zero, 0.2f);
 
             // disable the closet icon's circle colider
             closetIcon.GetComponent<CircleCollider2D>().enabled = false;
