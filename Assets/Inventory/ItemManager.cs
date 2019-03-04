@@ -13,8 +13,8 @@ public class ItemManager : MonoBehaviour
     [SerializeField] GameObject shopAnchor;
     [SerializeField] GameObject closetAnchor;
 
-    [SerializeField] Vector3 shopAnchorSpot;
-    [SerializeField] Vector3 closetAnchorSpot;
+    Vector3 shopAnchorSpot;
+    Vector3 closetAnchorSpot;
 
     void Start()
     {
