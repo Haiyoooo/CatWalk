@@ -15,8 +15,11 @@ public class ItemBehavoir : MonoBehaviour
     [SerializeField] GameObject equipMark;
     GameObject checkMark;
 
-    //[HideInInspector]
-    public Text costText; // ERNES
+    [HideInInspector]
+    public Text costText;
+
+    [HideInInspector]
+    public Transform fishcoin;
 
     //enum trend { Western, Goth, Formal, Neon, Skater, Sporty, Cute, Graceful, Pirate, Southern, MiddleEast, Royal };
     [SerializeField] CompanyManager.trend style; 
@@ -35,6 +38,7 @@ public class ItemBehavoir : MonoBehaviour
 
         cost = 1;
         costText = gameObject.GetComponentInChildren<Text>();
+        fishcoin = gameObject.transform.GetChild(0).GetChild(1);
     }
 
     
@@ -42,7 +46,7 @@ public class ItemBehavoir : MonoBehaviour
     {
 
         //Display Cost on  Item
-        costText.text = cost + "FC"; // ERNES
+        costText.text = "" + cost ; // ERNES
 
         Debug.Log(costText);
 
@@ -51,6 +55,7 @@ public class ItemBehavoir : MonoBehaviour
         {
             location = foundIn.closet;
             costText.enabled = false;
+            fishcoin.GetComponent<SpriteRenderer>().enabled = false;
             AudioManager.instance.job_success.Play();
             //money -= cost;
         }
