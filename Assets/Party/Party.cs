@@ -71,6 +71,9 @@ public class Party : MonoBehaviour
                 thisPartyState = partyState.SUCCESS;
                 var tempPopUp = Instantiate(successPopUp); //pop up message
                 tempPopUp.transform.parent = gameObject.transform;
+
+                //AUDIO
+                AudioManager.instance.party_success.Play();
             }
 
             //Fail
@@ -79,6 +82,9 @@ public class Party : MonoBehaviour
                 thisPartyState = partyState.FAIL;
                 var tempPopUp = Instantiate(failPopUp); //pop up message
                 tempPopUp.transform.parent = gameObject.transform;
+
+                //AUDIO
+                AudioManager.instance.job_fail.Play();
             }
 
             //Super Success
@@ -87,6 +93,9 @@ public class Party : MonoBehaviour
                 thisPartyState = partyState.SUPERSUCCESS;
                 var tempPopUp = Instantiate(superSuccessPopUp); //pop up message
                 tempPopUp.transform.parent = gameObject.transform;
+
+                //AUDIO
+                AudioManager.instance.party_success.Play();
             }
 
             GameManager.instance.day++;

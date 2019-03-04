@@ -119,6 +119,9 @@ public class Job : MonoBehaviour
                 var tempPopUp = Instantiate(superSuccessPopUp); //pop up message
                 tempPopUp.transform.parent = gameObject.transform;
                 Debug.Log("SUPERSUCCESS." + GameManager.instance.day + " $" + GameManager.instance.fishCoin);
+
+                //AUDIO
+                AudioManager.instance.job_success.Play();
             }
 
             GameManager.instance.day++;
