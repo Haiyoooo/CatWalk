@@ -35,7 +35,9 @@ public class Job : MonoBehaviour
     [SerializeField] private Text salaryTooltip;
     private Transform childObj;
     [SerializeField] private string jobName;
-    
+    [SerializeField] private int companyNumber;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -43,7 +45,9 @@ public class Job : MonoBehaviour
         rend = gameObject.GetComponent<SpriteRenderer>();
         rend.color = Color.white;
 
-        jobName = GameObject.FindGameObjectWithTag("Company Manager").GetComponent<CompanyManager>().CompanyList[Random.Range(0, 9)].name;
+        companyNumber = Random.Range(0, 9);
+        jobName = GameObject.FindGameObjectWithTag("Company Manager").GetComponent<CompanyManager>().CompanyList[companyNumber].name;
+
         nameTooltip.text = jobName;
         salaryTooltip.text = salary.ToString();
 
@@ -76,7 +80,8 @@ public class Job : MonoBehaviour
          * (eg. Message pop-up, Shop interface is open) */
         if (!EventSystem.current.IsPointerOverGameObject())
         {
-            
+
+            correctItems = determineSuccess();
             
             //Success
             //player is wearing 1 item that the job likes
@@ -135,6 +140,23 @@ public class Job : MonoBehaviour
     public int determineSuccess()
     {
         int result = 0;
+        CompanyManager.trend playerHeadStyle = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerBehavior>().headStyle;
+        CompanyManager.trend playerBodyStyle = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerBehavior>().bodyStyle;
+        CompanyManager.trend jobWant1 = GameObject.FindGameObjectWithTag("Company Manager").GetComponent<CompanyManager>().CompanyList[companyNumber].itWants[0];
+        CompanyManager.trend jobWant2 = GameObject.FindGameObjectWithTag("Company Manager").GetComponent<CompanyManager>().CompanyList[companyNumber].itWants[1];
+
+        // only head or body is what the company likes
+        if ( (playerHeadStyle == jobWant1) || (playerHeadStyle == jobWant2) || 
+             (playerBodyStyle == jobWant1) || (playerBodyStyle == jobWant2) ) 
+        {
+            result = 1;
+        }
+        // both head and body is what the company likes
+        if ( ((playerHeadStyle == jobWant1) || (playerHeadStyle == jobWant2)) &&
+             ((playerBodyStyle == jobWant1) || (playerBodyStyle == jobWant2))) 
+        {
+            result = 2;
+        }
         return result;
     }
 }
