@@ -74,6 +74,7 @@ public class SpawnManager : MonoBehaviour
 
     void CheckChange() //detect if the job or party in a city has been finished
     {
+        //If a job done then destroy it
         for (int i = 0; i < 8; i++)
             if(job[i] >= 0)
                 //if (cities[job[i]].GetComponent<Image>().color == Color.white)
@@ -85,26 +86,30 @@ public class SpawnManager : MonoBehaviour
                     jobNum--;
                 }
 
+        //if a party done then destroy it and respawn new jobs new parties
         //if (cities[party[0]].GetComponent<Image>().color == Color.white)
         if (cities[party[0]].GetComponent<City>().type == City.cityType.none)
         {
-            if (jobNum < 8)
+            if (jobNum < 8) //if there is any empty city
             {
+                //destroy the done party
                 lastParty = party[0];
                 Destroy(cities[lastParty].transform.GetChild(0).gameObject, 0.2f);
-                do { party[0] = Random.Range(0, 10); } while (PartyCheckConflict(party[0]) || party[0] == party[1] || party[0] == lastParty);
+                //spawn a new party, not on the other party, not on jobs, not on the city you just finished one party
+                do { party[0] = Random.Range(0, 10); } while (CheckConflict(party[0]) || party[0] == party[1] || party[0] == lastParty);
                 ChangeStatus(cities[party[0]], 2);
-                do { job[jobNum] = Random.Range(0, 10); } while (JobCheckConflict(jobNum) || job[jobNum] == party[0] || job[jobNum] == party[1]);
+                //spawn a new job, not on the parties, not on other jobs
+                do { job[jobNum] = Random.Range(0, 10); } while (CheckConflict(job[jobNum]) || job[jobNum] == party[0] || job[jobNum] == party[1]);
                 ChangeStatus(cities[job[jobNum]], 1);
-                if(jobNum < 7) 
+                if(jobNum < 7) //if there are more than 1 empty city then spawn the second new job
                 {
-                    do { job[jobNum+1] = Random.Range(0, 10); } while (JobCheckConflict(jobNum + 1) || job[jobNum+1] == party[0] || job[jobNum+1] == party[1]);
+                    do { job[jobNum+1] = Random.Range(0, 10); } while (CheckConflict(job[jobNum + 1]) || job[jobNum+1] == party[0] || job[jobNum+1] == party[1]);
                     ChangeStatus(cities[job[jobNum+1]], 1);
                     jobNum++;
                 }
                 jobNum++;
             }
-            else
+            else //if no empty city then spawn a new party on the same city
             {
                 lastParty = party[0];
                 Destroy(cities[lastParty].transform.GetChild(0).gameObject, 0.2f);
@@ -119,13 +124,13 @@ public class SpawnManager : MonoBehaviour
             {
                 lastParty = party[1];
                 Destroy(cities[lastParty].transform.GetChild(0).gameObject, 0.2f);
-                do { party[1] = Random.Range(0, 10); } while (PartyCheckConflict(party[1]) || party[1] == party[0] || party[1] == lastParty);
+                do { party[1] = Random.Range(0, 10); } while (CheckConflict(party[1]) || party[1] == party[0] || party[1] == lastParty);
                 ChangeStatus(cities[party[1]], 2);
-                do { job[jobNum] = Random.Range(0, 10); } while (JobCheckConflict(jobNum) || job[jobNum] == party[0] || job[jobNum] == party[1]);
+                do { job[jobNum] = Random.Range(0, 10); } while (CheckConflict(job[jobNum]) || job[jobNum] == party[0] || job[jobNum] == party[1]);
                 ChangeStatus(cities[job[jobNum]], 1);
                 if (jobNum < 7)
                 {
-                    do { job[jobNum + 1] = Random.Range(0, 10); } while (JobCheckConflict(jobNum + 1) || job[jobNum + 1] == party[0] || job[jobNum + 1] == party[1]);
+                    do { job[jobNum + 1] = Random.Range(0, 10); } while (CheckConflict(job[jobNum + 1]) || job[jobNum + 1] == party[0] || job[jobNum + 1] == party[1]);
                     ChangeStatus(cities[job[jobNum + 1]], 1);
                     jobNum++;
                 }
@@ -145,19 +150,10 @@ public class SpawnManager : MonoBehaviour
     //If there is no Job on the spot... job[i] = -1
     //If there is a Job on the spot... job[i] = spot's number (eg. job[7] = 8 ...
     //means this is the 7th job spawn, in city number 8
-    bool PartyCheckConflict(int n) //check the city doesn't have job when spawn party
+    bool CheckConflict(int n) //check the city doesn't have job when spawn party
     {
-        for(int i = 0; i < 8; i++)
-            if(job[i] != -1)
-                if (n == job[i]) return true;
+        if (cities[n].GetComponent<City>().type != City.cityType.none) return true;
         return false;
     }
 
-    bool JobCheckConflict(int index) //check the city doesn't have job when spawn new job
-    {
-        for (int i = 0; i < 8; i++)
-            if (i != index && job[i] != -1)
-                if (job[index] == job[i]) return true;
-        return false;
-    }
 }
