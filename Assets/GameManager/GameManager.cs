@@ -22,7 +22,7 @@ public class GameManager : MonoBehaviour
     private bool isPaied = false;
 
     public GameObject cashText;
-    public GameObject debtText;
+    //public GameObject debtText;
     private Text fameStatusText;
     public GameObject endWeek;
     public GameObject endWeekText;
@@ -36,7 +36,7 @@ public class GameManager : MonoBehaviour
         else if (instance != this)
             Destroy(this.gameObject);
 
-        fameStatusText = GameObject.Find("Fame Status").GetComponent<Text>();
+        //fameStatusText = GameObject.Find("Fame Status").GetComponent<Text>();
 
         debt = debtList[0];
     }
@@ -61,7 +61,9 @@ public class GameManager : MonoBehaviour
 
     private void DisplayCashDebt()
     {
-        debtText.GetComponent<Text>().text = "owe: " + debt;
+        Debug.Log(cashText);
+       //debtText.GetComponent<Text>().text = "owe: " + debt;
+
         cashText.GetComponent<Text>().text = "" + fishCoin;
     }
 
