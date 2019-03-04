@@ -31,6 +31,8 @@ public class GameManager : MonoBehaviour
     public GameObject quitButton;
     [SerializeField] private GameObject gameover;
     [SerializeField] private GameObject gamewin;
+    private Timebar_Animation timebar_Animation;
+    public bool backWhite = false;
 
     private void Awake()
     {
@@ -52,7 +54,9 @@ public class GameManager : MonoBehaviour
         if (day % countDown == 1)
         {
             isPaied = false;
-            //Timebar_Animation.ResetDayMarkerColor();
+            //timebar_Animation.GetComponent<Timebar_Animation>().ResetDayMarkerColor();
+            //if(day > 1)
+                
         }
     }
 
@@ -64,7 +68,11 @@ public class GameManager : MonoBehaviour
         if (day % countDown == 0)
             timeBar.value = 1;
         else
+        {
             timeBar.value = Mathf.Lerp(timeBar.value, goalValue, 0.02f);
+            backWhite = true;
+        }
+            
     }
 
     private void DisplayCashDebt()

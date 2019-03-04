@@ -19,6 +19,11 @@ public class Timebar_Animation : MonoBehaviour
         image.sprite = noFill;
     }
 
+    private void Update()
+    {
+        ResetDayMarkerColor();
+    }
+
     //fill colour when Arrow handle (current day) hits the Day Marker box
     private void OnTriggerStay2D(Collider2D other)
     {
@@ -31,9 +36,15 @@ public class Timebar_Animation : MonoBehaviour
     }
 
     //reset all to no fill
-    public void ResetDayMarkerColor()
+    private void ResetDayMarkerColor()
     {
-        image.sprite = noFill;
+        if (GameManager.instance.backWhite)
+        {
+            image.sprite = noFill;
+            GameManager.instance.backWhite = false;
+            Debug.Log("backwhite");
+        }
+           
     }
 
     //public void deadlineCatWriggle()
