@@ -60,8 +60,8 @@ MonoBehaviour:
   fishCoin: 10
   debt: 20
   debtList: 1400000064000000fa00000090010000
-  cashText: {fileID: 0}
-  debtText: {fileID: 0}
+  cashText: {fileID: 3333697950924981499, guid: 77e4ee670c909ed4588cd070247e8aa1,
+    type: 3}
   endWeek: {fileID: 0}
   endWeekText: {fileID: 0}
   nextweekButton: {fileID: 0}
