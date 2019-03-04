@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EndWeek : MonoBehaviour
 {
@@ -15,5 +16,10 @@ public class EndWeek : MonoBehaviour
     public void NextWeek()
     {
         panel.SetActive(false);
+    }
+
+    public void StartGame()
+    {
+        SceneManager.LoadScene(1);
     }
 }
