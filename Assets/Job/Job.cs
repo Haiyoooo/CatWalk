@@ -7,11 +7,9 @@ using UnityEngine.UI;
 
 public class Job : MonoBehaviour
 {
-    public enum jobState { AVALIABLE, SUCCESS, SUPERSUCCESS, FAIL };
-    public jobState thisJobState = jobState.AVALIABLE;
-    
-    private SpriteRenderer rend;
-    private bool mouseOn = false;
+    public enum eventState { AVALIABLE, SUCCESS, SUPERSUCCESS, FAIL };
+    public eventState thisEventState = eventState.AVALIABLE;
+    public bool isJob;
 
     [Header("For Testing")]
     [Tooltip("Number of clothing items currently worn which the company likes")]
@@ -33,10 +31,14 @@ public class Job : MonoBehaviour
     [Header("Tooltips Setup")]
     [SerializeField] private Text nameTooltip;
     [SerializeField] private Text salaryTooltip;
+    [SerializeField] private Text themeTooltip;
     private Transform childObj;
-    [SerializeField] private string jobName;
+    [SerializeField] private string eventName;
     [SerializeField] private int companyNumber;
+    private CompanyManager.trend theme;
+    private string themeString;
 
+    // Animation Stuff
     private Vector3 InitialScale;
     private Vector3 FinalScale;
     private bool playDisappear = false;
@@ -45,15 +47,23 @@ public class Job : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
-        rend = gameObject.GetComponent<SpriteRenderer>();
-        rend.color = Color.white;
+        if (isJob)
+        {
+            companyNumber = Random.Range(0, 9);
+            eventName = GameObject.FindGameObjectWithTag("Company Manager").GetComponent<CompanyManager>().CompanyList[companyNumber].name;
 
-        companyNumber = Random.Range(0, 9);
-        jobName = GameObject.FindGameObjectWithTag("Company Manager").GetComponent<CompanyManager>().CompanyList[companyNumber].name;
+            salaryTooltip.text = salary.ToString();
+        }
+        else // is a party 
+        {
+            theme = (CompanyManager.trend)Random.Range(0, 12); // picks a random theme
+            themeString = theme.ToString(); // gets the theme name string to display
+            salary = 0;
 
-        nameTooltip.text = jobName;
-        salaryTooltip.text = salary.ToString();
+            themeTooltip.text = themeString;
+        }
+
+        nameTooltip.text = eventName;
 
         //tooltip is a child object of this event prefab
         childObj = transform.Find("Tooltip(Canvas)");
@@ -63,14 +73,16 @@ public class Job : MonoBehaviour
         InitialScale = new Vector3(0.1f, 0.1f, 0.1f);
         FinalScale = new Vector3(1, 1, 1);
         transform.localScale = InitialScale;
+
     }
 
     private void Update()
     {
         transform.localScale = Vector3.Lerp(transform.localScale, FinalScale, Time.deltaTime * 2);
-        if(playDisappear)
+        if (playDisappear)
             transform.localScale = Vector3.Lerp(transform.localScale, InitialScale, Time.deltaTime * 2);
     }
+
 
     //Tool tip
     private void OnMouseOver()
@@ -96,47 +108,79 @@ public class Job : MonoBehaviour
         if (!EventSystem.current.IsPointerOverGameObject())
         {
 
-            correctItems = determineSuccess();
-            
+            // Determine Success
+            if (isJob)
+            {
+                correctItems = determineJobSuccess();
+            }
+            else
+            {
+                correctItems = determinePartySuccess();
+            }
+
+
             //Success
             //player is wearing 1 item that the job likes
             if (correctItems == 1)
             {
-                thisJobState = jobState.SUCCESS;
+                thisEventState = eventState.SUCCESS;
                 GameManager.instance.fishCoin += salary; //money
                 var tempPopUp = Instantiate(successPopUp); //pop up message
                 tempPopUp.transform.parent = gameObject.transform;
                 Debug.Log("Success." + GameManager.instance.day + " $" + GameManager.instance.fishCoin);
 
                 //AUDIO
-                AudioManager.instance.job_success.Play();
+                if (isJob)
+                {
+                    AudioManager.instance.job_success.Play();
+                }
+                else
+                {
+                    AudioManager.instance.party_success.Play();
+                }
+
             }
 
             //Fail
             //player is wearing 0 items that the job likes
             else if (correctItems == 0)
             {
-                thisJobState = jobState.FAIL;
+                thisEventState = eventState.FAIL;
                 var tempPopUp = Instantiate(failPopUp); //pop up message
-                tempPopUp.transform.parent = gameObject.transform; 
+                tempPopUp.transform.parent = gameObject.transform;
                 Debug.Log("Fail." + GameManager.instance.day + " $" + GameManager.instance.fishCoin);
 
                 //AUDIO
-                AudioManager.instance.job_fail.Play();
+                if (isJob)
+                {
+                    AudioManager.instance.job_fail.Play();
+                }
+                else
+                {
+                    AudioManager.instance.party_fail.Play();
+                }
+
             }
 
             //Super Success
             //player is wearing 2 items that the job likes
             else if (correctItems == 2)
             {
-                thisJobState = jobState.SUPERSUCCESS;
+                thisEventState = eventState.SUPERSUCCESS;
                 GameManager.instance.fishCoin += Mathf.FloorToInt(salary * ssBonusMultiplier); //money
                 var tempPopUp = Instantiate(superSuccessPopUp); //pop up message
                 tempPopUp.transform.parent = gameObject.transform;
                 Debug.Log("SUPERSUCCESS." + GameManager.instance.day + " $" + GameManager.instance.fishCoin);
 
                 //AUDIO
-                AudioManager.instance.job_success.Play();
+                if (isJob)
+                {
+                    AudioManager.instance.job_success.Play();
+                }
+                else
+                {
+                    AudioManager.instance.party_success.Play();
+                }
             }
 
             GameManager.instance.day++;
@@ -145,33 +189,57 @@ public class Job : MonoBehaviour
 
     public void disappearOnSuccess()
     {
-        if (thisJobState == Job.jobState.SUCCESS || thisJobState == Job.jobState.SUPERSUCCESS)
+        if (thisEventState == eventState.SUCCESS || thisEventState == eventState.SUPERSUCCESS)
         {
+            //var FX = Instantiate(fireworksFX, new Vector2(transform.position.x, transform.position.y), Quaternion.identity);
+            //Destroy(FX.gameObject, 3f);
+            Debug.Log("Disappear" + gameObject.name);
+            //Destroy(gameObject, 0.2f);
             transform.GetComponentInParent<City>().type = City.cityType.none;
-            playDisappear = true;
         }
     }
 
-    public int determineSuccess()
+    public int determineJobSuccess()
     {
         int result = 0;
         CompanyManager.trend playerHeadStyle = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerBehavior>().headStyle;
         CompanyManager.trend playerBodyStyle = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerBehavior>().bodyStyle;
         CompanyManager.trend jobWant1 = GameObject.FindGameObjectWithTag("Company Manager").GetComponent<CompanyManager>().CompanyList[companyNumber].itWants[0];
         CompanyManager.trend jobWant2 = GameObject.FindGameObjectWithTag("Company Manager").GetComponent<CompanyManager>().CompanyList[companyNumber].itWants[1];
-
-        // only head or body is what the company likes
-        if ( (playerHeadStyle == jobWant1) || (playerHeadStyle == jobWant2) || 
-             (playerBodyStyle == jobWant1) || (playerBodyStyle == jobWant2) ) 
+        
+        // only head OR body is what the company likes
+        if ((playerHeadStyle == jobWant1) || (playerHeadStyle == jobWant2) ||
+             (playerBodyStyle == jobWant1) || (playerBodyStyle == jobWant2))
         {
             result = 1;
         }
         // both head and body is what the company likes
-        if ( ((playerHeadStyle == jobWant1) || (playerHeadStyle == jobWant2)) &&
-             ((playerBodyStyle == jobWant1) || (playerBodyStyle == jobWant2))) 
+        if (((playerHeadStyle == jobWant1) || (playerHeadStyle == jobWant2)) &&
+             ((playerBodyStyle == jobWant1) || (playerBodyStyle == jobWant2)))
         {
             result = 2;
         }
+
+        return result;
+    }
+
+    public int determinePartySuccess()
+    {
+        int result = 0;
+        CompanyManager.trend playerHeadStyle = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerBehavior>().headStyle;
+        CompanyManager.trend playerBodyStyle = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerBehavior>().bodyStyle;
+
+        //  if the players head AND body in the theme
+        if ((playerHeadStyle == theme) && (playerBodyStyle == theme))
+        {
+            result = 2;
+        }
+        // if the players head OR body in the theme
+        else if ((playerHeadStyle == theme) || (playerBodyStyle == theme))
+        {
+            result = 1;
+        }
+        
         return result;
     }
 }
