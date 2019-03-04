@@ -11,12 +11,14 @@ public class ShopMenu : MonoBehaviour
     [SerializeField] GameObject storeWindow;
     [SerializeField] GameObject closetWindow;
     private Transform childObj;
+    private Vector3 windowScale;
 
     void Start()
     {
         // finds and disables the gray out rect
         childObj = transform.Find("Canvas");
         childObj.gameObject.SetActive(false);
+        windowScale = new Vector3(1, 0.725f, 1);
     }
 
     
@@ -50,10 +52,10 @@ public class ShopMenu : MonoBehaviour
             if (closetIcon.transform.position.x > 1) // if the closet icon gets far enough to the right
             {
                 // store window opens
-                storeWindow.transform.localScale = Vector3.Lerp(storeWindow.transform.localScale, Vector3.one, 0.2f);
+                storeWindow.transform.localScale = Vector3.Lerp(storeWindow.transform.localScale, windowScale, 0.2f);
 
                 // closet window opens
-                closetWindow.transform.localScale = Vector3.Lerp(closetWindow.transform.localScale, Vector3.one, 0.2f);
+                closetWindow.transform.localScale = Vector3.Lerp(closetWindow.transform.localScale, windowScale, 0.2f);
 
                 itemsOn = true;
             }

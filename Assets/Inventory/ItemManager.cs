@@ -47,7 +47,7 @@ public class ItemManager : MonoBehaviour
             {
                 // 2 is the distance between any two items, the (i%3) divides them into 3 columns, 
                 // the i/3 makes it move to a new row after every 3 items, the -5.75 and 3 are just initial x and y values to start from
-                Vector3 targetVector = new Vector3(-5.75f + (2 * (i % 3)), 3 - 2 * (i / 3), 0);
+                Vector3 targetVector = new Vector3(-5.35f + (2 * (i % 3)), 3.2f - 2 * (i / 3), 0);
                 if (transform.position != targetVector)
                 {
                     item.transform.position = Vector3.Lerp(item.transform.position, targetVector, 0.4f);
@@ -60,7 +60,7 @@ public class ItemManager : MonoBehaviour
             int j = 0;
             foreach (GameObject item in closetItems)
             {
-                Vector3 targetVector = new Vector3(1.75f + (2 * (j % 3)), 3 - 2 * (j / 3), 0);
+                Vector3 targetVector = new Vector3(1.35f + (2 * (j % 3)), 3.2f - 2 * (j / 3), 0);
 
                 if (transform.position != targetVector)
                 {

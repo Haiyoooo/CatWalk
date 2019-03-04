@@ -36,7 +36,6 @@ public class ItemBehavoir : MonoBehaviour
         // start scale at (0, 0 ,0)
         transform.localScale = Vector3.zero;
 
-        cost = 1;
         costText = gameObject.GetComponentInChildren<Text>();
         fishcoin = gameObject.transform.GetChild(0).GetChild(1);
 
