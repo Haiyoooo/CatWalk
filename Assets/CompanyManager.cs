@@ -17,11 +17,11 @@ public class CompanyManager : MonoBehaviour
     {
         foreach (Company comp in CompanyList)
         {
-            int rand1 = Random.Range( 0, comp.itLikes.Length ); // first random index
+            int rand1 = Random.Range(1, comp.itLikes.Length); // first random index
             int rand2;
             do
             {
-                rand2 = Random.Range(0, comp.itLikes.Length); // makes a second random int that isn't the first
+                rand2 = Random.Range(1, comp.itLikes.Length); // makes a second random int that isn't the first
             } while (rand1 == rand2);
 
             comp.itWants[0] = comp.itLikes[rand1]; // add the likes index to the wants list
