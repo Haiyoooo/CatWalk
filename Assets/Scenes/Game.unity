@@ -4837,6 +4837,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   headItem: {fileID: 0}
   bodyItem: {fileID: 0}
+  headStyle: 0
+  bodyStyle: 0
 --- !u!1 &2012982874
 GameObject:
   m_ObjectHideFlags: 0
