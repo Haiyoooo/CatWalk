@@ -18,17 +18,47 @@ public class PopUp_Messages : MonoBehaviour
 
     private int tempMessage;
 
-    private EventBehavior parent;
+    private EventBehavior parent;  
 
     private Text msgText;
 
+    private Text goldText; 
+
+    private CompanyManager companyManager;
+
+   // private CompanyManager.trend trend;   //COOL ENUM STUFF!!! DIDN'T KNOW IT'S A TYPE LIKE THIS (note for Ernes; don't erase
+
+    private string companyName;
+
+    private string style;
+
+    private int numberOfCompanies;
+
+
+
     private void Start()
     {
+       
         parent = transform.parent.GetComponent<EventBehavior>();
+
+        companyManager = GameObject.FindObjectOfType<CompanyManager>(); 
 
         tempMessage = Random.Range(0, 3);
 
         msgText = gameObject.transform.GetChild(4).GetComponent<Text>();
+
+        goldText = gameObject.transform.GetChild(3).GetComponent<Text>();
+
+        numberOfCompanies = companyManager.CompanyList.Length;
+
+        var tempRandom = Random.Range(0, numberOfCompanies);
+
+        companyName = GameObject.FindGameObjectWithTag("Company Manager").GetComponent<CompanyManager>().CompanyList[tempRandom].name;
+
+
+        var tempWant = Random.Range(0, 2);
+
+        style = GameObject.FindGameObjectWithTag("Company Manager").GetComponent<CompanyManager>().CompanyList[tempRandom].itWants[tempWant].ToString();   //0 1 style randomizer   /why zac why
 
     }
 
@@ -65,17 +95,19 @@ public class PopUp_Messages : MonoBehaviour
         //parent  is a party
         else if (parent.isJob == false)
         {
-            switch (parent.thisEventState)
+            goldText.text = "";
+
+            switch (parent.thisEventState)              //TODO FIGURE OUT HOW TO BOLD
             {
                 case (EventBehavior.eventState.SUCCESS):
 
-                    msgText.text = success_party[tempMessage];
+                    msgText.text = success_party[0] + " " + companyName + " likes " + style + " clothes...";
 
                     break;
 
                 case (EventBehavior.eventState.SUPERSUCCESS):
 
-                    msgText.text = super_party[tempMessage];
+                    msgText.text = super_party[0] + " " + companyName + " likes " + style + " clothes...";
 
                     break;
 

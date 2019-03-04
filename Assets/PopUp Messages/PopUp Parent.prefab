@@ -277,17 +277,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   success_party:
-  - a
-  - b
-  - c
+  - You heard a rumor at the party. It seems like
   fail_party:
-  - They didn''t  give your clothes a second glance...
+  - They didn't  give your clothes a second glance...
   - They didn''t like your clothes, so no one  spoke to you...
   - You ate alone in the corner because you're unfashionable...
   super_party:
-  - a
-  - b
-  - c
+  - Your heard a rumor at the party. It seems like
   success_job:
   - They were FELINE what you were wearing!
   - PAW-SOME! They thought you were one stylish cat!
