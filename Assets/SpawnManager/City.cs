@@ -24,13 +24,4 @@ public class City : MonoBehaviour
     {
         type = cityType.none;
     }
-
-    /*private void OnMouseDown()
-    {
-        if(GetComponent<TestCity>().type == TestCity.cityType.job || GetComponent<TestCity>().type == TestCity.cityType.party)
-        {
-            GetComponent<TestCity>().type = TestCity.cityType.none;
-        }
-            
-    }*/
 }

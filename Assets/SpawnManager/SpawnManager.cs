@@ -31,6 +31,7 @@ public class SpawnManager : MonoBehaviour
     void Update()
     {
         CheckChange();
+        Debug.Log(jobNum);
     }
 
     void ChangeStatus(GameObject obj, int index) //change the status of a city
@@ -80,6 +81,7 @@ public class SpawnManager : MonoBehaviour
                 {
                     Destroy(cities[job[i]].transform.GetChild(0).gameObject, 0.2f);
                     job[i] = -1;
+                    //Debug.Log(job[i]);
                     jobNum--;
                 }
 
@@ -146,7 +148,7 @@ public class SpawnManager : MonoBehaviour
     bool PartyCheckConflict(int n) //check the city doesn't have job when spawn party
     {
         for(int i = 0; i < 8; i++)
-            if(i != jobNum && job[i] != -1)
+            if(job[i] != -1)
                 if (n == job[i]) return true;
         return false;
     }
