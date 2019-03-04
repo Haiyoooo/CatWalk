@@ -9,7 +9,7 @@ public class Job : MonoBehaviour
 {
     public enum jobState { AVALIABLE, SUCCESS, SUPERSUCCESS, FAIL };
     public jobState thisJobState = jobState.AVALIABLE;
-    private jobPopUp jobPopUp; //refer to pop-up script
+    
     private SpriteRenderer rend;
     private bool mouseOn = false;
 
@@ -39,7 +39,7 @@ public class Job : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        jobPopUp = gameObject.GetComponent<jobPopUp>();
+        
         rend = gameObject.GetComponent<SpriteRenderer>();
         rend.color = Color.white;
 
@@ -76,6 +76,8 @@ public class Job : MonoBehaviour
          * (eg. Message pop-up, Shop interface is open) */
         if (!EventSystem.current.IsPointerOverGameObject())
         {
+            
+            
             //Success
             //player is wearing 1 item that the job likes
             if (correctItems == 1)
@@ -128,5 +130,11 @@ public class Job : MonoBehaviour
             //Destroy(gameObject, 0.2f);
             transform.GetComponentInParent<City>().type = City.cityType.none;
         }
+    }
+
+    public int determineSuccess()
+    {
+        int result = 0;
+        return result;
     }
 }
