@@ -216,7 +216,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0327, y: 0.121}
+  m_AnchoredPosition: {x: -0.004, y: 0.15}
   m_SizeDelta: {x: 239.4611, y: 47.2325}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &646634518130025688
@@ -260,7 +260,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Company Name
+  m_Text: Company Nameeeeeeeeeeee
 --- !u!1 &6475164643348598542
 GameObject:
   m_ObjectHideFlags: 0
@@ -295,7 +295,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.44699997, y: -0.21500002}
+  m_AnchoredPosition: {x: -0.44699997, y: -0.116}
   m_SizeDelta: {x: 130.174, y: 26.597}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4953018575023243648
@@ -550,7 +550,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.442, y: -0.215}
+  m_AnchoredPosition: {x: -0.448, y: -0.281}
   m_SizeDelta: {x: 130.174, y: 26.597}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3065685207671499821
