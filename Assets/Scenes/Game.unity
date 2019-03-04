@@ -3927,7 +3927,7 @@ PrefabInstance:
     - target: {fileID: 5881061401034424297, guid: 1afdc0f4803143e4e87b715d87048a0e,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -4.42
+      value: -4.4200134
       objectReference: {fileID: 0}
     - target: {fileID: 5881061401034424297, guid: 1afdc0f4803143e4e87b715d87048a0e,
         type: 3}
@@ -3968,16 +3968,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5881061401034424297, guid: 1afdc0f4803143e4e87b715d87048a0e,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.03875
-      objectReference: {fileID: 0}
-    - target: {fileID: 5881061401034424297, guid: 1afdc0f4803143e4e87b715d87048a0e,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.040000003
       objectReference: {fileID: 0}
     - target: {fileID: 5881061399585071846, guid: 1afdc0f4803143e4e87b715d87048a0e,
         type: 3}
@@ -4039,40 +4029,15 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6650213002876104719, guid: 1afdc0f4803143e4e87b715d87048a0e,
+    - target: {fileID: 1031663922492239165, guid: 1afdc0f4803143e4e87b715d87048a0e,
         type: 3}
-      propertyPath: m_Name
-      value: Day5Text
+      propertyPath: m_havePropertiesChanged
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 5881061399585071840, guid: 1afdc0f4803143e4e87b715d87048a0e,
+    - target: {fileID: 1031663922492239165, guid: 1afdc0f4803143e4e87b715d87048a0e,
         type: 3}
-      propertyPath: m_Name
-      value: Day1Text
-      objectReference: {fileID: 0}
-    - target: {fileID: 5881061399939458485, guid: 1afdc0f4803143e4e87b715d87048a0e,
-        type: 3}
-      propertyPath: m_Name
-      value: Day3Text
-      objectReference: {fileID: 0}
-    - target: {fileID: 5881061400066560181, guid: 1afdc0f4803143e4e87b715d87048a0e,
-        type: 3}
-      propertyPath: m_Name
-      value: Day2Text
-      objectReference: {fileID: 0}
-    - target: {fileID: 5881061400680972565, guid: 1afdc0f4803143e4e87b715d87048a0e,
-        type: 3}
-      propertyPath: m_Name
-      value: Day4Text
-      objectReference: {fileID: 0}
-    - target: {fileID: 6872173480605689514, guid: 1afdc0f4803143e4e87b715d87048a0e,
-        type: 3}
-      propertyPath: m_Name
-      value: Day6Text
-      objectReference: {fileID: 0}
-    - target: {fileID: 6644705226983758257, guid: 1afdc0f4803143e4e87b715d87048a0e,
-        type: 3}
-      propertyPath: m_text
-      value: Day 6
+      propertyPath: m_isInputParsingRequired
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6644705226983758257, guid: 1afdc0f4803143e4e87b715d87048a0e,
         type: 3}
@@ -4084,14 +4049,14 @@ PrefabInstance:
       propertyPath: m_isInputParsingRequired
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 6644705226983758257, guid: 1afdc0f4803143e4e87b715d87048a0e,
+    - target: {fileID: 4519866761960744428, guid: 1afdc0f4803143e4e87b715d87048a0e,
         type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 4
+      propertyPath: m_havePropertiesChanged
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 6644705226983758257, guid: 1afdc0f4803143e4e87b715d87048a0e,
+    - target: {fileID: 4519866761960744428, guid: 1afdc0f4803143e4e87b715d87048a0e,
         type: 3}
-      propertyPath: m_textInfo.wordCount
+      propertyPath: m_isInputParsingRequired
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
