@@ -11,6 +11,11 @@ public class EventBehavior : MonoBehaviour
     public eventState thisEventState = eventState.AVALIABLE;
     public bool isJob;
 
+    //COLORS & STUFF
+    private Color[] eColors = { Color.red, Color.white, Color.yellow, Color.green, Color.cyan, Color.blue, Color.magenta, Color.red };
+
+    float hue, S, V;
+
     [Header("For Testing")]
     [Tooltip("Number of clothing items currently worn which the company likes")]
     [Range(0, 2)]
@@ -59,7 +64,19 @@ public class EventBehavior : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //COLOR RANDOMIZER
+
+        hue = 1f;
+        S = 0.02f;
+        V = 1f;
+
+        var colorIndex = Random.Range(0, eColors.Length);
+        var eventColor = eColors[colorIndex];
         eventSpriteRenderer = transform.GetComponent<SpriteRenderer>();
+        eventSpriteRenderer.color = eventColor;
+        Color.RGBToHSV(eventSpriteRenderer.color, out hue, out S, out V);  //TODO  //NOT WORKING AS HOPED  ¯\_(ツ)_/¯
+
+
         assignPartyNames();
 
         if (isJob)
