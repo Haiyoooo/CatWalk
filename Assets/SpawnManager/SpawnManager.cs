@@ -87,7 +87,7 @@ public class SpawnManager : MonoBehaviour
                 {
                     Destroy(cities[job[i]].transform.GetChild(0).gameObject, 0.2f);
                     job[i] = -1;
-                    //Debug.Log(job[i]);
+                    Debug.Log("Destroyyyyyyyyyyyyyy" + job[i]);
                     jobNum--;
                 }
 

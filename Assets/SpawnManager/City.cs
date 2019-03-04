@@ -5,18 +5,6 @@ using UnityEngine.UI;
 
 public class City : MonoBehaviour
 {
-    //public void FinishJob()
-    //{
-    //    if (GetComponent<Image>().color == Color.blue)
-    //        GetComponent<Image>().color = Color.white;
-    //}
-
-    //public void FinishParty()
-    //{
-    //    if (GetComponent<Image>().color == Color.red)
-    //        GetComponent<Image>().color = Color.white;
-    //}
-
     [SerializeField] public enum cityType { job, party, none };
     [SerializeField] public cityType type;
 
