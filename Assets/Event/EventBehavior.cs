@@ -11,10 +11,7 @@ public class EventBehavior : MonoBehaviour
     public eventState thisEventState = eventState.AVALIABLE;
     public bool isJob;
 
-    //COLORS & STUFF
-    private Color[] eColors = { Color.red, Color.white, Color.yellow, Color.green, Color.cyan, Color.blue, Color.magenta, Color.red };
-
-    float hue, S, V;
+    private float saturation;
 
     [Header("For Testing")]
     [Tooltip("Number of clothing items currently worn which the company likes")]
@@ -65,22 +62,20 @@ public class EventBehavior : MonoBehaviour
     void Start()
     {
         //COLOR RANDOMIZER
-
-        hue = 1f;
-        S = 0.02f;
-        V = 1f;
-
-        var colorIndex = Random.Range(0, eColors.Length);
-        var eventColor = eColors[colorIndex];
+        saturation = 0.4f;
         eventSpriteRenderer = transform.GetComponent<SpriteRenderer>();
-        Color.RGBToHSV(eventColor, out hue, out S, out V);  //TODO  //NOT WORKING AS HOPED  ¯\_(ツ)_/¯
-        eventSpriteRenderer.color = eventColor;
 
-        //Color.
-        Debug.Log(eventColor);
+        float r = Random.Range(saturation, 1f);     //1 is white & 0 is black
+        float g = Random.Range(saturation, 1f);
+        float b = Random.Range(saturation, 1f);
+
+        Color newColor = new Color(r, g, b, 1f);
+
+        eventSpriteRenderer.color = newColor;
 
 
         assignPartyNames();
+
 
         if (isJob)
         {
