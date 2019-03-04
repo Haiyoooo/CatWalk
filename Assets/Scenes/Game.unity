@@ -3763,12 +3763,12 @@ PrefabInstance:
     - target: {fileID: 5881061401034424297, guid: 1afdc0f4803143e4e87b715d87048a0e,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -540.37
+      value: -539.37
       objectReference: {fileID: 0}
     - target: {fileID: 5881061401034424297, guid: 1afdc0f4803143e4e87b715d87048a0e,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -4.4200134
+      value: -4.27
       objectReference: {fileID: 0}
     - target: {fileID: 5881061401034424297, guid: 1afdc0f4803143e4e87b715d87048a0e,
         type: 3}
@@ -4120,12 +4120,12 @@ PrefabInstance:
     - target: {fileID: 3333697950924981500, guid: 77e4ee670c909ed4588cd070247e8aa1,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -4.757
+      value: -4.73
       objectReference: {fileID: 0}
     - target: {fileID: 3333697950924981500, guid: 77e4ee670c909ed4588cd070247e8aa1,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -612.462
+      value: -612.33
       objectReference: {fileID: 0}
     - target: {fileID: 3333697950924981500, guid: 77e4ee670c909ed4588cd070247e8aa1,
         type: 3}
@@ -4201,6 +4201,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -3.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2525013775610717592, guid: 77e4ee670c909ed4588cd070247e8aa1,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2525013775610717592, guid: 77e4ee670c909ed4588cd070247e8aa1,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2525013775610717592, guid: 77e4ee670c909ed4588cd070247e8aa1,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 77e4ee670c909ed4588cd070247e8aa1, type: 3}
@@ -5460,6 +5475,11 @@ PrefabInstance:
       propertyPath: quitButton
       value: 
       objectReference: {fileID: 482526274901849316}
+    - target: {fileID: 834445241352930398, guid: d4c9672a76d84294aa4e1bf4d4e9f9f5,
+        type: 3}
+      propertyPath: day
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d4c9672a76d84294aa4e1bf4d4e9f9f5, type: 3}
 --- !u!224 &7997212644434372379 stripped
