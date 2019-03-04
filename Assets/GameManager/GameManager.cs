@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -77,17 +78,19 @@ public class GameManager : MonoBehaviour
 
             if (fishCoin <= 0)
             {//GAME OVER
-                endWeekText.GetComponent<TextMeshProUGUI>().text = "You lost lah!";
-                quitButton.SetActive(true);
-                nextweekButton.SetActive(false);
+                //endWeekText.GetComponent<TextMeshProUGUI>().text = "You lost lah!";
+                //quitButton.SetActive(true);
+                //nextweekButton.SetActive(false);
+                SceneManager.LoadScene(2);
             }
             else
             {
                 if (currentWeek == lastWeek) //WON
                 {
-                    endWeekText.GetComponent<TextMeshProUGUI>().text = "Meow, you won!";
-                    quitButton.SetActive(true);
-                    nextweekButton.SetActive(false);
+                    //endWeekText.GetComponent<TextMeshProUGUI>().text = "Meow, you won!";
+                    //quitButton.SetActive(true);
+                    //nextweekButton.SetActive(false);
+                    SceneManager.LoadScene(3);
                 }
 
                 else //NEXTWEEK
