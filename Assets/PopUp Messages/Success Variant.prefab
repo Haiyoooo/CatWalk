@@ -123,5 +123,65 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: e43a0fae3069f8b458851a0db68a8478,
         type: 3}
+    - target: {fileID: 1571479581156518385, guid: b8e7ebaccf80ad443abbeaa4bf717fbd,
+        type: 3}
+      propertyPath: m_Name
+      value: messageText
+      objectReference: {fileID: 0}
+    - target: {fileID: 7245825836910766213, guid: b8e7ebaccf80ad443abbeaa4bf717fbd,
+        type: 3}
+      propertyPath: m_havePropertiesChanged
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7245825836910766213, guid: b8e7ebaccf80ad443abbeaa4bf717fbd,
+        type: 3}
+      propertyPath: m_isInputParsingRequired
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3879210891790009713, guid: b8e7ebaccf80ad443abbeaa4bf717fbd,
+        type: 3}
+      propertyPath: success_party.Array.data[0]
+      value: '"They were FELINE what you were wearing!"'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3879210891790009713, guid: b8e7ebaccf80ad443abbeaa4bf717fbd,
+        type: 3}
+      propertyPath: super_party.Array.data[0]
+      value: '"PAWS-itively MEOEW-velous! They loved your style!"'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3879210891790009713, guid: b8e7ebaccf80ad443abbeaa4bf717fbd,
+        type: 3}
+      propertyPath: success_party.Array.data[1]
+      value: '"PAW-SOME! They thought you were one stylish cat!"'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3879210891790009713, guid: b8e7ebaccf80ad443abbeaa4bf717fbd,
+        type: 3}
+      propertyPath: super_party.Array.data[1]
+      value: '"PURR-fect! You''re the best -dressed kitty around!'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3879210891790009713, guid: b8e7ebaccf80ad443abbeaa4bf717fbd,
+        type: 3}
+      propertyPath: super_party.Array.data[2]
+      value: '"You''re a kitty with FUR-midable fashion sense!"'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3879210891790009713, guid: b8e7ebaccf80ad443abbeaa4bf717fbd,
+        type: 3}
+      propertyPath: success_party.Array.data[2]
+      value: '"Your CLAW-ver clothes sure caught their eye!"'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3879210891790009713, guid: b8e7ebaccf80ad443abbeaa4bf717fbd,
+        type: 3}
+      propertyPath: fail_party.Array.data[0]
+      value: '"They didn''t  give your clothes a second glance..."'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3879210891790009713, guid: b8e7ebaccf80ad443abbeaa4bf717fbd,
+        type: 3}
+      propertyPath: fail_party.Array.data[1]
+      value: '"They didn''t like your clothes, so no one  spoke to you..."'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3879210891790009713, guid: b8e7ebaccf80ad443abbeaa4bf717fbd,
+        type: 3}
+      propertyPath: fail_party.Array.data[2]
+      value: '"You ate alone in the corner..."'
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b8e7ebaccf80ad443abbeaa4bf717fbd, type: 3}

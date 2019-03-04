@@ -277,23 +277,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   success_party:
-  - 
-  - 
-  - 
+  - a
+  - b
+  - c
   fail_party:
-  - 
-  - 
-  - 
+  - '"They didn''t  give your clothes a second glance..."'
+  - '"They didn''t like your clothes, so no one  spoke to you..."'
+  - '"You ate alone in the corner..."'
   super_party:
-  - 
-  - 
-  - 
+  - a
+  - b
+  - c
   success_job:
-  - 
-  - 
-  - 
-  fail_job: []
-  super_job: []
+  - '"They were FELINE what you were wearing!"'
+  - '"PAW-SOME! They thought you were one stylish cat!"'
+  - '"Your CLAW-ver clothes sure caught their eye!"'
+  fail_job:
+  - Are you FUR-real? You won't impress anyone with that clothing combo.
+  - They thought your clothes were CLAW-ful...
+  - With style like that you can FUR-get about success!
+  super_job:
+  - They loved you! You're SCRATCHING at the surfact of success!
+  - '"PURR-fect! You''re the best -dressed kitty around!'
+  - '"You''re a kitty with FUR-midable fashion sense!"'
 --- !u!1 &3241370074758260763
 GameObject:
   m_ObjectHideFlags: 0
