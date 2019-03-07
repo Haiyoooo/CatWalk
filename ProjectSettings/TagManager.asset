@@ -51,7 +51,7 @@ TagManager:
   - name: Background
     uniqueID: 3559212699
     locked: 0
-  - name: Job & Parties
+  - name: Job/Parties
     uniqueID: 1910586061
     locked: 0
   - name: UI
@@ -66,6 +66,6 @@ TagManager:
   - name: UI Message
     uniqueID: 3284674259
     locked: 0
-  - name: gameOver Win
+  - name: Game Over/Win
     uniqueID: 2681146295
     locked: 0
